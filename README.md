@@ -10,7 +10,7 @@
  - [x] API to display subtitles from custom scripts (Not documented)
  - [x] Assign AudioClip to each dialogue entry or use one big clip for whole dialogue  
  - [x] Support for markdown (uses TextMeshPro) 
- - [] Fancy Editor UI 
+ - [ ] Fancy Editor UI 
 
 # Dependencies
 **Cysharp UniTask** for proper Async support when exiting play mode.
