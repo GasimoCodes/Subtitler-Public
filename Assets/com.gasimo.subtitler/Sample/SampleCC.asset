@@ -44,3 +44,8 @@ MonoBehaviour:
     audio: {fileID: 0}
     waitFor: 2
     displayFor: 4
+  - dialogue: This one will show after a while
+    speaker: World
+    audio: {fileID: 0}
+    waitFor: 10
+    displayFor: 4
