@@ -1,7 +1,9 @@
 # Subtitler
  A simple subtitle tool for Unity3D inspired by Source Engine Closed Captions 
 
-![ezgif com-video-to-gif](https://github.com/GasimoCodes/Subtitler/assets/22917863/dee73353-8231-4471-b745-952123777e32)
+![Capture1](https://github.com/GasimoCodes/Subtitler/assets/22917863/65229daa-4547-4c9e-8277-c8cde53e8d0f)
+![Capture2](https://github.com/GasimoCodes/Subtitler/assets/22917863/d1607038-3afd-45d1-968a-6507ebf08b3d)
+
 
 ## Features
 
@@ -10,6 +12,7 @@
  - [x] API to display subtitles from custom scripts (Not documented)
  - [x] Assign AudioClip to each dialogue entry or use one big clip for whole dialogue  
  - [x] Support for markdown (uses TextMeshPro) 
+ - [x] Overrides (Alignment, background panel visibility, Font size)
  - [ ] Fancy Editor UI 
 
 # Dependencies
