@@ -109,13 +109,6 @@ namespace Gasimo.Subtitles
                 foreach (SubtitleDataEntry sE in sD.Subtitles)
                 {
                     await UniTask.Delay((int)(sE.waitFor * 1000f));
-                    
-                    if (enableBackgroundPanel)
-                    {
-                        displayPanel.GetComponent<Image>().DOKill();
-                        displayPanel.GetComponent<Image>().enabled = true;
-                        displayPanel.GetComponent<Image>().DOFade(0.4f, 0.1f);
-                    }
 
                     // Play audio
                     if (sE.audio != null)
@@ -128,6 +121,13 @@ namespace Gasimo.Subtitles
                         if (isRangeLimited && !checkAudioDistance(aS.maxDistance, aS))
                         {
                             continue;
+                        }
+
+                        if (enableBackgroundPanel)
+                        {
+                            displayPanel.GetComponent<Image>().DOKill();
+                            displayPanel.GetComponent<Image>().enabled = true;
+                            displayPanel.GetComponent<Image>().DOFade(0.4f, 0.1f);
                         }
 
                         DisplaySubtitle(sE.dialogue, sE.speaker, sE.displayFor);
@@ -169,7 +169,7 @@ namespace Gasimo.Subtitles
                 subtitle.text += $"<color=#{ColorUtility.ToHtmlStringRGB(speakerHighlight)}><b>{speaker}</b></color>: ";
             subtitle.text += message;
             subtitle.alpha = 255;
-            
+
             LayoutRebuilder.ForceRebuildLayoutImmediate(displayPanel.GetComponent<RectTransform>());
 
             // Neat animation intro
