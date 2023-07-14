@@ -7,8 +7,8 @@ using UnityEngine.UI;
 using DG.Tweening;
 using Cysharp.Threading.Tasks;
 using System;
-using Cysharp.Threading.Tasks.CompilerServices;
-using Cysharp.Threading.Tasks.Triggers;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Gasimo.Subtitles
 {
@@ -25,7 +25,9 @@ namespace Gasimo.Subtitles
         // Privates
         int shownLines = 0;
         Image displayBackground;
+        Dictionary<int, bool> activeSubtitleList = new Dictionary<int, bool>();
 
+        System.Object subtitleLock = new System.Object();
 
         private void Awake()
         {
@@ -87,13 +89,43 @@ namespace Gasimo.Subtitles
         /// <summary>
         /// Plays a given subtitle track 
         /// </summary>
-        /// <param name="sD"></param>
-        /// <param name="aS"></param>
-        public void playSubtitle(SubtitleData sD, AudioSource aS)
+        /// <param name="sD">Subtitle Data file</param>
+        /// <param name="aS">AudioSource to playOneShot through</param>
+        /// <returns>Cancellation ID of the subtitle instance</returns>
+        public int playSubtitle(SubtitleData sD, AudioSource aS)
         {
-            playSubtitleFile(sD, aS);
+            int id = 0;
+
+            lock (subtitleLock)
+            {
+                if (activeSubtitleList.Count != 0)
+                {
+                    id = activeSubtitleList.Max(kvp => kvp.Key) + 1;
+                }
+                activeSubtitleList.Add(id, true);
+            }
+
+            Debug.Log("Playing " + id);
+
+            playSubtitleFile(sD, aS, id);
+            return id;
         }
 
+        /// <summary>
+        /// Immediately kills an active subtitle loop based on ID
+        /// </summary>
+        /// <param name="id"></param>
+        public void killSubtitleById(int id)
+        {
+            lock (subtitleLock)
+            {
+                Debug.Log("Removing " + id);
+                if (activeSubtitleList.ContainsKey(id))
+                {
+                    activeSubtitleList[id] = false;
+                }
+            }
+        }
 
         /// <summary>
         /// 
@@ -101,24 +133,49 @@ namespace Gasimo.Subtitles
         /// <param name="sD"></param>
         /// <param name="aS"></param>
         /// <returns></returns>
-        private async UniTaskVoid playSubtitleFile(SubtitleData sD, AudioSource aS)
+        private async UniTaskVoid playSubtitleFile(SubtitleData sD, AudioSource aS, int id)
         {
             bool isRangeLimited = (aS.spatialBlend == 1);
 
             if (sD != null)
                 foreach (SubtitleDataEntry sE in sD.Subtitles)
                 {
+
                     await UniTask.Delay((int)(sE.waitFor * 1000f));
+
+                    // Check if we werent cancelled
+                    lock (subtitleLock)
+                    {
+                        if (activeSubtitleList[id] == false)
+                        {
+                            activeSubtitleList.Remove(id);
+                            return;
+                        }
+                    }
+
+                    // If the audioSource is really, really silent, or straight up disabled, do not show subtitle
+                    if (aS == null || aS.volume <= 0.05f || aS.enabled == false)
+                    {
+                        continue;
+                    }
 
                     // Play audio
                     if (sE.audio != null)
                         aS.PlayOneShot(sE.audio);
 
+                    // Trigger programmed events
+                    if (sE.subtitleEvent != null)
+                    {
+                        sE.subtitleEvent.Raise();
+                    }
+
+
                     // Display dialogue
                     if (sE.dialogue != "")
                     {
-                        // If we are range-limited and out of range, skip
-                        if (isRangeLimited && !checkAudioDistance(aS.maxDistance, aS))
+
+                        // If we are (range-limited, out of range AND not a 2D source) OR IF (the audioSource is not playing AND there was an valid AudioClip)
+                        if ((isRangeLimited && !checkAudioDistance(aS.maxDistance, aS) && aS.spatialBlend != 0) || (aS.isPlaying == false && sE.audio != null))
                         {
                             continue;
                         }
