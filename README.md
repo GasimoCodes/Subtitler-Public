@@ -13,6 +13,8 @@
  - [x] Assign AudioClip to each dialogue entry or use one big clip for whole dialogue  
  - [x] Support for markdown (uses TextMeshPro) 
  - [x] Overrides (Alignment, background panel visibility, Font size)
+ - [X] Play events when a specific subtitle line gets trigerred
+ - [X] Exit the display loop of one of the playing subtitle files based on generated session id. 
  - [ ] Fancy Editor UI 
 
 # Dependencies
