@@ -153,15 +153,15 @@ namespace Gasimo.Subtitles
                         }
                     }
 
+                    // Play audio
+                    if (sE.audio != null)
+                        aS.PlayOneShot(sE.audio);
+
                     // If the audioSource is really, really silent, or straight up disabled, do not show subtitle
                     if (aS == null || aS.volume <= 0.05f || aS.enabled == false)
                     {
                         continue;
                     }
-
-                    // Play audio
-                    if (sE.audio != null)
-                        aS.PlayOneShot(sE.audio);
 
                     // Trigger programmed events
                     if (sE.subtitleEvent != null)
