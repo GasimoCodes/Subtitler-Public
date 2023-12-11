@@ -10,20 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Built In Data
+  m_Name: Gasimo
   m_EditorClassIdentifier: 
-  m_GroupName: Built In Data
+  m_GroupName: Gasimo
   m_Data:
     m_SerializedData: []
-  m_GUID: 18725e1bd8fca2a419df7cc4798bb1b9
+  m_GUID: 39c355eb05c2e2e42a0ed82b212417b2
   m_SerializeEntries:
-  - m_GUID: Resources
-    m_Address: Resources
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: EditorSceneList
-    m_Address: EditorSceneList
+  - m_GUID: 6b8e67d9d0671e44287f8a561a1eb5fc
+    m_Address: Gasimo/Subtitle
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -31,4 +26,5 @@ MonoBehaviour:
   m_Settings: {fileID: 11400000, guid: ca047d32c308e894d8674e2ddb0dc280, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: 354ce2abdc2a8694a8422127d56c6b55, type: 2}
+    - {fileID: 11400000, guid: 46d8f25437f4e48439d392dad886726d, type: 2}
+    - {fileID: 11400000, guid: 4837186bc2c6be94fb02195a6b9b9cef, type: 2}

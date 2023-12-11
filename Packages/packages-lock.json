@@ -7,6 +7,25 @@
       "dependencies": {},
       "hash": "f2773f585e762480c835ac718b82b87cb111e500"
     },
+    "com.gasimo.subtitler": {
+      "version": "file:../com.gasimo.subtitler",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.unity.addressables": "1.21.10",
+        "com.unity.textmeshpro": "2.1.6",
+        "com.cysharp.unitask": "2.3.3"
+      }
+    },
+    "com.imangi.addressablesexample": {
+      "version": "https://github.com/erowe-imangi/unity-package-with-addressable-example.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.addressables": "1.16.16"
+      },
+      "hash": "b395af49806359e5b8ceefd39dcebef701d1b107"
+    },
     "com.unity.addressables": {
       "version": "1.21.12",
       "depth": 0,

@@ -1,6 +1,6 @@
 {
   "name": "com.gasimo.subtitler",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "displayName": "Subtitler",
   "description": "Versatile Unity Subtitle System inspired by Source 1 Closed Captions",
   "unity": "2019.1",
@@ -27,5 +27,17 @@
     "name": "Gasimo",
     "url": "https://github.com/GasimoCodes/"
   },
+  "samples": [
+
+    {
+
+      "displayName": "Sample Subtitled Scene",
+
+      "description": "Contains a sample subtitle file which is automatically played",
+
+      "path": "Samples~/SubtitleScene"
+
+    }
+  ],
   "hideInEditor": false
 }

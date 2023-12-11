@@ -15,13 +15,8 @@ MonoBehaviour:
   m_GroupName: Default Local Group
   m_Data:
     m_SerializedData: []
-  m_GUID: af2c6b2e8c3cf0b4592f9c248e4304d9
-  m_SerializeEntries:
-  - m_GUID: 6b8e67d9d0671e44287f8a561a1eb5fc
-    m_Address: Gasimo/Subtitle
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
+  m_GUID: 3647e85495fb03e4e956b7f60da8d976
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: ca047d32c308e894d8674e2ddb0dc280, type: 2}
   m_SchemaSet:
