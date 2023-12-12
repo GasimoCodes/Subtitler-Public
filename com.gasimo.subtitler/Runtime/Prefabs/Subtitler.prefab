@@ -32,7 +32,6 @@ RectTransform:
   m_Children:
   - {fileID: 3654764562942299419}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -64,7 +63,7 @@ MonoBehaviour:
   speakerHighlight: {r: 1, g: 0.6748429, b: 0.042452812, a: 1}
   enableBackgroundPanel: 1
   centeredText: 0
-  subtitleSize: 14
+  subtitleSize: 20
 --- !u!1 &6800445948248519391
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,7 +98,6 @@ RectTransform:
   m_Children:
   - {fileID: 6108961968086882110}
   m_Father: {fileID: 1270959924041914908}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -285,7 +283,7 @@ PrefabInstance:
     - target: {fileID: 3787254011368419299, guid: 6b8e67d9d0671e44287f8a561a1eb5fc,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 83.245
+      value: 83.24512
       objectReference: {fileID: 0}
     - target: {fileID: 3787254011368419299, guid: 6b8e67d9d0671e44287f8a561a1eb5fc,
         type: 3}

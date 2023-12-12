@@ -11,12 +11,16 @@ namespace Gasimo.Subtitles
         [TextArea]
         public string dialogue;
 
+        [SerializeField]
         public string speaker;
         public AudioClip audio;
         public ScriptableEvent subtitleEvent;
 
         public float waitFor = 1f;
-        public int displayFor = 5;
+        public float displayFor = 5;
+
+        public float start;  // Add these properties
+        public float end;    // Add these properties
 
 
     }

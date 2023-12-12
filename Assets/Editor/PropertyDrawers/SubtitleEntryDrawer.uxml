@@ -1,0 +1,17 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/Editor/PropertyDrawers/SubtitleEntryDrawer.uss?fileID=7433441132597879392&amp;guid=4965af1302132a441bc1b7c601274a6e&amp;type=3#SubtitleEntryDrawer" />
+    <ui:VisualElement style="flex-grow: 1;">
+        <ui:GroupBox>
+            <ui:TextField picking-mode="Ignore" binding-path="dialogue" tooltip="Subtitle Content (RIch Text)" value="Sample Dialogue" vertical-scroller-visibility="Auto" multiline="true" style="min-height: 40px;" />
+            <ui:TextField picking-mode="Ignore" label="Speaker" binding-path="speaker" />
+            <uie:ObjectField label="Audio" binding-path="audio" type="UnityEngine.AudioClip, UnityEngine.AudioModule" allow-scene-objects="false" />
+            <uie:ObjectField label="Trigger Events" allow-scene-objects="false" binding-path="subtitleEvent" type="gasimo.subtitles.ScriptableEvent, gasimo.subtitler" />
+            <ui:VisualElement style="flex-grow: 1; min-height: 10px;" />
+            <ui:Label tabindex="-1" text=" Timing" display-tooltip-when-elided="true" />
+            <ui:GroupBox name="GroupBox" style="flex-direction: row; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; flex-shrink: 0; flex-grow: 0; justify-content: space-evenly; flex-basis: auto; align-items: auto;">
+                <ui:FloatField label="Wait For" value="0" binding-path="waitFor" name="FieldStart" class="label-shrink" style="justify-content: flex-start; align-self: auto; flex-shrink: 0; overflow: hidden;" />
+                <ui:FloatField label="Display For" value="10" binding-path="displayFor" name="FieldEnd" class="label-shrink" style="align-self: auto;" />
+            </ui:GroupBox>
+        </ui:GroupBox>
+    </ui:VisualElement>
+</ui:UXML>

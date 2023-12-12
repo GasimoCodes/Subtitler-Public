@@ -1,0 +1,3 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:FloatField label="Wait For" value="0" binding-path="waitFor" name="FieldStart" style="justify-content: flex-start; align-self: auto; flex-shrink: 0; overflow: hidden;" />
+</ui:UXML>

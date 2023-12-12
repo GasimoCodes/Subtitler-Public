@@ -9,6 +9,7 @@ namespace Gasimo.Subtitles
     [Serializable]
     public class SubtitleData : ScriptableObject
     {
+        [SerializeField]
         public SubtitleDataEntry[] Subtitles;
 
     }

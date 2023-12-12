@@ -22,7 +22,7 @@ namespace Gasimo.Subtitles
 
         public void Play()
         {
-            Subtitler.instance.playSubtitle(subtitleData, this.GetComponent<AudioSource>());
+            Subtitler.Instance.playSubtitle(subtitleData, this.GetComponent<AudioSource>());
         }
     }
 }

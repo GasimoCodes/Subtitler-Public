@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:MultiColumnListView fixed-item-height="20" binding-path="Subtitles">
+        <ui:Columns>
+            <ui:Column name="Speaker" title="Speaker" width="50" optional="false" makeHeader="true" binding-path="speaker" />
+            <ui:Column name="Dialogue" title="Dialogue" width="200" optional="false" binding-path="dialogue" />
+            <ui:Column name="Start" title="Start" width="100" binding-path="start" />
+            <ui:Column name="End" title="End" width="100" binding-path="end" />
+            <ui:Column name="Audio" title="Audio" width="50" binding-path="audio" />
+            <ui:Column name="Events" title="Event" width="50" binding-path="subtitleEvent" />
+        </ui:Columns>
+    </ui:MultiColumnListView>
+    <ui:ListView binding-path="Subtitles" />
+</ui:UXML>
