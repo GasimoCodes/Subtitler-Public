@@ -3,7 +3,7 @@
   "version": "0.1.1",
   "displayName": "Subtitler",
   "description": "Versatile Unity Subtitle System inspired by Source 1 Closed Captions",
-  "unity": "2019.1",
+  "unity": "2020.1",
   "documentationUrl": "https://github.com/GasimoCodes/Subtitler",
   "scopedRegistries": [
     {
