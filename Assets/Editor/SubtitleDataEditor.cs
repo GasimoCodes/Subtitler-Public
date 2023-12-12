@@ -1,4 +1,5 @@
 using Gasimo.Subtitles;
+using System.Linq;
 using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine;
@@ -23,22 +24,77 @@ namespace gasimo.subtitles
 
             var listView = uiFromUXML.Q<MultiColumnListView>();
             var serializedObject = new SerializedObject(target);
-            
-            var subtitlesProperty = serializedObject.FindProperty("Subtitles");
+            SerializedProperty subtitlesProperty = serializedObject.FindProperty("Subtitles");
 
-            // Debug.Log(subtitlesProperty.arraySize);
-            
 
             // Set the binding of the MultiColumnListView to the serialized property
-            listView.Bind(serializedObject);
+            // listView.Bind(serializedObject);
 
             // Set the binding path for the MultiColumnListView
             listView.bindingPath = "Subtitles";
 
-            // Make sure to call the DataReloaded callback to refresh the UI
-            listView.RefreshItems();
+            listView.itemsSource = (target as SubtitleData).Subtitles;
+            var cols = listView.columns;
 
-            Debug.Log(listView.columns.Count);
+            cols["Speaker"].makeCell = () => new PropertyField();
+            cols["Speaker"].bindCell = (VisualElement e, int index) =>
+            {
+                var l = e as PropertyField;
+                l.bindingPath = "Subtitles.Array.data[" + index + "].speaker";
+                l.Bind(serializedObject);
+                l.Q<Label>().style.display = DisplayStyle.None;
+            };
+
+            cols["Dialogue"].makeCell = () => new PropertyField();
+            cols["Dialogue"].bindCell = (VisualElement e, int index) =>
+            {
+                var l = e as PropertyField;
+                l.bindingPath = "Subtitles.Array.data[" + index + "].dialogue";
+                l.Bind(serializedObject);
+                l.Q<Label>().style.display = DisplayStyle.None;
+            };
+
+
+            cols["Start"].makeCell = () => new PropertyField();
+            cols["Start"].bindCell = (VisualElement e, int index) =>
+            {
+                var l = e as PropertyField;
+                l.bindingPath = "Subtitles.Array.data[" + index + "].waitFor";
+                l.Bind(serializedObject);
+                l.Q<Label>().style.display = DisplayStyle.None;
+            };
+
+            cols["End"].makeCell = () => new PropertyField();
+            cols["End"].bindCell = (VisualElement e, int index) =>
+            {
+                var l = e as PropertyField;
+                l.bindingPath = "Subtitles.Array.data[" + index + "].displayFor";
+                l.Bind(serializedObject);
+                l.Q<Label>().style.display = DisplayStyle.None;
+            };
+
+            cols["Audio"].makeCell = () => new PropertyField();
+            cols["Audio"].bindCell = (VisualElement e, int index) =>
+            {
+                var l = e as PropertyField;
+                l.bindingPath = "Subtitles.Array.data[" + index + "].audio";
+                l.Bind(serializedObject);
+                l.Q<Label>().style.display = DisplayStyle.None;
+            };
+
+            
+            cols["Event"].makeCell = () => new PropertyField();
+            cols["Event"].bindCell = (VisualElement e, int index) =>
+            {
+                var l = e as PropertyField;
+                l.bindingPath = "Subtitles.Array.data[" + index + "].subtitleEvent";
+                l.Bind(serializedObject);
+                l.Q<Label>().style.display = DisplayStyle.None;
+            };
+            
+
+            listView.Rebuild();
+
 
             return root;
         }
