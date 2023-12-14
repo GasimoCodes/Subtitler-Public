@@ -8,7 +8,7 @@ namespace Gasimo.Subtitles
     public class SubtitleDataEntry
     {
 
-        [TextArea]
+        
         public string dialogue;
 
         [SerializeField]

@@ -1,8 +1,9 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/Editor/SubtitleDataEditor.uss?fileID=7433441132597879392&amp;guid=4c3ca8d55878d5f419f843fac2014fbb&amp;type=3#SubtitleDataEditor" />
     <ui:MultiColumnListView binding-path="Subtitles" showAddRemoveFooter="true" show-add-remove-footer="true">
         <ui:Columns>
-            <ui:Column name="Speaker" title="Speaker" width="50" optional="false" makeHeader="true" cell-binding-path="speaker" />
-            <ui:Column name="Dialogue" title="Dialogue" width="200" optional="false" cell-binding-path="dialogue" />
+            <ui:Column name="Speaker" title="Speaker" width="100" optional="false" makeHeader="true" cell-binding-path="speaker" />
+            <ui:Column name="Dialogue" title="Dialogue" width="350" optional="false" cell-binding-path="dialogue" />
             <ui:Column name="Start" title="Start" width="100" cell-binding-path="start" />
             <ui:Column name="End" title="End" width="100" cell-binding-path="end" />
             <ui:Column name="Audio" title="Audio" width="50" cell-binding-path="audio" />

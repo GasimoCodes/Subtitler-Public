@@ -70,11 +70,3 @@ MonoBehaviour:
     displayFor: 4
     start: 0
     end: 0
-  - dialogue: 
-    speaker: 
-    audio: {fileID: 0}
-    subtitleEvent: {fileID: 0}
-    waitFor: 0
-    displayFor: 0
-    start: 0
-    end: 0
