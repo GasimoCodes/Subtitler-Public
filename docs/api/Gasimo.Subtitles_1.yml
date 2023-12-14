@@ -1,0 +1,67 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gasimo.Subtitles
+  commentId: N:Gasimo.Subtitles
+  id: Gasimo.Subtitles
+  children:
+  - Gasimo.Subtitles.SubtitleContainer
+  - Gasimo.Subtitles.SubtitleData
+  - Gasimo.Subtitles.SubtitleDataEntry
+  - Gasimo.Subtitles.Subtitler
+  langs:
+  - csharp
+  - vb
+  name: Gasimo.Subtitles
+  nameWithType: Gasimo.Subtitles
+  fullName: Gasimo.Subtitles
+  type: Namespace
+  assemblies:
+  - gasimo.subtitler
+references:
+- uid: Gasimo.Subtitles.Subtitler
+  commentId: T:Gasimo.Subtitles.Subtitler
+  href: Gasimo.Subtitles.Subtitler.html
+  name: Subtitler
+  nameWithType: Subtitler
+  fullName: Gasimo.Subtitles.Subtitler
+- uid: Gasimo.Subtitles.SubtitleContainer
+  commentId: T:Gasimo.Subtitles.SubtitleContainer
+  href: Gasimo.Subtitles.SubtitleContainer.html
+  name: SubtitleContainer
+  nameWithType: SubtitleContainer
+  fullName: Gasimo.Subtitles.SubtitleContainer
+- uid: Gasimo.Subtitles.SubtitleDataEntry
+  commentId: T:Gasimo.Subtitles.SubtitleDataEntry
+  href: Gasimo.Subtitles.SubtitleDataEntry.html
+  name: SubtitleDataEntry
+  nameWithType: SubtitleDataEntry
+  fullName: Gasimo.Subtitles.SubtitleDataEntry
+- uid: Gasimo.Subtitles.SubtitleData
+  commentId: T:Gasimo.Subtitles.SubtitleData
+  parent: Gasimo.Subtitles
+  href: Gasimo.Subtitles.SubtitleData.html
+  name: SubtitleData
+  nameWithType: SubtitleData
+  fullName: Gasimo.Subtitles.SubtitleData
+- uid: Gasimo.Subtitles
+  commentId: N:Gasimo.Subtitles
+  href: Gasimo.html
+  name: Gasimo.Subtitles
+  nameWithType: Gasimo.Subtitles
+  fullName: Gasimo.Subtitles
+  spec.csharp:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+  spec.vb:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
