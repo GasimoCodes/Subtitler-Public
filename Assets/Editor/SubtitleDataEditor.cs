@@ -7,7 +7,7 @@ using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace gasimo.subtitles
+namespace Gasimo.Subtitles
 {
     [CustomEditor(typeof(SubtitleData))]
     public class SubtitleDataEditor : Editor

@@ -1,16 +1,16 @@
 ### YamlMime:ManagedReference
 items:
-- uid: gasimo.subtitles.ScriptableEvent.ScriptableEventHandler
-  commentId: T:gasimo.subtitles.ScriptableEvent.ScriptableEventHandler
+- uid: Gasimo.Subtitles.ScriptableEvent.ScriptableEventHandler
+  commentId: T:Gasimo.Subtitles.ScriptableEvent.ScriptableEventHandler
   id: ScriptableEvent.ScriptableEventHandler
-  parent: gasimo.subtitles
+  parent: Gasimo.Subtitles
   children: []
   langs:
   - csharp
   - vb
   name: ScriptableEvent.ScriptableEventHandler
   nameWithType: ScriptableEvent.ScriptableEventHandler
-  fullName: gasimo.subtitles.ScriptableEvent.ScriptableEventHandler
+  fullName: Gasimo.Subtitles.ScriptableEvent.ScriptableEventHandler
   type: Delegate
   source:
     remote:
@@ -22,30 +22,30 @@ items:
     startLine: 11
   assemblies:
   - gasimo.subtitler
-  namespace: gasimo.subtitles
+  namespace: Gasimo.Subtitles
   syntax:
     content: public delegate void ScriptableEvent.ScriptableEventHandler()
     content.vb: Public Delegate Sub ScriptableEvent.ScriptableEventHandler()
 references:
-- uid: gasimo.subtitles
-  commentId: N:gasimo.subtitles
-  href: gasimo.html
-  name: gasimo.subtitles
-  nameWithType: gasimo.subtitles
-  fullName: gasimo.subtitles
+- uid: Gasimo.Subtitles
+  commentId: N:Gasimo.Subtitles
+  href: Gasimo.html
+  name: Gasimo.Subtitles
+  nameWithType: Gasimo.Subtitles
+  fullName: Gasimo.Subtitles
   spec.csharp:
-  - uid: gasimo
-    name: gasimo
-    href: gasimo.html
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
   - name: .
-  - uid: gasimo.subtitles
-    name: subtitles
-    href: gasimo.subtitles.html
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
   spec.vb:
-  - uid: gasimo
-    name: gasimo
-    href: gasimo.html
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
   - name: .
-  - uid: gasimo.subtitles
-    name: subtitles
-    href: gasimo.subtitles.html
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html

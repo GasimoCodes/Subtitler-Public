@@ -1,5 +1,12 @@
 {
-  "Gasimo.Subtitles": "Gasimo.Subtitles_1.yml",
+  "Gasimo.Subtitles": "Gasimo.Subtitles.yml",
+  "Gasimo.Subtitles.MonoSingleton`1": "Gasimo.Subtitles.MonoSingleton-1.yml",
+  "Gasimo.Subtitles.MonoSingleton`1.Awake": "Gasimo.Subtitles.MonoSingleton-1.yml",
+  "Gasimo.Subtitles.MonoSingleton`1.Instance": "Gasimo.Subtitles.MonoSingleton-1.yml",
+  "Gasimo.Subtitles.ScriptableEvent": "Gasimo.Subtitles.ScriptableEvent.yml",
+  "Gasimo.Subtitles.ScriptableEvent.Raise": "Gasimo.Subtitles.ScriptableEvent.yml",
+  "Gasimo.Subtitles.ScriptableEvent.ScriptableEventHandler": "Gasimo.Subtitles.ScriptableEvent.ScriptableEventHandler.yml",
+  "Gasimo.Subtitles.ScriptableEvent.onEventRaised": "Gasimo.Subtitles.ScriptableEvent.yml",
   "Gasimo.Subtitles.SubtitleContainer": "Gasimo.Subtitles.SubtitleContainer.yml",
   "Gasimo.Subtitles.SubtitleContainer.Play": "Gasimo.Subtitles.SubtitleContainer.yml",
   "Gasimo.Subtitles.SubtitleContainer.autoPlay": "Gasimo.Subtitles.SubtitleContainer.yml",
@@ -27,13 +34,5 @@
   "Gasimo.Subtitles.Subtitler.player": "Gasimo.Subtitles.Subtitler.yml",
   "Gasimo.Subtitles.Subtitler.speakerHighlight": "Gasimo.Subtitles.Subtitler.yml",
   "Gasimo.Subtitles.Subtitler.subtitlePool": "Gasimo.Subtitles.Subtitler.yml",
-  "Gasimo.Subtitles.Subtitler.subtitleSize": "Gasimo.Subtitles.Subtitler.yml",
-  "gasimo.subtitles": "gasimo.subtitles.yml",
-  "gasimo.subtitles.MonoSingleton`1": "gasimo.subtitles.MonoSingleton-1.yml",
-  "gasimo.subtitles.MonoSingleton`1.Awake": "gasimo.subtitles.MonoSingleton-1.yml",
-  "gasimo.subtitles.MonoSingleton`1.Instance": "gasimo.subtitles.MonoSingleton-1.yml",
-  "gasimo.subtitles.ScriptableEvent": "gasimo.subtitles.ScriptableEvent.yml",
-  "gasimo.subtitles.ScriptableEvent.Raise": "gasimo.subtitles.ScriptableEvent.yml",
-  "gasimo.subtitles.ScriptableEvent.ScriptableEventHandler": "gasimo.subtitles.ScriptableEvent.ScriptableEventHandler.yml",
-  "gasimo.subtitles.ScriptableEvent.onEventRaised": "gasimo.subtitles.ScriptableEvent.yml"
+  "Gasimo.Subtitles.Subtitler.subtitleSize": "Gasimo.Subtitles.Subtitler.yml"
 }

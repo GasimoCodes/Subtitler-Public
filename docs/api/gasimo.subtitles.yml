@@ -1,96 +1,125 @@
 ### YamlMime:ManagedReference
 items:
-- uid: gasimo.subtitles
-  commentId: N:gasimo.subtitles
-  id: gasimo.subtitles
+- uid: Gasimo.Subtitles
+  commentId: N:Gasimo.Subtitles
+  id: Gasimo.Subtitles
   children:
-  - gasimo.subtitles.MonoSingleton`1
-  - gasimo.subtitles.ScriptableEvent
-  - gasimo.subtitles.ScriptableEvent.ScriptableEventHandler
+  - Gasimo.Subtitles.MonoSingleton`1
+  - Gasimo.Subtitles.ScriptableEvent
+  - Gasimo.Subtitles.ScriptableEvent.ScriptableEventHandler
+  - Gasimo.Subtitles.SubtitleContainer
+  - Gasimo.Subtitles.SubtitleData
+  - Gasimo.Subtitles.SubtitleDataEntry
+  - Gasimo.Subtitles.Subtitler
   langs:
   - csharp
   - vb
-  name: gasimo.subtitles
-  nameWithType: gasimo.subtitles
-  fullName: gasimo.subtitles
+  name: Gasimo.Subtitles
+  nameWithType: Gasimo.Subtitles
+  fullName: Gasimo.Subtitles
   type: Namespace
   assemblies:
   - gasimo.subtitler
 references:
-- uid: gasimo.subtitles.ScriptableEvent
-  commentId: T:gasimo.subtitles.ScriptableEvent
-  parent: gasimo.subtitles
-  href: gasimo.subtitles.ScriptableEvent.html
+- uid: Gasimo.Subtitles.ScriptableEvent
+  commentId: T:Gasimo.Subtitles.ScriptableEvent
+  parent: Gasimo.Subtitles
+  href: Gasimo.Subtitles.ScriptableEvent.html
   name: ScriptableEvent
   nameWithType: ScriptableEvent
-  fullName: gasimo.subtitles.ScriptableEvent
-- uid: gasimo.subtitles.ScriptableEvent.ScriptableEventHandler
-  commentId: T:gasimo.subtitles.ScriptableEvent.ScriptableEventHandler
-  parent: gasimo.subtitles
-  href: gasimo.subtitles.ScriptableEvent.html
+  fullName: Gasimo.Subtitles.ScriptableEvent
+- uid: Gasimo.Subtitles.ScriptableEvent.ScriptableEventHandler
+  commentId: T:Gasimo.Subtitles.ScriptableEvent.ScriptableEventHandler
+  parent: Gasimo.Subtitles
+  href: Gasimo.Subtitles.ScriptableEvent.html
   name: ScriptableEvent.ScriptableEventHandler
   nameWithType: ScriptableEvent.ScriptableEventHandler
-  fullName: gasimo.subtitles.ScriptableEvent.ScriptableEventHandler
+  fullName: Gasimo.Subtitles.ScriptableEvent.ScriptableEventHandler
   spec.csharp:
-  - uid: gasimo.subtitles.ScriptableEvent
+  - uid: Gasimo.Subtitles.ScriptableEvent
     name: ScriptableEvent
-    href: gasimo.subtitles.ScriptableEvent.html
+    href: Gasimo.Subtitles.ScriptableEvent.html
   - name: .
-  - uid: gasimo.subtitles.ScriptableEvent.ScriptableEventHandler
+  - uid: Gasimo.Subtitles.ScriptableEvent.ScriptableEventHandler
     name: ScriptableEventHandler
-    href: gasimo.subtitles.ScriptableEvent.ScriptableEventHandler.html
+    href: Gasimo.Subtitles.ScriptableEvent.ScriptableEventHandler.html
   spec.vb:
-  - uid: gasimo.subtitles.ScriptableEvent
+  - uid: Gasimo.Subtitles.ScriptableEvent
     name: ScriptableEvent
-    href: gasimo.subtitles.ScriptableEvent.html
+    href: Gasimo.Subtitles.ScriptableEvent.html
   - name: .
-  - uid: gasimo.subtitles.ScriptableEvent.ScriptableEventHandler
+  - uid: Gasimo.Subtitles.ScriptableEvent.ScriptableEventHandler
     name: ScriptableEventHandler
-    href: gasimo.subtitles.ScriptableEvent.ScriptableEventHandler.html
-- uid: gasimo.subtitles.MonoSingleton`1
-  commentId: T:gasimo.subtitles.MonoSingleton`1
-  href: gasimo.subtitles.MonoSingleton-1.html
+    href: Gasimo.Subtitles.ScriptableEvent.ScriptableEventHandler.html
+- uid: Gasimo.Subtitles.Subtitler
+  commentId: T:Gasimo.Subtitles.Subtitler
+  href: Gasimo.Subtitles.Subtitler.html
+  name: Subtitler
+  nameWithType: Subtitler
+  fullName: Gasimo.Subtitles.Subtitler
+- uid: Gasimo.Subtitles.SubtitleContainer
+  commentId: T:Gasimo.Subtitles.SubtitleContainer
+  href: Gasimo.Subtitles.SubtitleContainer.html
+  name: SubtitleContainer
+  nameWithType: SubtitleContainer
+  fullName: Gasimo.Subtitles.SubtitleContainer
+- uid: Gasimo.Subtitles.SubtitleDataEntry
+  commentId: T:Gasimo.Subtitles.SubtitleDataEntry
+  href: Gasimo.Subtitles.SubtitleDataEntry.html
+  name: SubtitleDataEntry
+  nameWithType: SubtitleDataEntry
+  fullName: Gasimo.Subtitles.SubtitleDataEntry
+- uid: Gasimo.Subtitles.SubtitleData
+  commentId: T:Gasimo.Subtitles.SubtitleData
+  parent: Gasimo.Subtitles
+  href: Gasimo.Subtitles.SubtitleData.html
+  name: SubtitleData
+  nameWithType: SubtitleData
+  fullName: Gasimo.Subtitles.SubtitleData
+- uid: Gasimo.Subtitles.MonoSingleton`1
+  commentId: T:Gasimo.Subtitles.MonoSingleton`1
+  href: Gasimo.Subtitles.MonoSingleton-1.html
   name: MonoSingleton<T>
   nameWithType: MonoSingleton<T>
-  fullName: gasimo.subtitles.MonoSingleton<T>
+  fullName: Gasimo.Subtitles.MonoSingleton<T>
   nameWithType.vb: MonoSingleton(Of T)
-  fullName.vb: gasimo.subtitles.MonoSingleton(Of T)
+  fullName.vb: Gasimo.Subtitles.MonoSingleton(Of T)
   name.vb: MonoSingleton(Of T)
   spec.csharp:
-  - uid: gasimo.subtitles.MonoSingleton`1
+  - uid: Gasimo.Subtitles.MonoSingleton`1
     name: MonoSingleton
-    href: gasimo.subtitles.MonoSingleton-1.html
+    href: Gasimo.Subtitles.MonoSingleton-1.html
   - name: <
   - name: T
   - name: '>'
   spec.vb:
-  - uid: gasimo.subtitles.MonoSingleton`1
+  - uid: Gasimo.Subtitles.MonoSingleton`1
     name: MonoSingleton
-    href: gasimo.subtitles.MonoSingleton-1.html
+    href: Gasimo.Subtitles.MonoSingleton-1.html
   - name: (
   - name: Of
   - name: " "
   - name: T
   - name: )
-- uid: gasimo.subtitles
-  commentId: N:gasimo.subtitles
-  href: gasimo.html
-  name: gasimo.subtitles
-  nameWithType: gasimo.subtitles
-  fullName: gasimo.subtitles
+- uid: Gasimo.Subtitles
+  commentId: N:Gasimo.Subtitles
+  href: Gasimo.html
+  name: Gasimo.Subtitles
+  nameWithType: Gasimo.Subtitles
+  fullName: Gasimo.Subtitles
   spec.csharp:
-  - uid: gasimo
-    name: gasimo
-    href: gasimo.html
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
   - name: .
-  - uid: gasimo.subtitles
-    name: subtitles
-    href: gasimo.subtitles.html
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
   spec.vb:
-  - uid: gasimo
-    name: gasimo
-    href: gasimo.html
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
   - name: .
-  - uid: gasimo.subtitles
-    name: subtitles
-    href: gasimo.subtitles.html
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html

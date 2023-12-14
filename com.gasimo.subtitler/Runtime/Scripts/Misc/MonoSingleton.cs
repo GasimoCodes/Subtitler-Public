@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace gasimo.subtitles
+namespace Gasimo.Subtitles
 {
     public abstract class MonoSingleton<T> : MonoBehaviour where T : Component
     {

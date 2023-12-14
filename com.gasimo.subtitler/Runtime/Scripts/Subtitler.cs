@@ -9,7 +9,6 @@ using Cysharp.Threading.Tasks;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using gasimo.subtitles;
 
 namespace Gasimo.Subtitles
 {
