@@ -12,21 +12,51 @@ using System.Linq;
 
 namespace Gasimo.Subtitles
 {
+    /// <summary>
+    /// Subtitler Manager. Contains all display logic and cc functions.
+    /// </summary>
     public class Subtitler : MonoSingleton<Subtitler>
     {
+        /// <summary>
+        /// Target audioListener, used for audio occlusion calculation.
+        /// </summary>
         public AudioListener player;
+
+        /// <summary>
+        /// Pool of TextMeshProUGUI Instances. Initializes automatically.
+        /// </summary>
         public ObjectPool<TextMeshProUGUI> subtitlePool;
+
+        /// <summary>
+        /// UI Panel GameObject where Subtitles will spawn
+        /// </summary>
         public Transform displayPanel;
+
+        /// <summary>
+        /// Default Speaker Color
+        /// </summary>
         public Color speakerHighlight = Color.white;
+
+        /// <summary>
+        /// Should background panel be visible?
+        /// </summary>
         public bool enableBackgroundPanel = true;
+
+        /// <summary>
+        /// Centers text. Text is aligned left by default.
+        /// </summary>
         public bool centeredText = false;
+
+        /// <summary>
+        /// Size of subtitle text. Default is 24.
+        /// </summary>
         public int subtitleSize = 24;
+
 
         // Privates
         int shownLines = 0;
         Image displayBackground;
         Dictionary<int, bool> activeSubtitleList = new Dictionary<int, bool>();
-
         System.Object subtitleLock = new System.Object();
 
         protected override void Awake()
@@ -116,7 +146,7 @@ namespace Gasimo.Subtitles
         /// <summary>
         /// Immediately kills an active subtitle loop based on ID
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="id">Subtitle Session ID to be killed</param>
         public void killSubtitleById(int id)
         {
             lock (subtitleLock)
@@ -130,11 +160,11 @@ namespace Gasimo.Subtitles
         }
 
         /// <summary>
-        /// 
+        /// Internal method for playing Subtitles
         /// </summary>
-        /// <param name="sD"></param>
-        /// <param name="aS"></param>
-        /// <returns></returns>
+        /// <param name="sD">File to play</param>
+        /// <param name="aS">AudioSource to play this with</param>
+        /// <returns>UniTaskVoid Handle</returns>
         private async UniTaskVoid playSubtitleFile(SubtitleData sD, AudioSource aS, int id)
         {
             bool isRangeLimited = (aS.spatialBlend == 1);
@@ -196,10 +226,11 @@ namespace Gasimo.Subtitles
         }
 
         /// <summary>
-        /// Checks whether the distance between player and the audioSource is within a range
+        /// Checks whether the distance between player and the audioSource is within the AudioSource maxRange
+        /// (e.g. if the player is in the AudioSources range)
         /// </summary>
-        /// <param name="range"></param>
-        /// <param name="audioObj"></param>
+        /// <param name="range">Max range from audiosource</param>
+        /// <param name="audioObj">AudioSource to check</param>
         /// <returns></returns>
         private bool checkAudioDistance(float range, AudioSource audioObj)
         {
@@ -212,11 +243,11 @@ namespace Gasimo.Subtitles
         }
 
         /// <summary>
-        /// Method to display a subtitle text
+        /// Method to display a single line of subtitles. Use this when you need to play subtitles using custom logic and want to skip all the additional features.
         /// </summary>
-        /// <param name="message"></param>
-        /// <param name="speaker"></param>
-        /// <param name="displayFor"></param>
+        /// <param name="message">Message (Dialogue) line to show</param>
+        /// <param name="speaker">Name of object which said the line (Leave empty string for none)</param>
+        /// <param name="displayFor">How long should this line be displayed for?</param>
         /// <returns></returns>
         public async UniTaskVoid DisplaySubtitle(string message, string speaker, float displayFor)
         {
@@ -253,7 +284,10 @@ namespace Gasimo.Subtitles
 
         }
 
-
+        /// <summary>
+        /// Checks whether the Subtitle Panel shouldnt be hidden. Hides it if no subtitles are currently on display.
+        /// </summary>
+        /// <returns></returns>
         public async UniTaskVoid CheckHideSubtitlePanel()
         {
             if (shownLines == 0)

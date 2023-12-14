@@ -22,10 +22,12 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: SubtitleContainer
     path: ../com.gasimo.subtitler/Runtime/Scripts/SubtitleContainer.cs
-    startLine: 7
+    startLine: 9
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
+  summary: Component representing one subtitle source in the world.
+  example: []
   syntax:
     content: >-
       [RequireComponent(typeof(AudioSource))]
@@ -59,10 +61,12 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: autoPlay
     path: ../com.gasimo.subtitler/Runtime/Scripts/SubtitleContainer.cs
-    startLine: 10
+    startLine: 15
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
+  summary: Play automatically on awake?
+  example: []
   syntax:
     content: public bool autoPlay
     return:
@@ -86,10 +90,12 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: subtitleData
     path: ../com.gasimo.subtitler/Runtime/Scripts/SubtitleContainer.cs
-    startLine: 11
+    startLine: 20
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
+  summary: Subtitle Data to play
+  example: []
   syntax:
     content: public SubtitleData subtitleData
     return:
@@ -113,10 +119,12 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: Play
     path: ../com.gasimo.subtitler/Runtime/Scripts/SubtitleContainer.cs
-    startLine: 22
+    startLine: 34
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
+  summary: Plays the attached Subtitle Data
+  example: []
   syntax:
     content: public void Play()
     content.vb: Public Sub Play()

@@ -19,7 +19,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: ScriptableEventHandler
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ScriptableEvent.cs
-    startLine: 11
+    startLine: 16
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles

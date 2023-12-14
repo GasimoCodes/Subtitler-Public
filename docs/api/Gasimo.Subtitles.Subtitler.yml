@@ -31,10 +31,12 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: Subtitler
     path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
-    startLine: 14
+    startLine: 17
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
+  summary: Subtitler Manager. Contains all display logic and cc functions.
+  example: []
   syntax:
     content: 'public class Subtitler : MonoSingleton<Subtitler>'
     content.vb: Public Class Subtitler Inherits MonoSingleton(Of Subtitler)
@@ -65,10 +67,12 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: player
     path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
-    startLine: 16
+    startLine: 22
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
+  summary: Target audioListener, used for audio occlusion calculation.
+  example: []
   syntax:
     content: public AudioListener player
     return:
@@ -92,10 +96,12 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: subtitlePool
     path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
-    startLine: 17
+    startLine: 27
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
+  summary: Pool of TextMeshProUGUI Instances. Initializes automatically.
+  example: []
   syntax:
     content: public ObjectPool<TextMeshProUGUI> subtitlePool
     return:
@@ -119,10 +125,12 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: displayPanel
     path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
-    startLine: 18
+    startLine: 32
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
+  summary: UI Panel GameObject where Subtitles will spawn
+  example: []
   syntax:
     content: public Transform displayPanel
     return:
@@ -146,10 +154,12 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: speakerHighlight
     path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
-    startLine: 19
+    startLine: 37
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
+  summary: Default Speaker Color
+  example: []
   syntax:
     content: public Color speakerHighlight
     return:
@@ -173,10 +183,12 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: enableBackgroundPanel
     path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
-    startLine: 20
+    startLine: 42
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
+  summary: Should background panel be visible?
+  example: []
   syntax:
     content: public bool enableBackgroundPanel
     return:
@@ -200,10 +212,12 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: centeredText
     path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
-    startLine: 21
+    startLine: 47
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
+  summary: Centers text. Text is aligned left by default.
+  example: []
   syntax:
     content: public bool centeredText
     return:
@@ -227,10 +241,12 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: subtitleSize
     path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
-    startLine: 22
+    startLine: 52
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
+  summary: Size of subtitle text. Default is 24.
+  example: []
   syntax:
     content: public int subtitleSize
     return:
@@ -254,7 +270,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: Awake
     path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
-    startLine: 31
+    startLine: 61
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
@@ -283,7 +299,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: playSubtitle
     path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
-    startLine: 96
+    startLine: 126
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
@@ -321,7 +337,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: killSubtitleById
     path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
-    startLine: 119
+    startLine: 149
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
@@ -332,7 +348,7 @@ items:
     parameters:
     - id: id
       type: System.Int32
-      description: ''
+      description: Subtitle Session ID to be killed
     content.vb: Public Sub killSubtitleById(id As Integer)
   overload: Gasimo.Subtitles.Subtitler.killSubtitleById*
   nameWithType.vb: Subtitler.killSubtitleById(Integer)
@@ -356,24 +372,24 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: DisplaySubtitle
     path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
-    startLine: 220
+    startLine: 251
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
-  summary: Method to display a subtitle text
+  summary: Method to display a single line of subtitles. Use this when you need to play subtitles using custom logic and want to skip all the additional features.
   example: []
   syntax:
     content: public UniTaskVoid DisplaySubtitle(string message, string speaker, float displayFor)
     parameters:
     - id: message
       type: System.String
-      description: ''
+      description: Message (Dialogue) line to show
     - id: speaker
       type: System.String
-      description: ''
+      description: Name of object which said the line (Leave empty string for none)
     - id: displayFor
       type: System.Single
-      description: ''
+      description: How long should this line be displayed for?
     return:
       type: Cysharp.Threading.Tasks.UniTaskVoid
       description: ''
@@ -400,14 +416,17 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: CheckHideSubtitlePanel
     path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
-    startLine: 256
+    startLine: 290
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
+  summary: Checks whether the Subtitle Panel shouldnt be hidden. Hides it if no subtitles are currently on display.
+  example: []
   syntax:
     content: public UniTaskVoid CheckHideSubtitlePanel()
     return:
       type: Cysharp.Threading.Tasks.UniTaskVoid
+      description: ''
     content.vb: Public Function CheckHideSubtitlePanel() As UniTaskVoid
   overload: Gasimo.Subtitles.Subtitler.CheckHideSubtitlePanel*
 references:

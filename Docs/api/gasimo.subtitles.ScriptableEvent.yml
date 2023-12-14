@@ -21,10 +21,15 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: ScriptableEvent
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ScriptableEvent.cs
-    startLine: 7
+    startLine: 12
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
+  summary: >-
+    Object which you can bind custom events to. Use it by creating an ScriptableObject for every instance of events you want to use.
+
+    To subscribe, use onEventRaised. To raise, use Raise(). Subtitles automatically calls Raise() when you attach instance of this class to a Subtitle line.
+  example: []
   syntax:
     content: >-
       [CreateAssetMenu(fileName = "ScriptableEvent", menuName = "Gasimo/ScriptableEvent")]
@@ -74,7 +79,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: onEventRaised
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ScriptableEvent.cs
-    startLine: 12
+    startLine: 17
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
@@ -101,10 +106,12 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: Raise
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ScriptableEvent.cs
-    startLine: 14
+    startLine: 22
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
+  summary: Invokes events subscribed to onEventRaised.
+  example: []
   syntax:
     content: public void Raise()
     content.vb: Public Sub Raise()

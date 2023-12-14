@@ -4,6 +4,10 @@ using UnityEngine;
 
 namespace Gasimo.Subtitles
 {
+    /// <summary>
+    /// Helper class to implement Singleton pattern into Subtitler
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public abstract class MonoSingleton<T> : MonoBehaviour where T : Component
     {
 

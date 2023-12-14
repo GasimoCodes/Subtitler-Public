@@ -21,14 +21,17 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: MonoSingleton
     path: ../com.gasimo.subtitler/Runtime/Scripts/Misc/MonoSingleton.cs
-    startLine: 6
+    startLine: 10
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
+  summary: Helper class to implement Singleton pattern into Subtitler
+  example: []
   syntax:
     content: 'public abstract class MonoSingleton<T> : MonoBehaviour where T : Component'
     typeParameters:
     - id: T
+      description: ''
     content.vb: Public MustInherit Class MonoSingleton(Of T As Component) Inherits MonoBehaviour
   inheritance:
   - System.Object
@@ -59,7 +62,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: Instance
     path: ../com.gasimo.subtitler/Runtime/Scripts/Misc/MonoSingleton.cs
-    startLine: 24
+    startLine: 28
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
@@ -93,7 +96,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: Awake
     path: ../com.gasimo.subtitler/Runtime/Scripts/Misc/MonoSingleton.cs
-    startLine: 49
+    startLine: 53
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles

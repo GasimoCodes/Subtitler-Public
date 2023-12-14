@@ -91,7 +91,7 @@
 
   <h1 id="Gasimo_Subtitles_ScriptableEvent" data-uid="Gasimo.Subtitles.ScriptableEvent" class="text-break">
     Class ScriptableEvent
-  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler/blob/main/com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ScriptableEvent.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler/blob/main/com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ScriptableEvent.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -99,7 +99,9 @@
   <dl><dt>Assembly</dt><dd>gasimo.subtitler.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Object which you can bind custom events to. Use it by creating an ScriptableObject for every instance of events you want to use.
+To subscribe, use onEventRaised. To raise, use Raise(). Subtitles automatically calls Raise() when you attach instance of this class to a Subtitle line.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -137,10 +139,11 @@ public class ScriptableEvent : ScriptableObject</code></pre>
 
   <h3 id="Gasimo_Subtitles_ScriptableEvent_Raise" data-uid="Gasimo.Subtitles.ScriptableEvent.Raise">
   Raise()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler/blob/main/com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ScriptableEvent.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler/blob/main/com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ScriptableEvent.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Invokes events subscribed to onEventRaised.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -166,7 +169,7 @@ public class ScriptableEvent : ScriptableObject</code></pre>
 
   <h3 id="Gasimo_Subtitles_ScriptableEvent_onEventRaised" data-uid="Gasimo.Subtitles.ScriptableEvent.onEventRaised">
   onEventRaised
-  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler/blob/main/com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ScriptableEvent.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/GasimoCodes/Subtitler/blob/main/com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ScriptableEvent.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -197,7 +200,7 @@ public class ScriptableEvent : ScriptableObject</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/GasimoCodes/Subtitler/blob/main/com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ScriptableEvent.cs/#L8" class="edit-link">Edit this page</a>
+          <a href="https://github.com/GasimoCodes/Subtitler/blob/main/com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ScriptableEvent.cs/#L13" class="edit-link">Edit this page</a>
         </div>
 
 

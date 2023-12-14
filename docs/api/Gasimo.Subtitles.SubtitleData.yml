@@ -20,10 +20,12 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: SubtitleData
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleData.cs
-    startLine: 7
+    startLine: 10
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
+  summary: Contains data holding a single Closed Caption sequence. For individual lines, see SubtitleDataEntry.
+  example: []
   syntax:
     content: >-
       [CreateAssetMenu(fileName = "SubtitleFile", menuName = "Gasimo/SubtitleFile")]
@@ -73,10 +75,12 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: Subtitles
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleData.cs
-    startLine: 12
+    startLine: 18
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
+  summary: Sequence of Subtitles
+  example: []
   syntax:
     content: >-
       [SerializeField]

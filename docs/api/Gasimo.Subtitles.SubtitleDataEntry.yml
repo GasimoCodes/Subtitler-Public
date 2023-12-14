@@ -27,10 +27,12 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: SubtitleDataEntry
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleDataEntry.cs
-    startLine: 5
+    startLine: 8
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
+  summary: Contains data for 1 line of dialogue.
+  example: []
   syntax:
     content: >-
       [Serializable]
@@ -64,10 +66,12 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: dialogue
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleDataEntry.cs
-    startLine: 10
+    startLine: 14
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
+  summary: Written Closed-Captions
+  example: []
   syntax:
     content: public string dialogue
     return:
@@ -91,10 +95,12 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: speaker
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleDataEntry.cs
-    startLine: 13
+    startLine: 20
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
+  summary: Display name of speaker/object which plays the dialogue. Leave empty for none (useful for sounds).
+  example: []
   syntax:
     content: >-
       [SerializeField]
@@ -128,10 +134,12 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: audio
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleDataEntry.cs
-    startLine: 14
+    startLine: 25
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
+  summary: AudioClip which will play simultaneously with the subtitle line. Can be left empty to not play sound.
+  example: []
   syntax:
     content: public AudioClip audio
     return:
@@ -155,10 +163,15 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: subtitleEvent
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleDataEntry.cs
-    startLine: 15
+    startLine: 31
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
+  summary: >-
+    Programmable event which gets ivoked when this subtitle gets played. 
+
+    Useful to trigger mechanics exactly when player hears a certain line.
+  example: []
   syntax:
     content: public ScriptableEvent subtitleEvent
     return:
@@ -182,10 +195,12 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: waitFor
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleDataEntry.cs
-    startLine: 17
+    startLine: 36
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
+  summary: Delay between last Subtitle line and this one. Leave 0 to play at same time as previous line.
+  example: []
   syntax:
     content: public float waitFor
     return:
@@ -209,10 +224,12 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: displayFor
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleDataEntry.cs
-    startLine: 18
+    startLine: 41
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
+  summary: How long will this subtitle be displayed for.
+  example: []
   syntax:
     content: public float displayFor
     return:
@@ -236,7 +253,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: start
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleDataEntry.cs
-    startLine: 20
+    startLine: 44
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
@@ -263,7 +280,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: end
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleDataEntry.cs
-    startLine: 21
+    startLine: 45
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
