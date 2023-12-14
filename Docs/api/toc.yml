@@ -1,0 +1,23 @@
+### YamlMime:TableOfContent
+items:
+- uid: Gasimo.Subtitles
+  name: Gasimo.Subtitles
+  items:
+  - uid: Gasimo.Subtitles.SubtitleContainer
+    name: SubtitleContainer
+  - uid: Gasimo.Subtitles.SubtitleData
+    name: SubtitleData
+  - uid: Gasimo.Subtitles.SubtitleDataEntry
+    name: SubtitleDataEntry
+  - uid: Gasimo.Subtitles.Subtitler
+    name: Subtitler
+- uid: gasimo.subtitles
+  name: gasimo.subtitles
+  items:
+  - uid: gasimo.subtitles.MonoSingleton`1
+    name: MonoSingleton<T>
+  - uid: gasimo.subtitles.ScriptableEvent
+    name: ScriptableEvent
+  - uid: gasimo.subtitles.ScriptableEvent.ScriptableEventHandler
+    name: ScriptableEvent.ScriptableEventHandler
+memberLayout: SamePage

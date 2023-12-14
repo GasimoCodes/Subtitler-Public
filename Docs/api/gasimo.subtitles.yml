@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: gasimo.subtitles
+  commentId: N:gasimo.subtitles
+  id: gasimo.subtitles
+  children:
+  - gasimo.subtitles.MonoSingleton`1
+  - gasimo.subtitles.ScriptableEvent
+  - gasimo.subtitles.ScriptableEvent.ScriptableEventHandler
+  langs:
+  - csharp
+  - vb
+  name: gasimo.subtitles
+  nameWithType: gasimo.subtitles
+  fullName: gasimo.subtitles
+  type: Namespace
+  assemblies:
+  - gasimo.subtitler
+references:
+- uid: gasimo.subtitles.ScriptableEvent
+  commentId: T:gasimo.subtitles.ScriptableEvent
+  parent: gasimo.subtitles
+  href: gasimo.subtitles.ScriptableEvent.html
+  name: ScriptableEvent
+  nameWithType: ScriptableEvent
+  fullName: gasimo.subtitles.ScriptableEvent
+- uid: gasimo.subtitles.ScriptableEvent.ScriptableEventHandler
+  commentId: T:gasimo.subtitles.ScriptableEvent.ScriptableEventHandler
+  parent: gasimo.subtitles
+  href: gasimo.subtitles.ScriptableEvent.html
+  name: ScriptableEvent.ScriptableEventHandler
+  nameWithType: ScriptableEvent.ScriptableEventHandler
+  fullName: gasimo.subtitles.ScriptableEvent.ScriptableEventHandler
+  spec.csharp:
+  - uid: gasimo.subtitles.ScriptableEvent
+    name: ScriptableEvent
+    href: gasimo.subtitles.ScriptableEvent.html
+  - name: .
+  - uid: gasimo.subtitles.ScriptableEvent.ScriptableEventHandler
+    name: ScriptableEventHandler
+    href: gasimo.subtitles.ScriptableEvent.ScriptableEventHandler.html
+  spec.vb:
+  - uid: gasimo.subtitles.ScriptableEvent
+    name: ScriptableEvent
+    href: gasimo.subtitles.ScriptableEvent.html
+  - name: .
+  - uid: gasimo.subtitles.ScriptableEvent.ScriptableEventHandler
+    name: ScriptableEventHandler
+    href: gasimo.subtitles.ScriptableEvent.ScriptableEventHandler.html
+- uid: gasimo.subtitles.MonoSingleton`1
+  commentId: T:gasimo.subtitles.MonoSingleton`1
+  href: gasimo.subtitles.MonoSingleton-1.html
+  name: MonoSingleton<T>
+  nameWithType: MonoSingleton<T>
+  fullName: gasimo.subtitles.MonoSingleton<T>
+  nameWithType.vb: MonoSingleton(Of T)
+  fullName.vb: gasimo.subtitles.MonoSingleton(Of T)
+  name.vb: MonoSingleton(Of T)
+  spec.csharp:
+  - uid: gasimo.subtitles.MonoSingleton`1
+    name: MonoSingleton
+    href: gasimo.subtitles.MonoSingleton-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: gasimo.subtitles.MonoSingleton`1
+    name: MonoSingleton
+    href: gasimo.subtitles.MonoSingleton-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: gasimo.subtitles
+  commentId: N:gasimo.subtitles
+  href: gasimo.html
+  name: gasimo.subtitles
+  nameWithType: gasimo.subtitles
+  fullName: gasimo.subtitles
+  spec.csharp:
+  - uid: gasimo
+    name: gasimo
+    href: gasimo.html
+  - name: .
+  - uid: gasimo.subtitles
+    name: subtitles
+    href: gasimo.subtitles.html
+  spec.vb:
+  - uid: gasimo
+    name: gasimo
+    href: gasimo.html
+  - name: .
+  - uid: gasimo.subtitles
+    name: subtitles
+    href: gasimo.subtitles.html
