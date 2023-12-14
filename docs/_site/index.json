@@ -44,6 +44,16 @@
     "title": "Namespace gasimo.subtitles | Subtitler",
     "keywords": "Namespace gasimo.subtitles Classes MonoSingleton<T> ScriptableEvent Delegates ScriptableEvent.ScriptableEventHandler"
   },
+  "docs/Start/index.html": {
+    "href": "docs/Start/index.html",
+    "title": "Welcome to Subtitler Docs. | Subtitler",
+    "keywords": "Welcome to Subtitler Docs. Refer to Markdown for how to write markdown files. Quick Start Notes: Lets go meowers"
+  },
+  "docs/index.html": {
+    "href": "docs/index.html",
+    "title": "Welcome to Subtitler Docs. | Subtitler",
+    "keywords": "Welcome to Subtitler Docs. Refer to Markdown for how to write markdown files. Quick Start Notes: Lets go meowers"
+  },
   "getting-started.html": {
     "href": "getting-started.html",
     "title": "Getting Started | Subtitler",

@@ -1,5 +1,5 @@
 {
-  "source_base_path": "D:/Projects/SubtitlerSample/Subtitler/Docs",
+  "source_base_path": "D:/Projects/SubtitlerSample/Subtitler/docs",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -109,6 +109,39 @@
         },
         ".json": {
           "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/Start/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Start/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
         }
       },
       "version": ""
