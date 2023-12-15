@@ -56,8 +56,8 @@
   },
   "index.html": {
     "href": "index.html",
-    "title": "This is the HOMEPAGE. | Subtitler",
-    "keywords": "This is the HOMEPAGE. Refer to Markdown for how to write markdown files. Quick Start Notes: Add images to the images folder if the file is referencing an image."
+    "title": "Welcome to Subtitler docs! | Subtitler",
+    "keywords": "Welcome to Subtitler docs! Subtitler is a simple to use Subtitling/Closed-Captions solution for Unity3D. Its currently under active development but is completely usable as of now (besides the Editor ui which is undergoing a recode). Quick Start Notes: Clone the repository import com.gasimo.subtitler folder into your Packages using Package Manager (this will automatically include dependencies) If you dont have DOTween in your project, import it or copy the 'Dependencies' folder from cloned repo (Assets/Dependencies) into ypur project. To see samples, open Package Manager, navigate to Subtitler. Press Samples and select import. Sample will automatically import into Assets/Samples/Subtitler"
   },
   "introduction.html": {
     "href": "introduction.html",
