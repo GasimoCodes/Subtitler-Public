@@ -258,10 +258,20 @@ items:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
   syntax:
-    content: public float start
+    content: >-
+      [HideInInspector]
+
+      public float start
     return:
       type: System.Single
-    content.vb: Public start As Single
+    content.vb: >-
+      <HideInInspector>
+
+      Public start As Single
+  attributes:
+  - type: UnityEngine.HideInInspector
+    ctor: UnityEngine.HideInInspector.#ctor
+    arguments: []
 - uid: Gasimo.Subtitles.SubtitleDataEntry.end
   commentId: F:Gasimo.Subtitles.SubtitleDataEntry.end
   id: end
@@ -280,15 +290,25 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: end
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleDataEntry.cs
-    startLine: 45
+    startLine: 46
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
   syntax:
-    content: public float end
+    content: >-
+      [HideInInspector]
+
+      public float end
     return:
       type: System.Single
-    content.vb: Public [end] As Single
+    content.vb: >-
+      <HideInInspector>
+
+      Public [end] As Single
+  attributes:
+  - type: UnityEngine.HideInInspector
+    ctor: UnityEngine.HideInInspector.#ctor
+    arguments: []
 references:
 - uid: Gasimo.Subtitles
   commentId: N:Gasimo.Subtitles

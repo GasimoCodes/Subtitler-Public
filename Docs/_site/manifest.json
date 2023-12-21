@@ -1,5 +1,5 @@
 {
-  "source_base_path": "D:/Projects/SubtitlerSample/Subtitler/docs",
+  "source_base_path": "C:/Users/Gasimo/Documents/GitHub/Subtitler/Docs",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -115,26 +115,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "docs/index.md",
-      "output": {
-        ".html": {
-          "relative_path": "docs/index.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "getting-started.md",
-      "output": {
-        ".html": {
-          "relative_path": "getting-started.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
@@ -145,10 +125,43 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "introduction.md",
+      "source_relative_path": "manual/SubtitleContainer.md",
       "output": {
         ".html": {
-          "relative_path": "introduction.html"
+          "relative_path": "manual/SubtitleContainer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/SubtitlerComponent.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/SubtitlerComponent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "manual/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "manual/toc.html"
+        },
+        ".json": {
+          "relative_path": "manual/toc.json"
         }
       },
       "version": ""

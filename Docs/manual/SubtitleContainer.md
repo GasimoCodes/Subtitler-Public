@@ -12,17 +12,6 @@ Recommended Unity version (as of now) is 2023.3 due to a [bug in UIToolkit](http
 
 ### UPM:
 
-# [2023.2 and above](#tab/newer)
-
-1. Add `https://github.com/GasimoCodes/Subtitler.git?path=com.gasimo.subtitler` into **Package Manager** 
-(*Package Manager/+/Install package from GIT URL*)
-
-2. If you dont have [DOTween](https://dotween.demigiant.com/download.php) in your project, import it.
-
-3. To see **samples**, open Package Manager, navigate to Subtitler. Press Samples and select import. Sample will automatically import into *Assets/Samples/Subtitler*
-
-# [2023.1 and below](#tab/older)
-
 1. Add `https://github.com/GasimoCodes/Subtitler.git?path=com.gasimo.subtitler` into **Package Manager** 
 (*Package Manager/+/Install package from GIT URL*)
 
@@ -31,9 +20,6 @@ Recommended Unity version (as of now) is 2023.3 due to a [bug in UIToolkit](http
 3. If you are on 2023.1 or below, add TextMeshPro package in your Package Manager. For 2023.2 onwards, Unity merged TextMeshPro with Unity Core, nothing needs to be done. 
 
 4. To see **samples**, open Package Manager, navigate to Subtitler. Press Samples and select import. Sample will automatically import into *Assets/Samples/Subtitler*
-
----
-
 
   
   

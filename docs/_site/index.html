@@ -71,14 +71,67 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="welcome-to-subtitler-docs">Welcome to <strong>Subtitler</strong> docs!</h1>
 
-<p>Subtitler is a simple to use Subtitling/Closed-Captions solution for Unity3D. Its currently under active development but is completely usable as of now (besides the Editor ui which is undergoing a recode).</p>
-<h2 id="quick-start-notes">Quick Start Notes:</h2>
+<p>Subtitler is a simple to use Subtitling/Closed-Captions solution for Unity3D. Its currently under active development but is completely usable. Report all bugs or feature requests <a href="https://github.com/GasimoCodes/Subtitler/issues/new/choose">here</a>.</p>
+<h2 id="quick-start">Quick Start:</h2>
+<p>Recommended Unity version (as of now) is 2023.3 due to a <a href="https://forum.unity.com/threads/cant-bind-multicolumnlistview-to-property.1425945/">bug in UIToolkit</a>, which is yet to be backported. Minimum supported version is 2022, but it doesnt feature custom editor for easier subtitle editing.</p>
+<h3 id="upm">UPM:</h3>
+<div class="tabGroup" id="tabgroup_1">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_1_newer" role="tab" aria-controls="tabpanel_1_newer" data-tab="newer" tabindex="0" aria-selected="true">2023.2 and above</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_1_older" role="tab" aria-controls="tabpanel_1_older" data-tab="older" tabindex="-1">2023.1 and below</a>
+</li>
+</ul>
+<section id="tabpanel_1_newer" role="tabpanel" data-tab="newer">
+
 <ol>
-<li>Clone the repository</li>
-<li>import com.gasimo.subtitler folder into your Packages using Package Manager (this will automatically include dependencies)</li>
-<li>If you dont have DOTween in your project, import it or copy the 'Dependencies' folder from cloned repo (Assets/Dependencies) into ypur project.</li>
-<li>To see samples, open Package Manager, navigate to Subtitler. Press Samples and select import. Sample will automatically import into Assets/Samples/Subtitler</li>
+<li><p>Add <code>https://github.com/GasimoCodes/Subtitler.git?path=com.gasimo.subtitler</code> into <strong>Package Manager</strong>
+(<em>Package Manager/+/Install package from GIT URL</em>)</p>
+</li>
+<li><p>If you dont have <a href="https://dotween.demigiant.com/download.php">DOTween</a> in your project, import it.</p>
+</li>
+<li><p>To see <strong>samples</strong>, open Package Manager, navigate to Subtitler. Press Samples and select import. Sample will automatically import into <em>Assets/Samples/Subtitler</em></p>
+</li>
 </ol>
+</section>
+<section id="tabpanel_1_older" role="tabpanel" data-tab="older" aria-hidden="true" hidden="hidden">
+
+<ol>
+<li><p>Add <code>https://github.com/GasimoCodes/Subtitler.git?path=com.gasimo.subtitler</code> into <strong>Package Manager</strong>
+(<em>Package Manager/+/Install package from GIT URL</em>)</p>
+</li>
+<li><p>If you dont have <a href="https://dotween.demigiant.com/download.php">DOTween</a> in your project, import it.</p>
+</li>
+<li><p>If you are on 2023.1 or below, add TextMeshPro package in your Package Manager. For 2023.2 onwards, Unity merged TextMeshPro with Unity Core, nothing needs to be done.</p>
+</li>
+<li><p>To see <strong>samples</strong>, open Package Manager, navigate to Subtitler. Press Samples and select import. Sample will automatically import into <em>Assets/Samples/Subtitler</em></p>
+</li>
+</ol>
+</section>
+</div>
+<h2 id="features">Features</h2>
+<ul>
+<li>Cull subtitles based on Player Distance / Audio Volume</li>
+<li>Define dialogue entries with variable timing offsets and display lengths</li>
+<li>Assign AudioClip to each dialogue entry, or use one big clip for whole dialogue instead</li>
+<li>Rich Text Support (uses TextMeshPro)</li>
+<li>UI Options (Alignment, background panel visibility, Font size)</li>
+<li>Trigger events (ScriptableEvent) when a certain line gets played</li>
+<li>Editor Subtitle Authoring tool</li>
+<li>API to hook your custom subtitles scripts or logic</li>
+<li>API to stop currently playing subtitles using their runtime ID.</li>
+</ul>
+<h2 id="planned-features">Planned Features</h2>
+<ul>
+<li><p>Optional Localization Package Support</p>
+</li>
+<li><p>Optional Addressables for audioClips support</p>
+</li>
+<li><p>Timeline support</p>
+</li>
+</ul>
 
 </article>
           </div>
@@ -88,7 +141,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/GasimoCodes/Subtitler/blob/main/docs/index.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/GasimoCodes/Subtitler/blob/main/Docs/index.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>

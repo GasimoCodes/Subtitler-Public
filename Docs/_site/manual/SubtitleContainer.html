@@ -9,14 +9,14 @@
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="Welcome to Subtitler docs! | Subtitler ">
     
-      <link rel="shortcut icon" href="favicon.ico">
-      <link rel="stylesheet" href="styles/docfx.vendor.min.css">
-      <link rel="stylesheet" href="styles/docfx.css">
-      <link rel="stylesheet" href="styles/main.css">
-      <meta property="docfx:navrel" content="toc.html">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
       <meta property="docfx:tocrel" content="toc.html">
     
-    <meta property="docfx:rel" content="">
+    <meta property="docfx:rel" content="../">
     
   </head>
   <body data-spy="scroll" data-target="#affix" data-offset="120">
@@ -33,8 +33,8 @@
                 <span class="icon-bar"></span>
               </button>
 
-              <a class="navbar-brand" href="index.html">
-                <img id="logo" class="svg" src="logo.svg" alt="Subtitler">
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="Subtitler">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -66,7 +66,14 @@
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
-        <div class="article row grid">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="welcome-to-subtitler-docs">Welcome to <strong>Subtitler</strong> docs!</h1>
@@ -75,29 +82,6 @@
 <h2 id="quick-start">Quick Start:</h2>
 <p>Recommended Unity version (as of now) is 2023.3 due to a <a href="https://forum.unity.com/threads/cant-bind-multicolumnlistview-to-property.1425945/">bug in UIToolkit</a>, which is yet to be backported. Minimum supported version is 2022, but it doesnt feature custom editor for easier subtitle editing.</p>
 <h3 id="upm">UPM:</h3>
-<div class="tabGroup" id="tabgroup_1">
-<ul role="tablist">
-<li role="presentation">
-<a href="#tabpanel_1_newer" role="tab" aria-controls="tabpanel_1_newer" data-tab="newer" tabindex="0" aria-selected="true">2023.2 and above</a>
-</li>
-<li role="presentation">
-<a href="#tabpanel_1_older" role="tab" aria-controls="tabpanel_1_older" data-tab="older" tabindex="-1">2023.1 and below</a>
-</li>
-</ul>
-<section id="tabpanel_1_newer" role="tabpanel" data-tab="newer">
-
-<ol>
-<li><p>Add <code>https://github.com/GasimoCodes/Subtitler.git?path=com.gasimo.subtitler</code> into <strong>Package Manager</strong>
-(<em>Package Manager/+/Install package from GIT URL</em>)</p>
-</li>
-<li><p>If you dont have <a href="https://dotween.demigiant.com/download.php">DOTween</a> in your project, import it.</p>
-</li>
-<li><p>To see <strong>samples</strong>, open Package Manager, navigate to Subtitler. Press Samples and select import. Sample will automatically import into <em>Assets/Samples/Subtitler</em></p>
-</li>
-</ol>
-</section>
-<section id="tabpanel_1_older" role="tabpanel" data-tab="older" aria-hidden="true" hidden="hidden">
-
 <ol>
 <li><p>Add <code>https://github.com/GasimoCodes/Subtitler.git?path=com.gasimo.subtitler</code> into <strong>Package Manager</strong>
 (<em>Package Manager/+/Install package from GIT URL</em>)</p>
@@ -109,8 +93,6 @@
 <li><p>To see <strong>samples</strong>, open Package Manager, navigate to Subtitler. Press Samples and select import. Sample will automatically import into <em>Assets/Samples/Subtitler</em></p>
 </li>
 </ol>
-</section>
-</div>
 <h2 id="features">Features</h2>
 <ul>
 <li>Cull subtitles based on Player Distance / Audio Volume</li>
@@ -141,7 +123,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/GasimoCodes/Subtitler/blob/main/Docs/index.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/GasimoCodes/Subtitler/blob/main/Docs/manual/SubtitleContainer.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>
@@ -168,8 +150,8 @@
       </footer>
     </div>
 
-    <script type="text/javascript" src="styles/docfx.vendor.min.js"></script>
-    <script type="text/javascript" src="styles/docfx.js"></script>
-    <script type="text/javascript" src="styles/main.js"></script>
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
   </body>
 </html>
