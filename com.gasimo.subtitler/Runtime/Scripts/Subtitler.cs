@@ -8,10 +8,9 @@ using Cysharp.Threading.Tasks;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
-#if !UNITY_2023_2_OR_NEWER
 using TMPro;
-#endif
+
+
 
 namespace Gasimo.Subtitles
 {

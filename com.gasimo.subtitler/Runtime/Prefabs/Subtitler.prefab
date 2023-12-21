@@ -55,15 +55,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 2397134125907853015}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f0af256cbd7cc742b61ba0e68bb4efc, type: 3}
+  m_Script: {fileID: 11500000, guid: 637bbe48165fa4a419f8800359b28fe5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   displayPanel: {fileID: 3654764562942299419}
-  speakerHighlight: {r: 1, g: 0.6748429, b: 0.042452812, a: 1}
+  speakerHighlight: {r: 1, g: 1, b: 1, a: 1}
   enableBackgroundPanel: 1
   centeredText: 0
-  subtitleSize: 20
+  subtitleSize: 24
 --- !u!1 &6800445948248519391
 GameObject:
   m_ObjectHideFlags: 0

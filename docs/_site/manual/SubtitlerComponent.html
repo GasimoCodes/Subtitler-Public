@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Welcome to Subtitler docs! | Subtitler </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Welcome to Subtitler docs! | Subtitler ">
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="Subtitler">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="welcome-to-subtitler-docs">Welcome to <strong>Subtitler</strong> docs!</h1>
+
+<p>Subtitler is a simple to use Subtitling/Closed-Captions solution for Unity3D. Its currently under active development but is completely usable. Report all bugs or feature requests <a href="https://github.com/GasimoCodes/Subtitler/issues/new/choose">here</a>.</p>
+<h2 id="quick-start">Quick Start:</h2>
+<p>Recommended Unity version (as of now) is 2023.3 due to a <a href="https://forum.unity.com/threads/cant-bind-multicolumnlistview-to-property.1425945/">bug in UIToolkit</a>, which is yet to be backported. Minimum supported version is 2022, but it doesnt feature custom editor for easier subtitle editing.</p>
+<h3 id="upm">UPM:</h3>
+<ol>
+<li><p>Add <code>https://github.com/GasimoCodes/Subtitler.git?path=com.gasimo.subtitler</code> into <strong>Package Manager</strong>
+(<em>Package Manager/+/Install package from GIT URL</em>)</p>
+</li>
+<li><p>If you dont have <a href="https://dotween.demigiant.com/download.php">DOTween</a> in your project, import it.</p>
+</li>
+<li><p>If you are on 2023.1 or below, add TextMeshPro package in your Package Manager. For 2023.2 onwards, Unity merged TextMeshPro with Unity Core, nothing needs to be done.</p>
+</li>
+<li><p>To see <strong>samples</strong>, open Package Manager, navigate to Subtitler. Press Samples and select import. Sample will automatically import into <em>Assets/Samples/Subtitler</em></p>
+</li>
+</ol>
+<h2 id="features">Features</h2>
+<ul>
+<li>Cull subtitles based on Player Distance / Audio Volume</li>
+<li>Define dialogue entries with variable timing offsets and display lengths</li>
+<li>Assign AudioClip to each dialogue entry, or use one big clip for whole dialogue instead</li>
+<li>Rich Text Support (uses TextMeshPro)</li>
+<li>UI Options (Alignment, background panel visibility, Font size)</li>
+<li>Trigger events (ScriptableEvent) when a certain line gets played</li>
+<li>Editor Subtitle Authoring tool</li>
+<li>API to hook your custom subtitles scripts or logic</li>
+<li>API to stop currently playing subtitles using their runtime ID.</li>
+</ul>
+<h2 id="planned-features">Planned Features</h2>
+<ul>
+<li><p>Optional Localization Package Support</p>
+</li>
+<li><p>Optional Addressables for audioClips support</p>
+</li>
+<li><p>Timeline support</p>
+</li>
+</ul>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/GasimoCodes/Subtitler/blob/main/Docs/manual/SubtitlerComponent.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
