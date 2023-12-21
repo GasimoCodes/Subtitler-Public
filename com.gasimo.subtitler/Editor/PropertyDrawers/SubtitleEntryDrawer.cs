@@ -7,7 +7,7 @@ using System.IO;
 
 namespace gasimo.subtitles
 {
-
+    #if UNITY_2023_3_OR_NEWER
     [CustomPropertyDrawer(typeof(SubtitleDataEntry))]
     public class SubtitleEntryDrawer : PropertyDrawer
     {
@@ -36,4 +36,5 @@ namespace gasimo.subtitles
 
 
     }
+#endif
 }

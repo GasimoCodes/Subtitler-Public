@@ -9,7 +9,7 @@ using UnityEngine.UIElements;
 
 namespace Gasimo.Subtitles
 {
-#if UNITY_2023_1_OR_NEWER
+#if UNITY_2023_3_OR_NEWER
     [CustomEditor(typeof(SubtitleData))]
     public class SubtitleDataEditor : Editor
     {

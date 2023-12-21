@@ -41,8 +41,9 @@ namespace Gasimo.Subtitles
         /// </summary>
         public float displayFor = 5;
 
-
+        [HideInInspector]
         public float start;  // Add these properties
+        [HideInInspector]
         public float end;    // Add these properties
 
 
