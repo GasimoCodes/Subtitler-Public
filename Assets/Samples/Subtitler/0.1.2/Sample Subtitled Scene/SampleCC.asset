@@ -17,7 +17,7 @@ MonoBehaviour:
     speaker: World
     audio: {fileID: 0}
     subtitleEvent: {fileID: 0}
-    waitFor: 4
+    waitFor: 0
     displayFor: 4
     start: 0
     end: 0
@@ -63,6 +63,14 @@ MonoBehaviour:
     start: 0
     end: 0
   - dialogue: This one will show after a while
+    speaker: World
+    audio: {fileID: 0}
+    subtitleEvent: {fileID: 0}
+    waitFor: 10
+    displayFor: 4
+    start: 0
+    end: 0
+  - dialogue: Hello
     speaker: World
     audio: {fileID: 0}
     subtitleEvent: {fileID: 0}

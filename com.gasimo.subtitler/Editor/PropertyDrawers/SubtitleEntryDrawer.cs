@@ -11,9 +11,6 @@ namespace gasimo.subtitles
     [CustomPropertyDrawer(typeof(SubtitleDataEntry))]
     public class SubtitleEntryDrawer : PropertyDrawer
     {
-        [SerializeField]
-        private VisualTreeAsset m_VisualTreeAsset = default;
-
 
         public override VisualElement CreatePropertyGUI(SerializedProperty property)
         {
