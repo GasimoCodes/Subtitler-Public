@@ -33,9 +33,6 @@ Recommended Unity version (as of now) is 2023.3 due to a [bug in UIToolkit](http
 4. To see **samples**, open Package Manager, navigate to Subtitler. Press Samples and select import. Sample will automatically import into *Assets/Samples/Subtitler*
 
 ---
-
-
-  
   
 
 ## Features
