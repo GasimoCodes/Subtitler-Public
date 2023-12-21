@@ -1,5 +1,5 @@
 ---
-_layout: landing
+_disableBreadcrumb: true
 ---
 
 # Welcome to **Subtitler** docs!

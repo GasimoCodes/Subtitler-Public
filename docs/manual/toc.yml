@@ -1,2 +1,14 @@
+items:
 - name: Getting Started
   href: gettingstarted.md
+  items:
+  - name: Setting up Subtitler
+    href: subtitler.md
+  - name: Defining Subtitles
+    href: data.md
+  - name: Custom Events
+    href: event.md
+
+items:
+- name: Integrations (WIP)
+
