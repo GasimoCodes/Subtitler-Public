@@ -1,5 +1,5 @@
 {
-  "source_base_path": "C:/Users/Gasimo/Documents/GitHub/Subtitler/Docs",
+  "source_base_path": "D:/Projects/SubtitlerSample/Subtitler/docs",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -9,6 +9,36 @@
           "relative_path": "index.json"
         }
       }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gasimo.Subtitles.MonoSingleton-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gasimo.Subtitles.MonoSingleton-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gasimo.Subtitles.ScriptableEvent.ScriptableEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gasimo.Subtitles.ScriptableEvent.ScriptableEventHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gasimo.Subtitles.ScriptableEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gasimo.Subtitles.ScriptableEvent.html"
+        }
+      },
+      "version": ""
     },
     {
       "type": "ManagedReference",
@@ -52,50 +82,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Gasimo.Subtitles_1.yml",
+      "source_relative_path": "api/Gasimo.Subtitles.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Gasimo.Subtitles_1.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/gasimo.subtitles.MonoSingleton-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/gasimo.subtitles.MonoSingleton-1.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/gasimo.subtitles.ScriptableEvent.ScriptableEventHandler.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/gasimo.subtitles.ScriptableEvent.ScriptableEventHandler.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/gasimo.subtitles.ScriptableEvent.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/gasimo.subtitles.ScriptableEvent.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/gasimo.subtitles.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/gasimo.subtitles.html"
+          "relative_path": "api/Gasimo.Subtitles.html"
         }
       },
       "version": ""
@@ -125,30 +115,10 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "manual/SubtitleContainer.md",
+      "source_relative_path": "manual/gettingstarted.md",
       "output": {
         ".html": {
-          "relative_path": "manual/SubtitleContainer.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "manual/SubtitlerComponent.md",
-      "output": {
-        ".html": {
-          "relative_path": "manual/SubtitlerComponent.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "manual/index.md",
-      "output": {
-        ".html": {
-          "relative_path": "manual/index.html"
+          "relative_path": "manual/gettingstarted.html"
         }
       },
       "version": ""

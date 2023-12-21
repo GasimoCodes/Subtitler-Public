@@ -1,5 +1,2 @@
-items:
-- name: Manual
-  items:
-  - href: index.md
-  - href: SubtitleContainer.md
+- name: Getting Started
+  href: gettingstarted.md

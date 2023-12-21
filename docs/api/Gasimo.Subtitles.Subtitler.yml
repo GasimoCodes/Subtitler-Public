@@ -31,7 +31,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: Subtitler
     path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
-    startLine: 20
+    startLine: 19
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
@@ -67,7 +67,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: player
     path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
-    startLine: 25
+    startLine: 24
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
@@ -96,7 +96,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: subtitlePool
     path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
-    startLine: 30
+    startLine: 29
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
@@ -125,7 +125,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: displayPanel
     path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
-    startLine: 35
+    startLine: 34
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
@@ -154,7 +154,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: speakerHighlight
     path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
-    startLine: 40
+    startLine: 39
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
@@ -183,7 +183,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: enableBackgroundPanel
     path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
-    startLine: 45
+    startLine: 44
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
@@ -212,7 +212,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: centeredText
     path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
-    startLine: 50
+    startLine: 49
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
@@ -241,7 +241,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: subtitleSize
     path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
-    startLine: 55
+    startLine: 54
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
@@ -270,7 +270,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: Awake
     path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
-    startLine: 64
+    startLine: 63
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
@@ -299,7 +299,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: playSubtitle
     path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
-    startLine: 129
+    startLine: 128
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
@@ -337,7 +337,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: killSubtitleById
     path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
-    startLine: 152
+    startLine: 151
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
@@ -372,7 +372,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: DisplaySubtitle
     path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
-    startLine: 254
+    startLine: 253
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles
@@ -416,7 +416,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: CheckHideSubtitlePanel
     path: ../com.gasimo.subtitler/Runtime/Scripts/Subtitler.cs
-    startLine: 293
+    startLine: 292
   assemblies:
   - gasimo.subtitler
   namespace: Gasimo.Subtitles

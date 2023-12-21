@@ -3,13 +3,13 @@ sorted: true
 references:
 - uid: Gasimo.Subtitles
   name: Gasimo.Subtitles
-  href: api/gasimo.subtitles.html
+  href: api/Gasimo.Subtitles.html
   commentId: N:Gasimo.Subtitles
   fullName: Gasimo.Subtitles
   nameWithType: Gasimo.Subtitles
 - uid: Gasimo.Subtitles.MonoSingleton`1
   name: MonoSingleton<T>
-  href: api/gasimo.subtitles.MonoSingleton-1.html
+  href: api/Gasimo.Subtitles.MonoSingleton-1.html
   commentId: T:Gasimo.Subtitles.MonoSingleton`1
   name.vb: MonoSingleton(Of T)
   fullName: Gasimo.Subtitles.MonoSingleton<T>
@@ -18,7 +18,7 @@ references:
   nameWithType.vb: MonoSingleton(Of T)
 - uid: Gasimo.Subtitles.MonoSingleton`1.Awake
   name: Awake()
-  href: api/gasimo.subtitles.MonoSingleton-1.html#Gasimo_Subtitles_MonoSingleton_1_Awake
+  href: api/Gasimo.Subtitles.MonoSingleton-1.html#Gasimo_Subtitles_MonoSingleton_1_Awake
   commentId: M:Gasimo.Subtitles.MonoSingleton`1.Awake
   fullName: Gasimo.Subtitles.MonoSingleton<T>.Awake()
   fullName.vb: Gasimo.Subtitles.MonoSingleton(Of T).Awake()
@@ -26,7 +26,7 @@ references:
   nameWithType.vb: MonoSingleton(Of T).Awake()
 - uid: Gasimo.Subtitles.MonoSingleton`1.Awake*
   name: Awake
-  href: api/gasimo.subtitles.MonoSingleton-1.html#Gasimo_Subtitles_MonoSingleton_1_Awake_
+  href: api/Gasimo.Subtitles.MonoSingleton-1.html#Gasimo_Subtitles_MonoSingleton_1_Awake_
   commentId: Overload:Gasimo.Subtitles.MonoSingleton`1.Awake
   isSpec: "True"
   fullName: Gasimo.Subtitles.MonoSingleton<T>.Awake
@@ -35,7 +35,7 @@ references:
   nameWithType.vb: MonoSingleton(Of T).Awake
 - uid: Gasimo.Subtitles.MonoSingleton`1.Instance
   name: Instance
-  href: api/gasimo.subtitles.MonoSingleton-1.html#Gasimo_Subtitles_MonoSingleton_1_Instance
+  href: api/Gasimo.Subtitles.MonoSingleton-1.html#Gasimo_Subtitles_MonoSingleton_1_Instance
   commentId: P:Gasimo.Subtitles.MonoSingleton`1.Instance
   fullName: Gasimo.Subtitles.MonoSingleton<T>.Instance
   fullName.vb: Gasimo.Subtitles.MonoSingleton(Of T).Instance
@@ -43,7 +43,7 @@ references:
   nameWithType.vb: MonoSingleton(Of T).Instance
 - uid: Gasimo.Subtitles.MonoSingleton`1.Instance*
   name: Instance
-  href: api/gasimo.subtitles.MonoSingleton-1.html#Gasimo_Subtitles_MonoSingleton_1_Instance_
+  href: api/Gasimo.Subtitles.MonoSingleton-1.html#Gasimo_Subtitles_MonoSingleton_1_Instance_
   commentId: Overload:Gasimo.Subtitles.MonoSingleton`1.Instance
   isSpec: "True"
   fullName: Gasimo.Subtitles.MonoSingleton<T>.Instance
@@ -52,32 +52,32 @@ references:
   nameWithType.vb: MonoSingleton(Of T).Instance
 - uid: Gasimo.Subtitles.ScriptableEvent
   name: ScriptableEvent
-  href: api/gasimo.subtitles.ScriptableEvent.html
+  href: api/Gasimo.Subtitles.ScriptableEvent.html
   commentId: T:Gasimo.Subtitles.ScriptableEvent
   fullName: Gasimo.Subtitles.ScriptableEvent
   nameWithType: ScriptableEvent
 - uid: Gasimo.Subtitles.ScriptableEvent.Raise
   name: Raise()
-  href: api/gasimo.subtitles.ScriptableEvent.html#Gasimo_Subtitles_ScriptableEvent_Raise
+  href: api/Gasimo.Subtitles.ScriptableEvent.html#Gasimo_Subtitles_ScriptableEvent_Raise
   commentId: M:Gasimo.Subtitles.ScriptableEvent.Raise
   fullName: Gasimo.Subtitles.ScriptableEvent.Raise()
   nameWithType: ScriptableEvent.Raise()
 - uid: Gasimo.Subtitles.ScriptableEvent.Raise*
   name: Raise
-  href: api/gasimo.subtitles.ScriptableEvent.html#Gasimo_Subtitles_ScriptableEvent_Raise_
+  href: api/Gasimo.Subtitles.ScriptableEvent.html#Gasimo_Subtitles_ScriptableEvent_Raise_
   commentId: Overload:Gasimo.Subtitles.ScriptableEvent.Raise
   isSpec: "True"
   fullName: Gasimo.Subtitles.ScriptableEvent.Raise
   nameWithType: ScriptableEvent.Raise
 - uid: Gasimo.Subtitles.ScriptableEvent.ScriptableEventHandler
   name: ScriptableEvent.ScriptableEventHandler
-  href: api/gasimo.subtitles.ScriptableEvent.ScriptableEventHandler.html
+  href: api/Gasimo.Subtitles.ScriptableEvent.ScriptableEventHandler.html
   commentId: T:Gasimo.Subtitles.ScriptableEvent.ScriptableEventHandler
   fullName: Gasimo.Subtitles.ScriptableEvent.ScriptableEventHandler
   nameWithType: ScriptableEvent.ScriptableEventHandler
 - uid: Gasimo.Subtitles.ScriptableEvent.onEventRaised
   name: onEventRaised
-  href: api/gasimo.subtitles.ScriptableEvent.html#Gasimo_Subtitles_ScriptableEvent_onEventRaised
+  href: api/Gasimo.Subtitles.ScriptableEvent.html#Gasimo_Subtitles_ScriptableEvent_onEventRaised
   commentId: E:Gasimo.Subtitles.ScriptableEvent.onEventRaised
   fullName: Gasimo.Subtitles.ScriptableEvent.onEventRaised
   nameWithType: ScriptableEvent.onEventRaised
