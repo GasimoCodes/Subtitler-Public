@@ -16,7 +16,7 @@
   ],
   "dependencies": {
     "com.unity.addressables": "1.21.10",
-    "com.cysharp.unitask": "2.5.0"
+    "com.cysharp.unitask": "2.3.3"
   },
   "keywords": [
     "Subtitles",
@@ -27,15 +27,10 @@
     "url": "https://github.com/GasimoCodes/"
   },
   "samples": [
-
     {
-
       "displayName": "Sample Subtitled Scene",
-
       "description": "Contains a sample subtitle file which is automatically played",
-
-      "path": "Samples~/SubtitleScene"
-
+      "path": "Samples/SubtitleScene"
     }
   ],
   "hideInEditor": false

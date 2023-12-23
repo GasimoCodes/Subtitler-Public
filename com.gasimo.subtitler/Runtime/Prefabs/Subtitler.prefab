@@ -64,6 +64,7 @@ MonoBehaviour:
   enableBackgroundPanel: 1
   centeredText: 0
   subtitleSize: 24
+  subtitlePoolSize: 10
 --- !u!1 &6800445948248519391
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,7 +163,7 @@ MonoBehaviour:
   m_ChildAlignment: 6
   m_Spacing: 2
   m_ChildForceExpandWidth: 0
-  m_ChildForceExpandHeight: 1
+  m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0

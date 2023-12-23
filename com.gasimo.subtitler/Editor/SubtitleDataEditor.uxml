@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
-    <Style src="project://database/Assets/Editor/SubtitleDataEditor.uss?fileID=7433441132597879392&amp;guid=4c3ca8d55878d5f419f843fac2014fbb&amp;type=3#SubtitleDataEditor" />
-    <ui:MultiColumnListView binding-path="Subtitles" showAddRemoveFooter="true" show-add-remove-footer="true" data-source="project://database/Assets/Samples/Subtitler/0.1.2/Sample%20Subtitled%20Scene/SampleCC.asset?fileID=11400000&amp;guid=49fe50571e10f1a40be6e53e96d5237a&amp;type=2#SampleCC" data-source-path="Subtitles" show-bound-collection-size="false">
+    <Style src="project://database/Packages/com.gasimo.subtitler/Editor/SubtitleDataEditor.uss?fileID=7433441132597879392&amp;guid=4c3ca8d55878d5f419f843fac2014fbb&amp;type=3#SubtitleDataEditor" />
+    <ui:MultiColumnListView binding-path="Subtitles" showAddRemoveFooter="true" show-add-remove-footer="true" data-source="project://database/Assets/Samples/Subtitler/0.1.2/Sample%20Subtitled%20Scene/SampleCC.asset?fileID=11400000&amp;guid=49fe50571e10f1a40be6e53e96d5237a&amp;type=2#SampleCC" data-source-path="Subtitles" show-bound-collection-size="false" reorderable="true">
         <ui:Columns primary-column-name="Speaker">
             <ui:Column name="Speaker" title="Speaker" width="100" optional="false" makeHeader="true" cell-binding-path="speaker" binding-path="speaker" />
             <ui:Column name="Dialogue" title="Dialogue" width="350" optional="false" cell-binding-path="dialogue" binding-path="dialogue" />

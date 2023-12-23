@@ -13,39 +13,69 @@ MonoBehaviour:
   m_Name: SampleCC
   m_EditorClassIdentifier: 
   Subtitles:
+  - dialogue: 
+    speaker: 
+    audio: {fileID: 0}
+    subtitleEvent: {fileID: 0}
+    waitFor: 0
+    displayFor: 0
+    start: 0
+    end: 0
   - dialogue: Hello world!
     speaker: World
     audio: {fileID: 0}
-    waitFor: 0
+    subtitleEvent: {fileID: 0}
+    waitFor: 2
     displayFor: 4
+    start: 0
+    end: 0
   - dialogue: This is a <color=orange>sample subtitle text</color> spoken by the
       "World".
     speaker: World
     audio: {fileID: 0}
-    waitFor: 2
+    subtitleEvent: {fileID: 0}
+    waitFor: 3
     displayFor: 4
+    start: 0
+    end: 0
   - dialogue: You can setup <b>when</b> the subtitle appears...
     speaker: World
     audio: {fileID: 0}
-    waitFor: 2
+    subtitleEvent: {fileID: 0}
+    waitFor: 3
     displayFor: 10
+    start: 0
+    end: 0
   - dialogue: and after how long it fades out! This one will fade before the previous.
     speaker: World
     audio: {fileID: 0}
-    waitFor: 2
+    subtitleEvent: {fileID: 0}
+    waitFor: 3
     displayFor: 1
+    start: 0
+    end: 0
   - dialogue: You can either play a single audio clip with the full dialogue,
     speaker: World
     audio: {fileID: 0}
-    waitFor: 2
+    subtitleEvent: {fileID: 0}
+    waitFor: 3
     displayFor: 4
+    start: 0
+    end: 0
   - dialogue: or assign files with spoken pieces of text separately.
     speaker: World
     audio: {fileID: 0}
-    waitFor: 2
+    subtitleEvent: {fileID: 0}
+    waitFor: 3
     displayFor: 4
-  - dialogue: This one will show after a while
+    start: 0
+    end: 0
+  - dialogue: This one will show after a while. It will also be veeeeeeeeeeeeeeeery
+      looong! Taking more than a single line on most of the monitors.
     speaker: World
     audio: {fileID: 0}
-    waitFor: 10
+    subtitleEvent: {fileID: 0}
+    waitFor: 5
     displayFor: 4
+    start: 0
+    end: 0

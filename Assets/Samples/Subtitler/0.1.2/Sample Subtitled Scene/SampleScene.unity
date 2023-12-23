@@ -188,8 +188,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 105787467}
-  - component: {fileID: 105787465}
   - component: {fileID: 105787466}
+  - component: {fileID: 105787465}
   m_Layer: 0
   m_Name: SampleSubtitlePlayer
   m_TagString: Untagged
@@ -210,7 +210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoPlay: 1
-  subtitleData: {fileID: 11400000, guid: 49fe50571e10f1a40be6e53e96d5237a, type: 2}
+  subtitleData: {fileID: 11400000, guid: f0706db0cbaa6aa49b89ce5174a4da8f, type: 2}
 --- !u!82 &105787466
 AudioSource:
   m_ObjectHideFlags: 0

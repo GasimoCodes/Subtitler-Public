@@ -11,7 +11,6 @@ using System.Linq;
 using TMPro;
 
 
-
 namespace Gasimo.Subtitles
 {
     /// <summary>
@@ -55,11 +54,18 @@ namespace Gasimo.Subtitles
         public int subtitleSize = 24;
 
 
+        [HideInInspector]
+        /// <summary>
+        /// Max amount of lines visible at once. Unused right now. 
+        /// </summary>
+        public int subtitlePoolSize = 10;
+
+
         // Privates
         int shownLines = 0;
         Image displayBackground;
         Dictionary<int, bool> activeSubtitleList = new Dictionary<int, bool>();
-        System.Object subtitleLock = new System.Object();
+        object subtitleLock = new System.Object();
 
         protected override void Awake()
         {
@@ -76,10 +82,9 @@ namespace Gasimo.Subtitles
                 displayPanel.GetComponent<VerticalLayoutGroup>().childAlignment = TextAnchor.LowerCenter;
 
 
-            /*
             if(player == null)
                 player = FindAnyObjectByType<AudioListener>();
-            */
+            
 
             // Define pool methods
             subtitlePool = new ObjectPool<TextMeshProUGUI>(
@@ -103,13 +108,10 @@ namespace Gasimo.Subtitles
                 obj.text = "";
                 obj.gameObject.SetActive(false);
             },
-            actionOnDestroy: (obj) => Destroy(obj),
+            actionOnDestroy: (obj) => Destroy(obj.gameObject),
             collectionCheck: false,
             defaultCapacity: 5,
-            maxSize: 20);
-
-            // Foolish way to precache
-            // subtitlePool.Release(subtitlePool.Get());
+            maxSize: 10);
 
         }
 
@@ -139,9 +141,9 @@ namespace Gasimo.Subtitles
                 activeSubtitleList.Add(id, true);
             }
 
-            Debug.Log("Playing " + id);
+            // Debug.Log("Playing " + id);
 
-            playSubtitleFile(sD, aS, id);
+            _ = playSubtitleFile(sD, aS, id);
             return id;
         }
 
@@ -221,7 +223,7 @@ namespace Gasimo.Subtitles
                             displayPanel.GetComponent<Image>().DOFade(0.4f, 0.1f);
                         }
 
-                        DisplaySubtitle(sE.dialogue, sE.speaker, sE.displayFor);
+                       _ =  DisplaySubtitle(sE.dialogue, sE.speaker, sE.displayFor);
                     }
 
                 }
@@ -261,8 +263,11 @@ namespace Gasimo.Subtitles
                 subtitle.text += $"<color=#{ColorUtility.ToHtmlStringRGB(speakerHighlight)}><b>{speaker}</b></color>: ";
             subtitle.text += message;
             subtitle.alpha = 255;
+            subtitle.GetComponent<ContentSizeFitter>().enabled = true;
 
             LayoutRebuilder.ForceRebuildLayoutImmediate(displayPanel.GetComponent<RectTransform>());
+
+            
 
             // Neat animation intro
             subtitle.transform.DOScaleY(0.5f, 0);
@@ -275,8 +280,14 @@ namespace Gasimo.Subtitles
             await UniTask.Delay((int)(displayFor * 1000f));
 
 
-            // Fadeout
-            await subtitle.DOFade(0, 1).AsyncWaitForCompletion();
+            // Fadeout, then make small
+            subtitle.DOFade(0.0f, 0.3f);
+            // await UniTask.Delay(0.3f);
+
+            // LayoutRebuilder.ForceRebuildLayoutImmediate(displayPanel.GetComponent<RectTransform>());
+            subtitle.GetComponent<ContentSizeFitter>().enabled = false;
+            subtitle.transform.localScale = new Vector3(1, 1, 1);
+            await subtitle.transform.DOScaleY(0, 0.5f).AsyncWaitForCompletion();
 
 
             shownLines--;
@@ -290,7 +301,7 @@ namespace Gasimo.Subtitles
         /// Checks whether the Subtitle Panel shouldnt be hidden. Hides it if no subtitles are currently on display.
         /// </summary>
         /// <returns></returns>
-        public async UniTaskVoid CheckHideSubtitlePanel()
+        public void CheckHideSubtitlePanel()
         {
             if (shownLines == 0)
             {
