@@ -31,7 +31,7 @@ jobs:
       with:
         dotnet-version: 8.x
 
-    - run: dotnet tool update -g docfx
+    - run: dotnet tool update -g docfx --configfile Gasimo.Subtitler.csproj
     - run: docfx docs/docfx.json
 
     - name: Setup Pages
