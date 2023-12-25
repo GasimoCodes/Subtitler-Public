@@ -9,4 +9,9 @@ items:
   - name: Custom Events
     href: event.md
 
+- name: Timeline Integration
+  href: timeline_intro.md
+  items:
+  - name: Usage
+    href: timeline_use.md
 

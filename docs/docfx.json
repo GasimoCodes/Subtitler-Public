@@ -5,6 +5,7 @@
         {
           "src": "../",
           "files": [
+            "**/Gasimo.Subtitler.Timeline.csproj",
             "**/gasimo.subtitler.csproj"
           ]
         }
