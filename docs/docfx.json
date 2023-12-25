@@ -41,6 +41,7 @@
     "globalMetadata": {
       "_appName": "Subtitler",
       "_appTitle": "Subtitler",
+      "_appLogoPath": "images/logo.svg",
       "_enableSearch": true,
       "pdf": false
     }
