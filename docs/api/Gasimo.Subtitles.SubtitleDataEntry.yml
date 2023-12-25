@@ -1,0 +1,394 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gasimo.Subtitles.SubtitleDataEntry
+  commentId: T:Gasimo.Subtitles.SubtitleDataEntry
+  id: SubtitleDataEntry
+  parent: Gasimo.Subtitles
+  children:
+  - Gasimo.Subtitles.SubtitleDataEntry.audio
+  - Gasimo.Subtitles.SubtitleDataEntry.dialogue
+  - Gasimo.Subtitles.SubtitleDataEntry.displayFor
+  - Gasimo.Subtitles.SubtitleDataEntry.end
+  - Gasimo.Subtitles.SubtitleDataEntry.speaker
+  - Gasimo.Subtitles.SubtitleDataEntry.start
+  - Gasimo.Subtitles.SubtitleDataEntry.subtitleEvent
+  - Gasimo.Subtitles.SubtitleDataEntry.waitFor
+  langs:
+  - csharp
+  - vb
+  name: SubtitleDataEntry
+  nameWithType: SubtitleDataEntry
+  fullName: Gasimo.Subtitles.SubtitleDataEntry
+  type: Class
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleDataEntry.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler.git
+    id: SubtitleDataEntry
+    path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleDataEntry.cs
+    startLine: 8
+  assemblies:
+  - Gasimo.Subtitler
+  namespace: Gasimo.Subtitles
+  summary: Contains data for 1 line of dialogue.
+  example: []
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class SubtitleDataEntry
+    content.vb: >-
+      <Serializable>
+
+      Public Class SubtitleDataEntry
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: Gasimo.Subtitles.SubtitleDataEntry.dialogue
+  commentId: F:Gasimo.Subtitles.SubtitleDataEntry.dialogue
+  id: dialogue
+  parent: Gasimo.Subtitles.SubtitleDataEntry
+  langs:
+  - csharp
+  - vb
+  name: dialogue
+  nameWithType: SubtitleDataEntry.dialogue
+  fullName: Gasimo.Subtitles.SubtitleDataEntry.dialogue
+  type: Field
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleDataEntry.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler.git
+    id: dialogue
+    path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleDataEntry.cs
+    startLine: 14
+  assemblies:
+  - Gasimo.Subtitler
+  namespace: Gasimo.Subtitles
+  summary: Written Closed-Captions
+  example: []
+  syntax:
+    content: public string dialogue
+    return:
+      type: System.String
+    content.vb: Public dialogue As String
+- uid: Gasimo.Subtitles.SubtitleDataEntry.speaker
+  commentId: F:Gasimo.Subtitles.SubtitleDataEntry.speaker
+  id: speaker
+  parent: Gasimo.Subtitles.SubtitleDataEntry
+  langs:
+  - csharp
+  - vb
+  name: speaker
+  nameWithType: SubtitleDataEntry.speaker
+  fullName: Gasimo.Subtitles.SubtitleDataEntry.speaker
+  type: Field
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleDataEntry.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler.git
+    id: speaker
+    path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleDataEntry.cs
+    startLine: 20
+  assemblies:
+  - Gasimo.Subtitler
+  namespace: Gasimo.Subtitles
+  summary: Display name of speaker/object which plays the dialogue. Leave empty for none (useful for sounds).
+  example: []
+  syntax:
+    content: >-
+      [SerializeField]
+
+      public string speaker
+    return:
+      type: System.String
+    content.vb: >-
+      <SerializeField>
+
+      Public speaker As String
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+- uid: Gasimo.Subtitles.SubtitleDataEntry.audio
+  commentId: F:Gasimo.Subtitles.SubtitleDataEntry.audio
+  id: audio
+  parent: Gasimo.Subtitles.SubtitleDataEntry
+  langs:
+  - csharp
+  - vb
+  name: audio
+  nameWithType: SubtitleDataEntry.audio
+  fullName: Gasimo.Subtitles.SubtitleDataEntry.audio
+  type: Field
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleDataEntry.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler.git
+    id: audio
+    path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleDataEntry.cs
+    startLine: 25
+  assemblies:
+  - Gasimo.Subtitler
+  namespace: Gasimo.Subtitles
+  summary: AudioClip which will play simultaneously with the subtitle line. Can be left empty to not play sound.
+  example: []
+  syntax:
+    content: public AudioClip audio
+    return:
+      type: UnityEngine.AudioClip
+    content.vb: Public audio As AudioClip
+- uid: Gasimo.Subtitles.SubtitleDataEntry.subtitleEvent
+  commentId: F:Gasimo.Subtitles.SubtitleDataEntry.subtitleEvent
+  id: subtitleEvent
+  parent: Gasimo.Subtitles.SubtitleDataEntry
+  langs:
+  - csharp
+  - vb
+  name: subtitleEvent
+  nameWithType: SubtitleDataEntry.subtitleEvent
+  fullName: Gasimo.Subtitles.SubtitleDataEntry.subtitleEvent
+  type: Field
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleDataEntry.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler.git
+    id: subtitleEvent
+    path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleDataEntry.cs
+    startLine: 31
+  assemblies:
+  - Gasimo.Subtitler
+  namespace: Gasimo.Subtitles
+  summary: >-
+    Programmable event which gets ivoked when this subtitle gets played. 
+
+    Useful to trigger mechanics exactly when player hears a certain line.
+  example: []
+  syntax:
+    content: public ScriptableEvent subtitleEvent
+    return:
+      type: Gasimo.Subtitles.ScriptableEvent
+    content.vb: Public subtitleEvent As ScriptableEvent
+- uid: Gasimo.Subtitles.SubtitleDataEntry.waitFor
+  commentId: F:Gasimo.Subtitles.SubtitleDataEntry.waitFor
+  id: waitFor
+  parent: Gasimo.Subtitles.SubtitleDataEntry
+  langs:
+  - csharp
+  - vb
+  name: waitFor
+  nameWithType: SubtitleDataEntry.waitFor
+  fullName: Gasimo.Subtitles.SubtitleDataEntry.waitFor
+  type: Field
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleDataEntry.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler.git
+    id: waitFor
+    path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleDataEntry.cs
+    startLine: 36
+  assemblies:
+  - Gasimo.Subtitler
+  namespace: Gasimo.Subtitles
+  summary: Delay between last Subtitle line and this one. Leave 0 to play at same time as previous line.
+  example: []
+  syntax:
+    content: public float waitFor
+    return:
+      type: System.Single
+    content.vb: Public waitFor As Single
+- uid: Gasimo.Subtitles.SubtitleDataEntry.displayFor
+  commentId: F:Gasimo.Subtitles.SubtitleDataEntry.displayFor
+  id: displayFor
+  parent: Gasimo.Subtitles.SubtitleDataEntry
+  langs:
+  - csharp
+  - vb
+  name: displayFor
+  nameWithType: SubtitleDataEntry.displayFor
+  fullName: Gasimo.Subtitles.SubtitleDataEntry.displayFor
+  type: Field
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleDataEntry.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler.git
+    id: displayFor
+    path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleDataEntry.cs
+    startLine: 41
+  assemblies:
+  - Gasimo.Subtitler
+  namespace: Gasimo.Subtitles
+  summary: How long will this subtitle be displayed for.
+  example: []
+  syntax:
+    content: public float displayFor
+    return:
+      type: System.Single
+    content.vb: Public displayFor As Single
+- uid: Gasimo.Subtitles.SubtitleDataEntry.start
+  commentId: F:Gasimo.Subtitles.SubtitleDataEntry.start
+  id: start
+  parent: Gasimo.Subtitles.SubtitleDataEntry
+  langs:
+  - csharp
+  - vb
+  name: start
+  nameWithType: SubtitleDataEntry.start
+  fullName: Gasimo.Subtitles.SubtitleDataEntry.start
+  type: Field
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleDataEntry.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler.git
+    id: start
+    path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleDataEntry.cs
+    startLine: 44
+  assemblies:
+  - Gasimo.Subtitler
+  namespace: Gasimo.Subtitles
+  syntax:
+    content: >-
+      [HideInInspector]
+
+      public float start
+    return:
+      type: System.Single
+    content.vb: >-
+      <HideInInspector>
+
+      Public start As Single
+  attributes:
+  - type: UnityEngine.HideInInspector
+    ctor: UnityEngine.HideInInspector.#ctor
+    arguments: []
+- uid: Gasimo.Subtitles.SubtitleDataEntry.end
+  commentId: F:Gasimo.Subtitles.SubtitleDataEntry.end
+  id: end
+  parent: Gasimo.Subtitles.SubtitleDataEntry
+  langs:
+  - csharp
+  - vb
+  name: end
+  nameWithType: SubtitleDataEntry.end
+  fullName: Gasimo.Subtitles.SubtitleDataEntry.end
+  type: Field
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleDataEntry.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler.git
+    id: end
+    path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleDataEntry.cs
+    startLine: 46
+  assemblies:
+  - Gasimo.Subtitler
+  namespace: Gasimo.Subtitles
+  syntax:
+    content: >-
+      [HideInInspector]
+
+      public float end
+    return:
+      type: System.Single
+    content.vb: >-
+      <HideInInspector>
+
+      Public [end] As Single
+  attributes:
+  - type: UnityEngine.HideInInspector
+    ctor: UnityEngine.HideInInspector.#ctor
+    arguments: []
+references:
+- uid: Gasimo.Subtitles
+  commentId: N:Gasimo.Subtitles
+  href: Gasimo.html
+  name: Gasimo.Subtitles
+  nameWithType: Gasimo.Subtitles
+  fullName: Gasimo.Subtitles
+  spec.csharp:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+  spec.vb:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: UnityEngine.AudioClip
+  commentId: T:UnityEngine.AudioClip
+  parent: UnityEngine
+  isExternal: true
+  name: AudioClip
+  nameWithType: AudioClip
+  fullName: UnityEngine.AudioClip
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Gasimo.Subtitles.ScriptableEvent
+  commentId: T:Gasimo.Subtitles.ScriptableEvent
+  parent: Gasimo.Subtitles
+  href: Gasimo.Subtitles.ScriptableEvent.html
+  name: ScriptableEvent
+  nameWithType: ScriptableEvent
+  fullName: Gasimo.Subtitles.ScriptableEvent
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single

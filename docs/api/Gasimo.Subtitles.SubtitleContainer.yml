@@ -1,0 +1,230 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gasimo.Subtitles.SubtitleContainer
+  commentId: T:Gasimo.Subtitles.SubtitleContainer
+  id: SubtitleContainer
+  parent: Gasimo.Subtitles
+  children:
+  - Gasimo.Subtitles.SubtitleContainer.Play
+  - Gasimo.Subtitles.SubtitleContainer.autoPlay
+  - Gasimo.Subtitles.SubtitleContainer.subtitleData
+  langs:
+  - csharp
+  - vb
+  name: SubtitleContainer
+  nameWithType: SubtitleContainer
+  fullName: Gasimo.Subtitles.SubtitleContainer
+  type: Class
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Scripts/SubtitleContainer.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler.git
+    id: SubtitleContainer
+    path: ../com.gasimo.subtitler/Runtime/Scripts/SubtitleContainer.cs
+    startLine: 9
+  assemblies:
+  - Gasimo.Subtitler
+  namespace: Gasimo.Subtitles
+  summary: Component representing one subtitle source in the world.
+  example: []
+  syntax:
+    content: >-
+      [RequireComponent(typeof(AudioSource))]
+
+      public class SubtitleContainer : MonoBehaviour
+    content.vb: >-
+      <RequireComponent(GetType(AudioSource))>
+
+      Public Class SubtitleContainer Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+- uid: Gasimo.Subtitles.SubtitleContainer.autoPlay
+  commentId: F:Gasimo.Subtitles.SubtitleContainer.autoPlay
+  id: autoPlay
+  parent: Gasimo.Subtitles.SubtitleContainer
+  langs:
+  - csharp
+  - vb
+  name: autoPlay
+  nameWithType: SubtitleContainer.autoPlay
+  fullName: Gasimo.Subtitles.SubtitleContainer.autoPlay
+  type: Field
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Scripts/SubtitleContainer.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler.git
+    id: autoPlay
+    path: ../com.gasimo.subtitler/Runtime/Scripts/SubtitleContainer.cs
+    startLine: 15
+  assemblies:
+  - Gasimo.Subtitler
+  namespace: Gasimo.Subtitles
+  summary: Play automatically on awake?
+  example: []
+  syntax:
+    content: public bool autoPlay
+    return:
+      type: System.Boolean
+    content.vb: Public autoPlay As Boolean
+- uid: Gasimo.Subtitles.SubtitleContainer.subtitleData
+  commentId: F:Gasimo.Subtitles.SubtitleContainer.subtitleData
+  id: subtitleData
+  parent: Gasimo.Subtitles.SubtitleContainer
+  langs:
+  - csharp
+  - vb
+  name: subtitleData
+  nameWithType: SubtitleContainer.subtitleData
+  fullName: Gasimo.Subtitles.SubtitleContainer.subtitleData
+  type: Field
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Scripts/SubtitleContainer.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler.git
+    id: subtitleData
+    path: ../com.gasimo.subtitler/Runtime/Scripts/SubtitleContainer.cs
+    startLine: 20
+  assemblies:
+  - Gasimo.Subtitler
+  namespace: Gasimo.Subtitles
+  summary: Subtitle Data to play
+  example: []
+  syntax:
+    content: public SubtitleSequenceData subtitleData
+    return:
+      type: Gasimo.Subtitles.SubtitleSequenceData
+    content.vb: Public subtitleData As SubtitleSequenceData
+- uid: Gasimo.Subtitles.SubtitleContainer.Play
+  commentId: M:Gasimo.Subtitles.SubtitleContainer.Play
+  id: Play
+  parent: Gasimo.Subtitles.SubtitleContainer
+  langs:
+  - csharp
+  - vb
+  name: Play()
+  nameWithType: SubtitleContainer.Play()
+  fullName: Gasimo.Subtitles.SubtitleContainer.Play()
+  type: Method
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Scripts/SubtitleContainer.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler.git
+    id: Play
+    path: ../com.gasimo.subtitler/Runtime/Scripts/SubtitleContainer.cs
+    startLine: 34
+  assemblies:
+  - Gasimo.Subtitler
+  namespace: Gasimo.Subtitles
+  summary: Plays the attached Subtitle Data
+  example: []
+  syntax:
+    content: public void Play()
+    content.vb: Public Sub Play()
+  overload: Gasimo.Subtitles.SubtitleContainer.Play*
+references:
+- uid: Gasimo.Subtitles
+  commentId: N:Gasimo.Subtitles
+  href: Gasimo.html
+  name: Gasimo.Subtitles
+  nameWithType: Gasimo.Subtitles
+  fullName: Gasimo.Subtitles
+  spec.csharp:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+  spec.vb:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Gasimo.Subtitles.SubtitleSequenceData
+  commentId: T:Gasimo.Subtitles.SubtitleSequenceData
+  parent: Gasimo.Subtitles
+  href: Gasimo.Subtitles.SubtitleSequenceData.html
+  name: SubtitleSequenceData
+  nameWithType: SubtitleSequenceData
+  fullName: Gasimo.Subtitles.SubtitleSequenceData
+- uid: Gasimo.Subtitles.SubtitleContainer.Play*
+  commentId: Overload:Gasimo.Subtitles.SubtitleContainer.Play
+  href: Gasimo.Subtitles.SubtitleContainer.html#Gasimo_Subtitles_SubtitleContainer_Play
+  name: Play
+  nameWithType: SubtitleContainer.Play
+  fullName: Gasimo.Subtitles.SubtitleContainer.Play
