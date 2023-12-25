@@ -307,6 +307,8 @@ namespace Gasimo.Subtitles
 #endif
             */
 
+
+
             TextMeshProUGUI subtitle = subtitlePool.Get();
             shownLines++;
 

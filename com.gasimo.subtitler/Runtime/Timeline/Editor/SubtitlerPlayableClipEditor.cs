@@ -1,8 +1,10 @@
+#if TIMELINE_PRESENT
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Timeline;
 using UnityEngine;
 using UnityEngine.Timeline;
+
 
 namespace Gasimo.Subtitles.Timeline
 {
@@ -25,3 +27,4 @@ namespace Gasimo.Subtitles.Timeline
 
     }
 }
+#endif

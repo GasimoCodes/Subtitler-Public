@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
 
+#if TIMELINE_PRESENT
+
 namespace Gasimo.Subtitles.Timeline
 {
     /// <summary>
@@ -25,7 +27,7 @@ namespace Gasimo.Subtitles.Timeline
         public override void OnBehaviourPause(Playable playable, FrameData info)
         {
             base.OnBehaviourPlay(playable, info);
-            // Debug.Log("STOP");
         }
     }
 }
+#endif

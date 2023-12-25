@@ -8,6 +8,7 @@ namespace Gasimo.Subtitles.Timeline
     /// <summary>
     /// a clip instance on timeline
     /// </summary>
+#if TIMELINE_PRESENT
     public class SubtitlerPlayableAsset : PlayableAsset
     {
 
@@ -21,21 +22,9 @@ namespace Gasimo.Subtitles.Timeline
             playableBehaviour.entry = entry;
 
 
-            // Init Subtitler since this is called before awake :(
-#if UNITY_EDITOR
-            // if (Application.isPlaying)
-#endif
-                
-
-
-
             return playable;
         }
-
-
-
-
-
-
     }
+#endif
+
 }

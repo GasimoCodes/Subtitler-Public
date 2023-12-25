@@ -31,6 +31,11 @@
       "displayName": "Sample Subtitled Scene",
       "description": "Contains a sample subtitle file which is automatically played",
       "path": "Samples/SubtitleScene"
+    },
+    {
+      "displayName": "Timeline Integration Scene",
+      "description": "A simple scene with a Timeline Subtitling track leveraging Subtitler",
+      "path": "Samples/Timeline"
     }
   ],
   "hideInEditor": false

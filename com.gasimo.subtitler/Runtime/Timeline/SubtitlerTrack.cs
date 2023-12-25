@@ -1,3 +1,4 @@
+#if TIMELINE_PRESENT
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,3 +22,4 @@ namespace Gasimo.Subtitles.Timeline
         }
     }
 }
+#endif
