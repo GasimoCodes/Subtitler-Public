@@ -1,0 +1,322 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gasimo.Subtitles.Timeline.SubtitlerTrack
+  commentId: T:Gasimo.Subtitles.Timeline.SubtitlerTrack
+  id: SubtitlerTrack
+  parent: Gasimo.Subtitles.Timeline
+  children:
+  - Gasimo.Subtitles.Timeline.SubtitlerTrack.CreateTrackMixer(UnityEngine.Playables.PlayableGraph,UnityEngine.GameObject,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: SubtitlerTrack
+  nameWithType: SubtitlerTrack
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerTrack
+  type: Class
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Timeline/SubtitlerTrack.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler.git
+    id: SubtitlerTrack
+    path: ../com.gasimo.subtitler/Runtime/Timeline/SubtitlerTrack.cs
+    startLine: 13
+  assemblies:
+  - Gasimo.Subtitler.Timeline
+  namespace: Gasimo.Subtitles.Timeline
+  summary: Controls creating a track in Timeline
+  example: []
+  syntax:
+    content: >-
+      [TrackColor(0.945, 0.349, 0.165)]
+
+      [TrackClipType(typeof(SubtitlerPlayableAsset))]
+
+      [TrackBindingType(typeof(AudioSource))]
+
+      public class SubtitlerTrack : TrackAsset
+    content.vb: >-
+      <TrackColor(0.945, 0.349, 0.165)>
+
+      <TrackClipType(GetType(SubtitlerPlayableAsset))>
+
+      <TrackBindingType(GetType(AudioSource))>
+
+      Public Class SubtitlerTrack Inherits TrackAsset
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  - UnityEngine.Playables.PlayableAsset
+  - UnityEngine.Timeline.TrackAsset
+  attributes:
+  - type: UnityEngine.Timeline.TrackColorAttribute
+    ctor: UnityEngine.Timeline.TrackColorAttribute.#ctor(System.Single,System.Single,System.Single)
+    arguments:
+    - type: System.Single
+      value: 0.945
+    - type: System.Single
+      value: 0.349
+    - type: System.Single
+      value: 0.165
+  - type: UnityEngine.Timeline.TrackClipTypeAttribute
+    ctor: UnityEngine.Timeline.TrackClipTypeAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset
+- uid: Gasimo.Subtitles.Timeline.SubtitlerTrack.CreateTrackMixer(UnityEngine.Playables.PlayableGraph,UnityEngine.GameObject,System.Int32)
+  commentId: M:Gasimo.Subtitles.Timeline.SubtitlerTrack.CreateTrackMixer(UnityEngine.Playables.PlayableGraph,UnityEngine.GameObject,System.Int32)
+  id: CreateTrackMixer(UnityEngine.Playables.PlayableGraph,UnityEngine.GameObject,System.Int32)
+  parent: Gasimo.Subtitles.Timeline.SubtitlerTrack
+  langs:
+  - csharp
+  - vb
+  name: CreateTrackMixer(PlayableGraph, GameObject, int)
+  nameWithType: SubtitlerTrack.CreateTrackMixer(PlayableGraph, GameObject, int)
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerTrack.CreateTrackMixer(UnityEngine.Playables.PlayableGraph, UnityEngine.GameObject, int)
+  type: Method
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Timeline/SubtitlerTrack.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler.git
+    id: CreateTrackMixer
+    path: ../com.gasimo.subtitler/Runtime/Timeline/SubtitlerTrack.cs
+    startLine: 18
+  assemblies:
+  - Gasimo.Subtitler.Timeline
+  namespace: Gasimo.Subtitles.Timeline
+  example: []
+  syntax:
+    content: public override Playable CreateTrackMixer(PlayableGraph graph, GameObject go, int inputCount)
+    parameters:
+    - id: graph
+      type: UnityEngine.Playables.PlayableGraph
+    - id: go
+      type: UnityEngine.GameObject
+    - id: inputCount
+      type: System.Int32
+    return:
+      type: UnityEngine.Playables.Playable
+    content.vb: Public Overrides Function CreateTrackMixer(graph As PlayableGraph, go As GameObject, inputCount As Integer) As Playable
+  overridden: UnityEngine.Timeline.TrackAsset.CreateTrackMixer(UnityEngine.Playables.PlayableGraph,UnityEngine.GameObject,System.Int32)
+  overload: Gasimo.Subtitles.Timeline.SubtitlerTrack.CreateTrackMixer*
+  nameWithType.vb: SubtitlerTrack.CreateTrackMixer(PlayableGraph, GameObject, Integer)
+  fullName.vb: Gasimo.Subtitles.Timeline.SubtitlerTrack.CreateTrackMixer(UnityEngine.Playables.PlayableGraph, UnityEngine.GameObject, Integer)
+  name.vb: CreateTrackMixer(PlayableGraph, GameObject, Integer)
+references:
+- uid: Gasimo.Subtitles.Timeline
+  commentId: N:Gasimo.Subtitles.Timeline
+  href: Gasimo.html
+  name: Gasimo.Subtitles.Timeline
+  nameWithType: Gasimo.Subtitles.Timeline
+  fullName: Gasimo.Subtitles.Timeline
+  spec.csharp:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+  - name: .
+  - uid: Gasimo.Subtitles.Timeline
+    name: Timeline
+    href: Gasimo.Subtitles.Timeline.html
+  spec.vb:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+  - name: .
+  - uid: Gasimo.Subtitles.Timeline
+    name: Timeline
+    href: Gasimo.Subtitles.Timeline.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: UnityEngine.Playables.PlayableAsset
+  commentId: T:UnityEngine.Playables.PlayableAsset
+  parent: UnityEngine.Playables
+  isExternal: true
+  name: PlayableAsset
+  nameWithType: PlayableAsset
+  fullName: UnityEngine.Playables.PlayableAsset
+- uid: UnityEngine.Timeline.TrackAsset
+  commentId: T:UnityEngine.Timeline.TrackAsset
+  parent: UnityEngine.Timeline
+  isExternal: true
+  name: TrackAsset
+  nameWithType: TrackAsset
+  fullName: UnityEngine.Timeline.TrackAsset
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEngine.Playables
+  commentId: N:UnityEngine.Playables
+  isExternal: true
+  name: UnityEngine.Playables
+  nameWithType: UnityEngine.Playables
+  fullName: UnityEngine.Playables
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.Playables
+    name: Playables
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.Playables
+    name: Playables
+    isExternal: true
+- uid: UnityEngine.Timeline
+  commentId: N:UnityEngine.Timeline
+  isExternal: true
+  name: UnityEngine.Timeline
+  nameWithType: UnityEngine.Timeline
+  fullName: UnityEngine.Timeline
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.Timeline
+    name: Timeline
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.Timeline
+    name: Timeline
+    isExternal: true
+- uid: UnityEngine.Timeline.TrackAsset.CreateTrackMixer(UnityEngine.Playables.PlayableGraph,UnityEngine.GameObject,System.Int32)
+  commentId: M:UnityEngine.Timeline.TrackAsset.CreateTrackMixer(UnityEngine.Playables.PlayableGraph,UnityEngine.GameObject,System.Int32)
+  parent: UnityEngine.Timeline.TrackAsset
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: CreateTrackMixer(PlayableGraph, GameObject, int)
+  nameWithType: TrackAsset.CreateTrackMixer(PlayableGraph, GameObject, int)
+  fullName: UnityEngine.Timeline.TrackAsset.CreateTrackMixer(UnityEngine.Playables.PlayableGraph, UnityEngine.GameObject, int)
+  nameWithType.vb: TrackAsset.CreateTrackMixer(PlayableGraph, GameObject, Integer)
+  fullName.vb: UnityEngine.Timeline.TrackAsset.CreateTrackMixer(UnityEngine.Playables.PlayableGraph, UnityEngine.GameObject, Integer)
+  name.vb: CreateTrackMixer(PlayableGraph, GameObject, Integer)
+  spec.csharp:
+  - uid: UnityEngine.Timeline.TrackAsset.CreateTrackMixer(UnityEngine.Playables.PlayableGraph,UnityEngine.GameObject,System.Int32)
+    name: CreateTrackMixer
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Playables.PlayableGraph
+    name: PlayableGraph
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.GameObject
+    name: GameObject
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.Timeline.TrackAsset.CreateTrackMixer(UnityEngine.Playables.PlayableGraph,UnityEngine.GameObject,System.Int32)
+    name: CreateTrackMixer
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Playables.PlayableGraph
+    name: PlayableGraph
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.GameObject
+    name: GameObject
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Gasimo.Subtitles.Timeline.SubtitlerTrack.CreateTrackMixer*
+  commentId: Overload:Gasimo.Subtitles.Timeline.SubtitlerTrack.CreateTrackMixer
+  href: Gasimo.Subtitles.Timeline.SubtitlerTrack.html#Gasimo_Subtitles_Timeline_SubtitlerTrack_CreateTrackMixer_UnityEngine_Playables_PlayableGraph_UnityEngine_GameObject_System_Int32_
+  name: CreateTrackMixer
+  nameWithType: SubtitlerTrack.CreateTrackMixer
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerTrack.CreateTrackMixer
+- uid: UnityEngine.Playables.PlayableGraph
+  commentId: T:UnityEngine.Playables.PlayableGraph
+  parent: UnityEngine.Playables
+  isExternal: true
+  name: PlayableGraph
+  nameWithType: PlayableGraph
+  fullName: UnityEngine.Playables.PlayableGraph
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: UnityEngine.Playables.Playable
+  commentId: T:UnityEngine.Playables.Playable
+  parent: UnityEngine.Playables
+  isExternal: true
+  name: Playable
+  nameWithType: Playable
+  fullName: UnityEngine.Playables.Playable

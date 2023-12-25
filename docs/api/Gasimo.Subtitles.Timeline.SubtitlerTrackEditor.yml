@@ -1,0 +1,284 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gasimo.Subtitles.Timeline.SubtitlerTrackEditor
+  commentId: T:Gasimo.Subtitles.Timeline.SubtitlerTrackEditor
+  id: SubtitlerTrackEditor
+  parent: Gasimo.Subtitles.Timeline
+  children:
+  - Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.GetTrackOptions(UnityEngine.Timeline.TrackAsset,UnityEngine.Object)
+  - Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.icon
+  langs:
+  - csharp
+  - vb
+  name: SubtitlerTrackEditor
+  nameWithType: SubtitlerTrackEditor
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerTrackEditor
+  type: Class
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Timeline/Editor/SubtitlerTrackEditor.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler.git
+    id: SubtitlerTrackEditor
+    path: ../com.gasimo.subtitler/Runtime/Timeline/Editor/SubtitlerTrackEditor.cs
+    startLine: 13
+  assemblies:
+  - Gasimo.Subtitler.Timeline
+  namespace: Gasimo.Subtitles.Timeline
+  summary: Custom editor for the track. Will be used for custom icon once I find the docs on hows the proper way to implement this.
+  example: []
+  syntax:
+    content: >-
+      [CustomTimelineEditor(typeof(SubtitlerTrack))]
+
+      public class SubtitlerTrackEditor : TrackEditor
+    content.vb: >-
+      <CustomTimelineEditor(GetType(SubtitlerTrack))>
+
+      Public Class SubtitlerTrackEditor Inherits TrackEditor
+  inheritance:
+  - System.Object
+  - UnityEditor.Timeline.TrackEditor
+  attributes:
+  - type: UnityEditor.Timeline.CustomTimelineEditorAttribute
+    ctor: UnityEditor.Timeline.CustomTimelineEditorAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: Gasimo.Subtitles.Timeline.SubtitlerTrack
+- uid: Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.icon
+  commentId: F:Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.icon
+  id: icon
+  parent: Gasimo.Subtitles.Timeline.SubtitlerTrackEditor
+  langs:
+  - csharp
+  - vb
+  name: icon
+  nameWithType: SubtitlerTrackEditor.icon
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.icon
+  type: Field
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Timeline/Editor/SubtitlerTrackEditor.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler.git
+    id: icon
+    path: ../com.gasimo.subtitler/Runtime/Timeline/Editor/SubtitlerTrackEditor.cs
+    startLine: 17
+  assemblies:
+  - Gasimo.Subtitler.Timeline
+  namespace: Gasimo.Subtitles.Timeline
+  syntax:
+    content: public static Sprite icon
+    return:
+      type: UnityEngine.Sprite
+    content.vb: Public Shared icon As Sprite
+- uid: Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.GetTrackOptions(UnityEngine.Timeline.TrackAsset,UnityEngine.Object)
+  commentId: M:Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.GetTrackOptions(UnityEngine.Timeline.TrackAsset,UnityEngine.Object)
+  id: GetTrackOptions(UnityEngine.Timeline.TrackAsset,UnityEngine.Object)
+  parent: Gasimo.Subtitles.Timeline.SubtitlerTrackEditor
+  langs:
+  - csharp
+  - vb
+  name: GetTrackOptions(TrackAsset, Object)
+  nameWithType: SubtitlerTrackEditor.GetTrackOptions(TrackAsset, Object)
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.GetTrackOptions(UnityEngine.Timeline.TrackAsset, UnityEngine.Object)
+  type: Method
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Timeline/Editor/SubtitlerTrackEditor.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler.git
+    id: GetTrackOptions
+    path: ../com.gasimo.subtitler/Runtime/Timeline/Editor/SubtitlerTrackEditor.cs
+    startLine: 19
+  assemblies:
+  - Gasimo.Subtitler.Timeline
+  namespace: Gasimo.Subtitles.Timeline
+  example: []
+  syntax:
+    content: public override TrackDrawOptions GetTrackOptions(TrackAsset track, Object binding)
+    parameters:
+    - id: track
+      type: UnityEngine.Timeline.TrackAsset
+    - id: binding
+      type: UnityEngine.Object
+    return:
+      type: UnityEditor.Timeline.TrackDrawOptions
+    content.vb: Public Overrides Function GetTrackOptions(track As TrackAsset, binding As [Object]) As TrackDrawOptions
+  overridden: UnityEditor.Timeline.TrackEditor.GetTrackOptions(UnityEngine.Timeline.TrackAsset,UnityEngine.Object)
+  overload: Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.GetTrackOptions*
+references:
+- uid: Gasimo.Subtitles.Timeline
+  commentId: N:Gasimo.Subtitles.Timeline
+  href: Gasimo.html
+  name: Gasimo.Subtitles.Timeline
+  nameWithType: Gasimo.Subtitles.Timeline
+  fullName: Gasimo.Subtitles.Timeline
+  spec.csharp:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+  - name: .
+  - uid: Gasimo.Subtitles.Timeline
+    name: Timeline
+    href: Gasimo.Subtitles.Timeline.html
+  spec.vb:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+  - name: .
+  - uid: Gasimo.Subtitles.Timeline
+    name: Timeline
+    href: Gasimo.Subtitles.Timeline.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEditor.Timeline.TrackEditor
+  commentId: T:UnityEditor.Timeline.TrackEditor
+  parent: UnityEditor.Timeline
+  isExternal: true
+  name: TrackEditor
+  nameWithType: TrackEditor
+  fullName: UnityEditor.Timeline.TrackEditor
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEditor.Timeline
+  commentId: N:UnityEditor.Timeline
+  isExternal: true
+  name: UnityEditor.Timeline
+  nameWithType: UnityEditor.Timeline
+  fullName: UnityEditor.Timeline
+  spec.csharp:
+  - uid: UnityEditor
+    name: UnityEditor
+    isExternal: true
+  - name: .
+  - uid: UnityEditor.Timeline
+    name: Timeline
+    isExternal: true
+  spec.vb:
+  - uid: UnityEditor
+    name: UnityEditor
+    isExternal: true
+  - name: .
+  - uid: UnityEditor.Timeline
+    name: Timeline
+    isExternal: true
+- uid: UnityEngine.Sprite
+  commentId: T:UnityEngine.Sprite
+  parent: UnityEngine
+  isExternal: true
+  name: Sprite
+  nameWithType: Sprite
+  fullName: UnityEngine.Sprite
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEditor.Timeline.TrackEditor.GetTrackOptions(UnityEngine.Timeline.TrackAsset,UnityEngine.Object)
+  commentId: M:UnityEditor.Timeline.TrackEditor.GetTrackOptions(UnityEngine.Timeline.TrackAsset,UnityEngine.Object)
+  parent: UnityEditor.Timeline.TrackEditor
+  isExternal: true
+  name: GetTrackOptions(TrackAsset, Object)
+  nameWithType: TrackEditor.GetTrackOptions(TrackAsset, Object)
+  fullName: UnityEditor.Timeline.TrackEditor.GetTrackOptions(UnityEngine.Timeline.TrackAsset, UnityEngine.Object)
+  spec.csharp:
+  - uid: UnityEditor.Timeline.TrackEditor.GetTrackOptions(UnityEngine.Timeline.TrackAsset,UnityEngine.Object)
+    name: GetTrackOptions
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Timeline.TrackAsset
+    name: TrackAsset
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Timeline.TrackEditor.GetTrackOptions(UnityEngine.Timeline.TrackAsset,UnityEngine.Object)
+    name: GetTrackOptions
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Timeline.TrackAsset
+    name: TrackAsset
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.Object
+    name: Object
+    isExternal: true
+  - name: )
+- uid: Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.GetTrackOptions*
+  commentId: Overload:Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.GetTrackOptions
+  href: Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.html#Gasimo_Subtitles_Timeline_SubtitlerTrackEditor_GetTrackOptions_UnityEngine_Timeline_TrackAsset_UnityEngine_Object_
+  name: GetTrackOptions
+  nameWithType: SubtitlerTrackEditor.GetTrackOptions
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.GetTrackOptions
+- uid: UnityEngine.Timeline.TrackAsset
+  commentId: T:UnityEngine.Timeline.TrackAsset
+  parent: UnityEngine.Timeline
+  isExternal: true
+  name: TrackAsset
+  nameWithType: TrackAsset
+  fullName: UnityEngine.Timeline.TrackAsset
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEditor.Timeline.TrackDrawOptions
+  commentId: T:UnityEditor.Timeline.TrackDrawOptions
+  parent: UnityEditor.Timeline
+  isExternal: true
+  name: TrackDrawOptions
+  nameWithType: TrackDrawOptions
+  fullName: UnityEditor.Timeline.TrackDrawOptions
+- uid: UnityEngine.Timeline
+  commentId: N:UnityEngine.Timeline
+  isExternal: true
+  name: UnityEngine.Timeline
+  nameWithType: UnityEngine.Timeline
+  fullName: UnityEngine.Timeline
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.Timeline
+    name: Timeline
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.Timeline
+    name: Timeline
+    isExternal: true

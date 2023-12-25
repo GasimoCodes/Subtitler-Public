@@ -1,0 +1,215 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor
+  commentId: T:Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor
+  id: SubtitlerPlayableClipEditor
+  parent: Gasimo.Subtitles.Timeline
+  children:
+  - Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor.OnClipChanged(UnityEngine.Timeline.TimelineClip)
+  langs:
+  - csharp
+  - vb
+  name: SubtitlerPlayableClipEditor
+  nameWithType: SubtitlerPlayableClipEditor
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor
+  type: Class
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Timeline/Editor/SubtitlerPlayableClipEditor.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler.git
+    id: SubtitlerPlayableClipEditor
+    path: ../com.gasimo.subtitler/Runtime/Timeline/Editor/SubtitlerPlayableClipEditor.cs
+    startLine: 13
+  assemblies:
+  - Gasimo.Subtitler.Timeline
+  namespace: Gasimo.Subtitles.Timeline
+  summary: Custom Editor for the Timeline clip. Takes care of replacing the clip name and assigning duration property.
+  example: []
+  syntax:
+    content: >-
+      [CustomTimelineEditor(typeof(SubtitlerPlayableAsset))]
+
+      public class SubtitlerPlayableClipEditor : ClipEditor
+    content.vb: >-
+      <CustomTimelineEditor(GetType(SubtitlerPlayableAsset))>
+
+      Public Class SubtitlerPlayableClipEditor Inherits ClipEditor
+  inheritance:
+  - System.Object
+  - UnityEditor.Timeline.ClipEditor
+  attributes:
+  - type: UnityEditor.Timeline.CustomTimelineEditorAttribute
+    ctor: UnityEditor.Timeline.CustomTimelineEditorAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset
+- uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor.OnClipChanged(UnityEngine.Timeline.TimelineClip)
+  commentId: M:Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor.OnClipChanged(UnityEngine.Timeline.TimelineClip)
+  id: OnClipChanged(UnityEngine.Timeline.TimelineClip)
+  parent: Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor
+  langs:
+  - csharp
+  - vb
+  name: OnClipChanged(TimelineClip)
+  nameWithType: SubtitlerPlayableClipEditor.OnClipChanged(TimelineClip)
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor.OnClipChanged(UnityEngine.Timeline.TimelineClip)
+  type: Method
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Timeline/Editor/SubtitlerPlayableClipEditor.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler.git
+    id: OnClipChanged
+    path: ../com.gasimo.subtitler/Runtime/Timeline/Editor/SubtitlerPlayableClipEditor.cs
+    startLine: 19
+  assemblies:
+  - Gasimo.Subtitler.Timeline
+  namespace: Gasimo.Subtitles.Timeline
+  example: []
+  syntax:
+    content: public override void OnClipChanged(TimelineClip clip)
+    parameters:
+    - id: clip
+      type: UnityEngine.Timeline.TimelineClip
+    content.vb: Public Overrides Sub OnClipChanged(clip As TimelineClip)
+  overridden: UnityEditor.Timeline.ClipEditor.OnClipChanged(UnityEngine.Timeline.TimelineClip)
+  overload: Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor.OnClipChanged*
+references:
+- uid: Gasimo.Subtitles.Timeline
+  commentId: N:Gasimo.Subtitles.Timeline
+  href: Gasimo.html
+  name: Gasimo.Subtitles.Timeline
+  nameWithType: Gasimo.Subtitles.Timeline
+  fullName: Gasimo.Subtitles.Timeline
+  spec.csharp:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+  - name: .
+  - uid: Gasimo.Subtitles.Timeline
+    name: Timeline
+    href: Gasimo.Subtitles.Timeline.html
+  spec.vb:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+  - name: .
+  - uid: Gasimo.Subtitles.Timeline
+    name: Timeline
+    href: Gasimo.Subtitles.Timeline.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEditor.Timeline.ClipEditor
+  commentId: T:UnityEditor.Timeline.ClipEditor
+  parent: UnityEditor.Timeline
+  isExternal: true
+  name: ClipEditor
+  nameWithType: ClipEditor
+  fullName: UnityEditor.Timeline.ClipEditor
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEditor.Timeline
+  commentId: N:UnityEditor.Timeline
+  isExternal: true
+  name: UnityEditor.Timeline
+  nameWithType: UnityEditor.Timeline
+  fullName: UnityEditor.Timeline
+  spec.csharp:
+  - uid: UnityEditor
+    name: UnityEditor
+    isExternal: true
+  - name: .
+  - uid: UnityEditor.Timeline
+    name: Timeline
+    isExternal: true
+  spec.vb:
+  - uid: UnityEditor
+    name: UnityEditor
+    isExternal: true
+  - name: .
+  - uid: UnityEditor.Timeline
+    name: Timeline
+    isExternal: true
+- uid: UnityEditor.Timeline.ClipEditor.OnClipChanged(UnityEngine.Timeline.TimelineClip)
+  commentId: M:UnityEditor.Timeline.ClipEditor.OnClipChanged(UnityEngine.Timeline.TimelineClip)
+  parent: UnityEditor.Timeline.ClipEditor
+  isExternal: true
+  name: OnClipChanged(TimelineClip)
+  nameWithType: ClipEditor.OnClipChanged(TimelineClip)
+  fullName: UnityEditor.Timeline.ClipEditor.OnClipChanged(UnityEngine.Timeline.TimelineClip)
+  spec.csharp:
+  - uid: UnityEditor.Timeline.ClipEditor.OnClipChanged(UnityEngine.Timeline.TimelineClip)
+    name: OnClipChanged
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Timeline.TimelineClip
+    name: TimelineClip
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.Timeline.ClipEditor.OnClipChanged(UnityEngine.Timeline.TimelineClip)
+    name: OnClipChanged
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Timeline.TimelineClip
+    name: TimelineClip
+    isExternal: true
+  - name: )
+- uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor.OnClipChanged*
+  commentId: Overload:Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor.OnClipChanged
+  href: Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor.html#Gasimo_Subtitles_Timeline_SubtitlerPlayableClipEditor_OnClipChanged_UnityEngine_Timeline_TimelineClip_
+  name: OnClipChanged
+  nameWithType: SubtitlerPlayableClipEditor.OnClipChanged
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor.OnClipChanged
+- uid: UnityEngine.Timeline.TimelineClip
+  commentId: T:UnityEngine.Timeline.TimelineClip
+  parent: UnityEngine.Timeline
+  isExternal: true
+  name: TimelineClip
+  nameWithType: TimelineClip
+  fullName: UnityEngine.Timeline.TimelineClip
+- uid: UnityEngine.Timeline
+  commentId: N:UnityEngine.Timeline
+  isExternal: true
+  name: UnityEngine.Timeline
+  nameWithType: UnityEngine.Timeline
+  fullName: UnityEngine.Timeline
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.Timeline
+    name: Timeline
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.Timeline
+    name: Timeline
+    isExternal: true

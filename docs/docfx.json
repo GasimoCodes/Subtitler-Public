@@ -5,13 +5,15 @@
         {
           "src": "../",
           "files": [
-            "**/Gasimo.Subtitler.Timeline.csproj",
-            "**/Gasimo.Subtitler.csproj"
+            "Gasimo.*.csproj"
           ]
         }
       ],
       "filter": "filterConfig.yml",
-      "dest": "api"
+      "dest": "api",
+      "properties": {
+        "DefineConstants": "TIMELINE_PRESENT"
+      }
     }
   ],
   "build": {

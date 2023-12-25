@@ -112,18 +112,6 @@ references:
   commentId: F:Gasimo.Subtitles.SubtitleContainer.subtitleData
   fullName: Gasimo.Subtitles.SubtitleContainer.subtitleData
   nameWithType: SubtitleContainer.subtitleData
-- uid: Gasimo.Subtitles.SubtitleData
-  name: SubtitleData
-  href: api/Gasimo.Subtitles.SubtitleData.html
-  commentId: T:Gasimo.Subtitles.SubtitleData
-  fullName: Gasimo.Subtitles.SubtitleData
-  nameWithType: SubtitleData
-- uid: Gasimo.Subtitles.SubtitleData.Subtitles
-  name: Subtitles
-  href: api/Gasimo.Subtitles.SubtitleData.html#Gasimo_Subtitles_SubtitleData_Subtitles
-  commentId: F:Gasimo.Subtitles.SubtitleData.Subtitles
-  fullName: Gasimo.Subtitles.SubtitleData.Subtitles
-  nameWithType: SubtitleData.Subtitles
 - uid: Gasimo.Subtitles.SubtitleDataEntry
   name: SubtitleDataEntry
   href: api/Gasimo.Subtitles.SubtitleDataEntry.html
@@ -325,3 +313,144 @@ references:
   commentId: F:Gasimo.Subtitles.Subtitler.subtitleSize
   fullName: Gasimo.Subtitles.Subtitler.subtitleSize
   nameWithType: Subtitler.subtitleSize
+- uid: Gasimo.Subtitles.Timeline
+  name: Gasimo.Subtitles.Timeline
+  href: api/Gasimo.Subtitles.Timeline.html
+  commentId: N:Gasimo.Subtitles.Timeline
+  fullName: Gasimo.Subtitles.Timeline
+  nameWithType: Gasimo.Subtitles.Timeline
+- uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset
+  name: SubtitlerPlayableAsset
+  href: api/Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset.html
+  commentId: T:Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset
+  nameWithType: SubtitlerPlayableAsset
+- uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset.CreatePlayable(UnityEngine.Playables.PlayableGraph,UnityEngine.GameObject)
+  name: CreatePlayable(PlayableGraph, GameObject)
+  href: api/Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset.html#Gasimo_Subtitles_Timeline_SubtitlerPlayableAsset_CreatePlayable_UnityEngine_Playables_PlayableGraph_UnityEngine_GameObject_
+  commentId: M:Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset.CreatePlayable(UnityEngine.Playables.PlayableGraph,UnityEngine.GameObject)
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset.CreatePlayable(UnityEngine.Playables.PlayableGraph, UnityEngine.GameObject)
+  nameWithType: SubtitlerPlayableAsset.CreatePlayable(PlayableGraph, GameObject)
+- uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset.CreatePlayable*
+  name: CreatePlayable
+  href: api/Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset.html#Gasimo_Subtitles_Timeline_SubtitlerPlayableAsset_CreatePlayable_
+  commentId: Overload:Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset.CreatePlayable
+  isSpec: "True"
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset.CreatePlayable
+  nameWithType: SubtitlerPlayableAsset.CreatePlayable
+- uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset.entry
+  name: entry
+  href: api/Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset.html#Gasimo_Subtitles_Timeline_SubtitlerPlayableAsset_entry
+  commentId: F:Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset.entry
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset.entry
+  nameWithType: SubtitlerPlayableAsset.entry
+- uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour
+  name: SubtitlerPlayableBehaviour
+  href: api/Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.html
+  commentId: T:Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour
+  nameWithType: SubtitlerPlayableBehaviour
+- uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.OnBehaviourPause(UnityEngine.Playables.Playable,UnityEngine.Playables.FrameData)
+  name: OnBehaviourPause(Playable, FrameData)
+  href: api/Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.html#Gasimo_Subtitles_Timeline_SubtitlerPlayableBehaviour_OnBehaviourPause_UnityEngine_Playables_Playable_UnityEngine_Playables_FrameData_
+  commentId: M:Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.OnBehaviourPause(UnityEngine.Playables.Playable,UnityEngine.Playables.FrameData)
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.OnBehaviourPause(UnityEngine.Playables.Playable, UnityEngine.Playables.FrameData)
+  nameWithType: SubtitlerPlayableBehaviour.OnBehaviourPause(Playable, FrameData)
+- uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.OnBehaviourPause*
+  name: OnBehaviourPause
+  href: api/Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.html#Gasimo_Subtitles_Timeline_SubtitlerPlayableBehaviour_OnBehaviourPause_
+  commentId: Overload:Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.OnBehaviourPause
+  isSpec: "True"
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.OnBehaviourPause
+  nameWithType: SubtitlerPlayableBehaviour.OnBehaviourPause
+- uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.OnBehaviourPlay(UnityEngine.Playables.Playable,UnityEngine.Playables.FrameData)
+  name: OnBehaviourPlay(Playable, FrameData)
+  href: api/Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.html#Gasimo_Subtitles_Timeline_SubtitlerPlayableBehaviour_OnBehaviourPlay_UnityEngine_Playables_Playable_UnityEngine_Playables_FrameData_
+  commentId: M:Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.OnBehaviourPlay(UnityEngine.Playables.Playable,UnityEngine.Playables.FrameData)
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.OnBehaviourPlay(UnityEngine.Playables.Playable, UnityEngine.Playables.FrameData)
+  nameWithType: SubtitlerPlayableBehaviour.OnBehaviourPlay(Playable, FrameData)
+- uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.OnBehaviourPlay*
+  name: OnBehaviourPlay
+  href: api/Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.html#Gasimo_Subtitles_Timeline_SubtitlerPlayableBehaviour_OnBehaviourPlay_
+  commentId: Overload:Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.OnBehaviourPlay
+  isSpec: "True"
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.OnBehaviourPlay
+  nameWithType: SubtitlerPlayableBehaviour.OnBehaviourPlay
+- uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.entry
+  name: entry
+  href: api/Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.html#Gasimo_Subtitles_Timeline_SubtitlerPlayableBehaviour_entry
+  commentId: F:Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.entry
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.entry
+  nameWithType: SubtitlerPlayableBehaviour.entry
+- uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor
+  name: SubtitlerPlayableClipEditor
+  href: api/Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor.html
+  commentId: T:Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor
+  nameWithType: SubtitlerPlayableClipEditor
+- uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor.OnClipChanged(UnityEngine.Timeline.TimelineClip)
+  name: OnClipChanged(TimelineClip)
+  href: api/Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor.html#Gasimo_Subtitles_Timeline_SubtitlerPlayableClipEditor_OnClipChanged_UnityEngine_Timeline_TimelineClip_
+  commentId: M:Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor.OnClipChanged(UnityEngine.Timeline.TimelineClip)
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor.OnClipChanged(UnityEngine.Timeline.TimelineClip)
+  nameWithType: SubtitlerPlayableClipEditor.OnClipChanged(TimelineClip)
+- uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor.OnClipChanged*
+  name: OnClipChanged
+  href: api/Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor.html#Gasimo_Subtitles_Timeline_SubtitlerPlayableClipEditor_OnClipChanged_
+  commentId: Overload:Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor.OnClipChanged
+  isSpec: "True"
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor.OnClipChanged
+  nameWithType: SubtitlerPlayableClipEditor.OnClipChanged
+- uid: Gasimo.Subtitles.Timeline.SubtitlerTrack
+  name: SubtitlerTrack
+  href: api/Gasimo.Subtitles.Timeline.SubtitlerTrack.html
+  commentId: T:Gasimo.Subtitles.Timeline.SubtitlerTrack
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerTrack
+  nameWithType: SubtitlerTrack
+- uid: Gasimo.Subtitles.Timeline.SubtitlerTrack.CreateTrackMixer(UnityEngine.Playables.PlayableGraph,UnityEngine.GameObject,System.Int32)
+  name: CreateTrackMixer(PlayableGraph, GameObject, int)
+  href: api/Gasimo.Subtitles.Timeline.SubtitlerTrack.html#Gasimo_Subtitles_Timeline_SubtitlerTrack_CreateTrackMixer_UnityEngine_Playables_PlayableGraph_UnityEngine_GameObject_System_Int32_
+  commentId: M:Gasimo.Subtitles.Timeline.SubtitlerTrack.CreateTrackMixer(UnityEngine.Playables.PlayableGraph,UnityEngine.GameObject,System.Int32)
+  name.vb: CreateTrackMixer(PlayableGraph, GameObject, Integer)
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerTrack.CreateTrackMixer(UnityEngine.Playables.PlayableGraph, UnityEngine.GameObject, int)
+  fullName.vb: Gasimo.Subtitles.Timeline.SubtitlerTrack.CreateTrackMixer(UnityEngine.Playables.PlayableGraph, UnityEngine.GameObject, Integer)
+  nameWithType: SubtitlerTrack.CreateTrackMixer(PlayableGraph, GameObject, int)
+  nameWithType.vb: SubtitlerTrack.CreateTrackMixer(PlayableGraph, GameObject, Integer)
+- uid: Gasimo.Subtitles.Timeline.SubtitlerTrack.CreateTrackMixer*
+  name: CreateTrackMixer
+  href: api/Gasimo.Subtitles.Timeline.SubtitlerTrack.html#Gasimo_Subtitles_Timeline_SubtitlerTrack_CreateTrackMixer_
+  commentId: Overload:Gasimo.Subtitles.Timeline.SubtitlerTrack.CreateTrackMixer
+  isSpec: "True"
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerTrack.CreateTrackMixer
+  nameWithType: SubtitlerTrack.CreateTrackMixer
+- uid: Gasimo.Subtitles.Timeline.SubtitlerTrackEditor
+  name: SubtitlerTrackEditor
+  href: api/Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.html
+  commentId: T:Gasimo.Subtitles.Timeline.SubtitlerTrackEditor
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerTrackEditor
+  nameWithType: SubtitlerTrackEditor
+- uid: Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.GetTrackOptions(UnityEngine.Timeline.TrackAsset,UnityEngine.Object)
+  name: GetTrackOptions(TrackAsset, Object)
+  href: api/Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.html#Gasimo_Subtitles_Timeline_SubtitlerTrackEditor_GetTrackOptions_UnityEngine_Timeline_TrackAsset_UnityEngine_Object_
+  commentId: M:Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.GetTrackOptions(UnityEngine.Timeline.TrackAsset,UnityEngine.Object)
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.GetTrackOptions(UnityEngine.Timeline.TrackAsset, UnityEngine.Object)
+  nameWithType: SubtitlerTrackEditor.GetTrackOptions(TrackAsset, Object)
+- uid: Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.GetTrackOptions*
+  name: GetTrackOptions
+  href: api/Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.html#Gasimo_Subtitles_Timeline_SubtitlerTrackEditor_GetTrackOptions_
+  commentId: Overload:Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.GetTrackOptions
+  isSpec: "True"
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.GetTrackOptions
+  nameWithType: SubtitlerTrackEditor.GetTrackOptions
+- uid: Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.icon
+  name: icon
+  href: api/Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.html#Gasimo_Subtitles_Timeline_SubtitlerTrackEditor_icon
+  commentId: F:Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.icon
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.icon
+  nameWithType: SubtitlerTrackEditor.icon
+- uid: Gasimo.Subtitles.Timeline.SubtitlerTrackMixer
+  name: SubtitlerTrackMixer
+  href: api/Gasimo.Subtitles.Timeline.SubtitlerTrackMixer.html
+  commentId: T:Gasimo.Subtitles.Timeline.SubtitlerTrackMixer
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerTrackMixer
+  nameWithType: SubtitlerTrackMixer

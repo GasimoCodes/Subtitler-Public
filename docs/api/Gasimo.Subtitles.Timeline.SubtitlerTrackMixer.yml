@@ -1,0 +1,111 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gasimo.Subtitles.Timeline.SubtitlerTrackMixer
+  commentId: T:Gasimo.Subtitles.Timeline.SubtitlerTrackMixer
+  id: SubtitlerTrackMixer
+  parent: Gasimo.Subtitles.Timeline
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: SubtitlerTrackMixer
+  nameWithType: SubtitlerTrackMixer
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerTrackMixer
+  type: Class
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Timeline/SubtitlerTrackMixer.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler.git
+    id: SubtitlerTrackMixer
+    path: ../com.gasimo.subtitler/Runtime/Timeline/SubtitlerTrackMixer.cs
+    startLine: 12
+  assemblies:
+  - Gasimo.Subtitler.Timeline
+  namespace: Gasimo.Subtitles.Timeline
+  summary: Currently unused. Will be possibly used to manage clips on the timeline.
+  example: []
+  syntax:
+    content: 'public class SubtitlerTrackMixer : PlayableBehaviour'
+    content.vb: Public Class SubtitlerTrackMixer Inherits PlayableBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Playables.PlayableBehaviour
+references:
+- uid: Gasimo.Subtitles.Timeline
+  commentId: N:Gasimo.Subtitles.Timeline
+  href: Gasimo.html
+  name: Gasimo.Subtitles.Timeline
+  nameWithType: Gasimo.Subtitles.Timeline
+  fullName: Gasimo.Subtitles.Timeline
+  spec.csharp:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+  - name: .
+  - uid: Gasimo.Subtitles.Timeline
+    name: Timeline
+    href: Gasimo.Subtitles.Timeline.html
+  spec.vb:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+  - name: .
+  - uid: Gasimo.Subtitles.Timeline
+    name: Timeline
+    href: Gasimo.Subtitles.Timeline.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Playables.PlayableBehaviour
+  commentId: T:UnityEngine.Playables.PlayableBehaviour
+  parent: UnityEngine.Playables
+  isExternal: true
+  name: PlayableBehaviour
+  nameWithType: PlayableBehaviour
+  fullName: UnityEngine.Playables.PlayableBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine.Playables
+  commentId: N:UnityEngine.Playables
+  isExternal: true
+  name: UnityEngine.Playables
+  nameWithType: UnityEngine.Playables
+  fullName: UnityEngine.Playables
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.Playables
+    name: Playables
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.Playables
+    name: Playables
+    isExternal: true

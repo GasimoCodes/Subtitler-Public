@@ -1,0 +1,343 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour
+  commentId: T:Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour
+  id: SubtitlerPlayableBehaviour
+  parent: Gasimo.Subtitles.Timeline
+  children:
+  - Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.OnBehaviourPause(UnityEngine.Playables.Playable,UnityEngine.Playables.FrameData)
+  - Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.OnBehaviourPlay(UnityEngine.Playables.Playable,UnityEngine.Playables.FrameData)
+  - Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.entry
+  langs:
+  - csharp
+  - vb
+  name: SubtitlerPlayableBehaviour
+  nameWithType: SubtitlerPlayableBehaviour
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour
+  type: Class
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Timeline/SubtitlerPlayableBehaviour.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler.git
+    id: SubtitlerPlayableBehaviour
+    path: ../com.gasimo.subtitler/Runtime/Timeline/SubtitlerPlayableBehaviour.cs
+    startLine: 12
+  assemblies:
+  - Gasimo.Subtitler.Timeline
+  namespace: Gasimo.Subtitles.Timeline
+  summary: Behaviour called by clips. This plays a single SubtitleDataEntry at the beginning of the clip.
+  example: []
+  syntax:
+    content: 'public class SubtitlerPlayableBehaviour : PlayableBehaviour'
+    content.vb: Public Class SubtitlerPlayableBehaviour Inherits PlayableBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Playables.PlayableBehaviour
+- uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.entry
+  commentId: F:Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.entry
+  id: entry
+  parent: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour
+  langs:
+  - csharp
+  - vb
+  name: entry
+  nameWithType: SubtitlerPlayableBehaviour.entry
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.entry
+  type: Field
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Timeline/SubtitlerPlayableBehaviour.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler.git
+    id: entry
+    path: ../com.gasimo.subtitler/Runtime/Timeline/SubtitlerPlayableBehaviour.cs
+    startLine: 15
+  assemblies:
+  - Gasimo.Subtitler.Timeline
+  namespace: Gasimo.Subtitles.Timeline
+  syntax:
+    content: public SubtitleDataEntry entry
+    return:
+      type: Gasimo.Subtitles.SubtitleDataEntry
+    content.vb: Public entry As SubtitleDataEntry
+- uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.OnBehaviourPlay(UnityEngine.Playables.Playable,UnityEngine.Playables.FrameData)
+  commentId: M:Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.OnBehaviourPlay(UnityEngine.Playables.Playable,UnityEngine.Playables.FrameData)
+  id: OnBehaviourPlay(UnityEngine.Playables.Playable,UnityEngine.Playables.FrameData)
+  parent: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour
+  langs:
+  - csharp
+  - vb
+  name: OnBehaviourPlay(Playable, FrameData)
+  nameWithType: SubtitlerPlayableBehaviour.OnBehaviourPlay(Playable, FrameData)
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.OnBehaviourPlay(UnityEngine.Playables.Playable, UnityEngine.Playables.FrameData)
+  type: Method
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Timeline/SubtitlerPlayableBehaviour.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler.git
+    id: OnBehaviourPlay
+    path: ../com.gasimo.subtitler/Runtime/Timeline/SubtitlerPlayableBehaviour.cs
+    startLine: 18
+  assemblies:
+  - Gasimo.Subtitler.Timeline
+  namespace: Gasimo.Subtitles.Timeline
+  summary: <p>This function is called when the Playable play state is changed to Playables.PlayState.Playing.</p>
+  example: []
+  syntax:
+    content: public override void OnBehaviourPlay(Playable playable, FrameData info)
+    parameters:
+    - id: playable
+      type: UnityEngine.Playables.Playable
+      description: The Playable that owns the current PlayableBehaviour.
+    - id: info
+      type: UnityEngine.Playables.FrameData
+      description: A FrameData structure that contains information about the current frame context.
+    content.vb: Public Overrides Sub OnBehaviourPlay(playable As Playable, info As FrameData)
+  overridden: UnityEngine.Playables.PlayableBehaviour.OnBehaviourPlay(UnityEngine.Playables.Playable,UnityEngine.Playables.FrameData)
+  overload: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.OnBehaviourPlay*
+- uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.OnBehaviourPause(UnityEngine.Playables.Playable,UnityEngine.Playables.FrameData)
+  commentId: M:Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.OnBehaviourPause(UnityEngine.Playables.Playable,UnityEngine.Playables.FrameData)
+  id: OnBehaviourPause(UnityEngine.Playables.Playable,UnityEngine.Playables.FrameData)
+  parent: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour
+  langs:
+  - csharp
+  - vb
+  name: OnBehaviourPause(Playable, FrameData)
+  nameWithType: SubtitlerPlayableBehaviour.OnBehaviourPause(Playable, FrameData)
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.OnBehaviourPause(UnityEngine.Playables.Playable, UnityEngine.Playables.FrameData)
+  type: Method
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Timeline/SubtitlerPlayableBehaviour.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler.git
+    id: OnBehaviourPause
+    path: ../com.gasimo.subtitler/Runtime/Timeline/SubtitlerPlayableBehaviour.cs
+    startLine: 26
+  assemblies:
+  - Gasimo.Subtitler.Timeline
+  namespace: Gasimo.Subtitles.Timeline
+  summary: >-
+    <p>This method is invoked when one of the following situations occurs:
+
+    &lt;br&gt;&lt;br&gt;
+         The effective play state during traversal is changed to Playables.PlayState.Paused. This state is indicated by FrameData.effectivePlayState.&lt;br&gt;&lt;br&gt;
+         The PlayableGraph is stopped while the playable play state is Playing. This state is indicated by PlayableGraph.IsPlaying returning true.</p>
+  example: []
+  syntax:
+    content: public override void OnBehaviourPause(Playable playable, FrameData info)
+    parameters:
+    - id: playable
+      type: UnityEngine.Playables.Playable
+      description: The Playable that owns the current PlayableBehaviour.
+    - id: info
+      type: UnityEngine.Playables.FrameData
+      description: A FrameData structure that contains information about the current frame context.
+    content.vb: Public Overrides Sub OnBehaviourPause(playable As Playable, info As FrameData)
+  overridden: UnityEngine.Playables.PlayableBehaviour.OnBehaviourPause(UnityEngine.Playables.Playable,UnityEngine.Playables.FrameData)
+  overload: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.OnBehaviourPause*
+references:
+- uid: Gasimo.Subtitles.Timeline
+  commentId: N:Gasimo.Subtitles.Timeline
+  href: Gasimo.html
+  name: Gasimo.Subtitles.Timeline
+  nameWithType: Gasimo.Subtitles.Timeline
+  fullName: Gasimo.Subtitles.Timeline
+  spec.csharp:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+  - name: .
+  - uid: Gasimo.Subtitles.Timeline
+    name: Timeline
+    href: Gasimo.Subtitles.Timeline.html
+  spec.vb:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+  - name: .
+  - uid: Gasimo.Subtitles.Timeline
+    name: Timeline
+    href: Gasimo.Subtitles.Timeline.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Playables.PlayableBehaviour
+  commentId: T:UnityEngine.Playables.PlayableBehaviour
+  parent: UnityEngine.Playables
+  isExternal: true
+  name: PlayableBehaviour
+  nameWithType: PlayableBehaviour
+  fullName: UnityEngine.Playables.PlayableBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine.Playables
+  commentId: N:UnityEngine.Playables
+  isExternal: true
+  name: UnityEngine.Playables
+  nameWithType: UnityEngine.Playables
+  fullName: UnityEngine.Playables
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.Playables
+    name: Playables
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.Playables
+    name: Playables
+    isExternal: true
+- uid: Gasimo.Subtitles.SubtitleDataEntry
+  commentId: T:Gasimo.Subtitles.SubtitleDataEntry
+  parent: Gasimo.Subtitles
+  href: Gasimo.Subtitles.SubtitleDataEntry.html
+  name: SubtitleDataEntry
+  nameWithType: SubtitleDataEntry
+  fullName: Gasimo.Subtitles.SubtitleDataEntry
+- uid: Gasimo.Subtitles
+  commentId: N:Gasimo.Subtitles
+  href: Gasimo.html
+  name: Gasimo.Subtitles
+  nameWithType: Gasimo.Subtitles
+  fullName: Gasimo.Subtitles
+  spec.csharp:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+  spec.vb:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+- uid: UnityEngine.Playables.PlayableBehaviour.OnBehaviourPlay(UnityEngine.Playables.Playable,UnityEngine.Playables.FrameData)
+  commentId: M:UnityEngine.Playables.PlayableBehaviour.OnBehaviourPlay(UnityEngine.Playables.Playable,UnityEngine.Playables.FrameData)
+  parent: UnityEngine.Playables.PlayableBehaviour
+  isExternal: true
+  name: OnBehaviourPlay(Playable, FrameData)
+  nameWithType: PlayableBehaviour.OnBehaviourPlay(Playable, FrameData)
+  fullName: UnityEngine.Playables.PlayableBehaviour.OnBehaviourPlay(UnityEngine.Playables.Playable, UnityEngine.Playables.FrameData)
+  spec.csharp:
+  - uid: UnityEngine.Playables.PlayableBehaviour.OnBehaviourPlay(UnityEngine.Playables.Playable,UnityEngine.Playables.FrameData)
+    name: OnBehaviourPlay
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Playables.Playable
+    name: Playable
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.Playables.FrameData
+    name: FrameData
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.Playables.PlayableBehaviour.OnBehaviourPlay(UnityEngine.Playables.Playable,UnityEngine.Playables.FrameData)
+    name: OnBehaviourPlay
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Playables.Playable
+    name: Playable
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.Playables.FrameData
+    name: FrameData
+    isExternal: true
+  - name: )
+- uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.OnBehaviourPlay*
+  commentId: Overload:Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.OnBehaviourPlay
+  href: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.html#Gasimo_Subtitles_Timeline_SubtitlerPlayableBehaviour_OnBehaviourPlay_UnityEngine_Playables_Playable_UnityEngine_Playables_FrameData_
+  name: OnBehaviourPlay
+  nameWithType: SubtitlerPlayableBehaviour.OnBehaviourPlay
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.OnBehaviourPlay
+- uid: UnityEngine.Playables.Playable
+  commentId: T:UnityEngine.Playables.Playable
+  parent: UnityEngine.Playables
+  isExternal: true
+  name: Playable
+  nameWithType: Playable
+  fullName: UnityEngine.Playables.Playable
+- uid: UnityEngine.Playables.FrameData
+  commentId: T:UnityEngine.Playables.FrameData
+  parent: UnityEngine.Playables
+  isExternal: true
+  name: FrameData
+  nameWithType: FrameData
+  fullName: UnityEngine.Playables.FrameData
+- uid: UnityEngine.Playables.PlayableBehaviour.OnBehaviourPause(UnityEngine.Playables.Playable,UnityEngine.Playables.FrameData)
+  commentId: M:UnityEngine.Playables.PlayableBehaviour.OnBehaviourPause(UnityEngine.Playables.Playable,UnityEngine.Playables.FrameData)
+  parent: UnityEngine.Playables.PlayableBehaviour
+  isExternal: true
+  name: OnBehaviourPause(Playable, FrameData)
+  nameWithType: PlayableBehaviour.OnBehaviourPause(Playable, FrameData)
+  fullName: UnityEngine.Playables.PlayableBehaviour.OnBehaviourPause(UnityEngine.Playables.Playable, UnityEngine.Playables.FrameData)
+  spec.csharp:
+  - uid: UnityEngine.Playables.PlayableBehaviour.OnBehaviourPause(UnityEngine.Playables.Playable,UnityEngine.Playables.FrameData)
+    name: OnBehaviourPause
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Playables.Playable
+    name: Playable
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.Playables.FrameData
+    name: FrameData
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEngine.Playables.PlayableBehaviour.OnBehaviourPause(UnityEngine.Playables.Playable,UnityEngine.Playables.FrameData)
+    name: OnBehaviourPause
+    isExternal: true
+  - name: (
+  - uid: UnityEngine.Playables.Playable
+    name: Playable
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: UnityEngine.Playables.FrameData
+    name: FrameData
+    isExternal: true
+  - name: )
+- uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.OnBehaviourPause*
+  commentId: Overload:Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.OnBehaviourPause
+  href: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.html#Gasimo_Subtitles_Timeline_SubtitlerPlayableBehaviour_OnBehaviourPause_UnityEngine_Playables_Playable_UnityEngine_Playables_FrameData_
+  name: OnBehaviourPause
+  nameWithType: SubtitlerPlayableBehaviour.OnBehaviourPause
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.OnBehaviourPause

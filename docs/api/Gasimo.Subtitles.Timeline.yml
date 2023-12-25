@@ -1,0 +1,90 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gasimo.Subtitles.Timeline
+  commentId: N:Gasimo.Subtitles.Timeline
+  id: Gasimo.Subtitles.Timeline
+  children:
+  - Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset
+  - Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour
+  - Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor
+  - Gasimo.Subtitles.Timeline.SubtitlerTrack
+  - Gasimo.Subtitles.Timeline.SubtitlerTrackEditor
+  - Gasimo.Subtitles.Timeline.SubtitlerTrackMixer
+  langs:
+  - csharp
+  - vb
+  name: Gasimo.Subtitles.Timeline
+  nameWithType: Gasimo.Subtitles.Timeline
+  fullName: Gasimo.Subtitles.Timeline
+  type: Namespace
+  assemblies:
+  - Gasimo.Subtitler.Timeline
+references:
+- uid: Gasimo.Subtitles.Timeline.SubtitlerTrackEditor
+  commentId: T:Gasimo.Subtitles.Timeline.SubtitlerTrackEditor
+  href: Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.html
+  name: SubtitlerTrackEditor
+  nameWithType: SubtitlerTrackEditor
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerTrackEditor
+- uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour
+  commentId: T:Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour
+  href: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.html
+  name: SubtitlerPlayableBehaviour
+  nameWithType: SubtitlerPlayableBehaviour
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour
+- uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset
+  commentId: T:Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset
+  parent: Gasimo.Subtitles.Timeline
+  href: Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset.html
+  name: SubtitlerPlayableAsset
+  nameWithType: SubtitlerPlayableAsset
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset
+- uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor
+  commentId: T:Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor
+  href: Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor.html
+  name: SubtitlerPlayableClipEditor
+  nameWithType: SubtitlerPlayableClipEditor
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor
+- uid: Gasimo.Subtitles.Timeline.SubtitlerTrack
+  commentId: T:Gasimo.Subtitles.Timeline.SubtitlerTrack
+  parent: Gasimo.Subtitles.Timeline
+  href: Gasimo.Subtitles.Timeline.SubtitlerTrack.html
+  name: SubtitlerTrack
+  nameWithType: SubtitlerTrack
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerTrack
+- uid: Gasimo.Subtitles.Timeline.SubtitlerTrackMixer
+  commentId: T:Gasimo.Subtitles.Timeline.SubtitlerTrackMixer
+  href: Gasimo.Subtitles.Timeline.SubtitlerTrackMixer.html
+  name: SubtitlerTrackMixer
+  nameWithType: SubtitlerTrackMixer
+  fullName: Gasimo.Subtitles.Timeline.SubtitlerTrackMixer
+- uid: Gasimo.Subtitles.Timeline
+  commentId: N:Gasimo.Subtitles.Timeline
+  href: Gasimo.html
+  name: Gasimo.Subtitles.Timeline
+  nameWithType: Gasimo.Subtitles.Timeline
+  fullName: Gasimo.Subtitles.Timeline
+  spec.csharp:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+  - name: .
+  - uid: Gasimo.Subtitles.Timeline
+    name: Timeline
+    href: Gasimo.Subtitles.Timeline.html
+  spec.vb:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+  - name: .
+  - uid: Gasimo.Subtitles.Timeline
+    name: Timeline
+    href: Gasimo.Subtitles.Timeline.html

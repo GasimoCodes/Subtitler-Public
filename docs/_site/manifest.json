@@ -52,16 +52,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Gasimo.Subtitles.SubtitleData.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Gasimo.Subtitles.SubtitleData.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Gasimo.Subtitles.SubtitleDataEntry.yml",
       "output": {
         ".html": {
@@ -86,6 +76,76 @@
       "output": {
         ".html": {
           "relative_path": "api/Gasimo.Subtitles.Subtitler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gasimo.Subtitles.Timeline.SubtitlerTrack.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gasimo.Subtitles.Timeline.SubtitlerTrack.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gasimo.Subtitles.Timeline.SubtitlerTrackMixer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gasimo.Subtitles.Timeline.SubtitlerTrackMixer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gasimo.Subtitles.Timeline.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gasimo.Subtitles.Timeline.html"
         }
       },
       "version": ""

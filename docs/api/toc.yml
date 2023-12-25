@@ -17,4 +17,19 @@ items:
     name: SubtitleSequenceData
   - uid: Gasimo.Subtitles.Subtitler
     name: Subtitler
+- uid: Gasimo.Subtitles.Timeline
+  name: Gasimo.Subtitles.Timeline
+  items:
+  - uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset
+    name: SubtitlerPlayableAsset
+  - uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour
+    name: SubtitlerPlayableBehaviour
+  - uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor
+    name: SubtitlerPlayableClipEditor
+  - uid: Gasimo.Subtitles.Timeline.SubtitlerTrack
+    name: SubtitlerTrack
+  - uid: Gasimo.Subtitles.Timeline.SubtitlerTrackEditor
+    name: SubtitlerTrackEditor
+  - uid: Gasimo.Subtitles.Timeline.SubtitlerTrackMixer
+    name: SubtitlerTrackMixer
 memberLayout: SamePage

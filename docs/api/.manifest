@@ -36,5 +36,21 @@
   "Gasimo.Subtitles.Subtitler.speakerHighlight": "Gasimo.Subtitles.Subtitler.yml",
   "Gasimo.Subtitles.Subtitler.subtitlePool": "Gasimo.Subtitles.Subtitler.yml",
   "Gasimo.Subtitles.Subtitler.subtitlePoolSize": "Gasimo.Subtitles.Subtitler.yml",
-  "Gasimo.Subtitles.Subtitler.subtitleSize": "Gasimo.Subtitles.Subtitler.yml"
+  "Gasimo.Subtitles.Subtitler.subtitleSize": "Gasimo.Subtitles.Subtitler.yml",
+  "Gasimo.Subtitles.Timeline": "Gasimo.Subtitles.Timeline.yml",
+  "Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset": "Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset.yml",
+  "Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset.CreatePlayable(UnityEngine.Playables.PlayableGraph,UnityEngine.GameObject)": "Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset.yml",
+  "Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset.entry": "Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset.yml",
+  "Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour": "Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.yml",
+  "Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.OnBehaviourPause(UnityEngine.Playables.Playable,UnityEngine.Playables.FrameData)": "Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.yml",
+  "Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.OnBehaviourPlay(UnityEngine.Playables.Playable,UnityEngine.Playables.FrameData)": "Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.yml",
+  "Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.entry": "Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.yml",
+  "Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor": "Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor.yml",
+  "Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor.OnClipChanged(UnityEngine.Timeline.TimelineClip)": "Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor.yml",
+  "Gasimo.Subtitles.Timeline.SubtitlerTrack": "Gasimo.Subtitles.Timeline.SubtitlerTrack.yml",
+  "Gasimo.Subtitles.Timeline.SubtitlerTrack.CreateTrackMixer(UnityEngine.Playables.PlayableGraph,UnityEngine.GameObject,System.Int32)": "Gasimo.Subtitles.Timeline.SubtitlerTrack.yml",
+  "Gasimo.Subtitles.Timeline.SubtitlerTrackEditor": "Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.yml",
+  "Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.GetTrackOptions(UnityEngine.Timeline.TrackAsset,UnityEngine.Object)": "Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.yml",
+  "Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.icon": "Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.yml",
+  "Gasimo.Subtitles.Timeline.SubtitlerTrackMixer": "Gasimo.Subtitles.Timeline.SubtitlerTrackMixer.yml"
 }
