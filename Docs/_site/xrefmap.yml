@@ -178,6 +178,18 @@ references:
   commentId: F:Gasimo.Subtitles.SubtitleDataEntry.waitFor
   fullName: Gasimo.Subtitles.SubtitleDataEntry.waitFor
   nameWithType: SubtitleDataEntry.waitFor
+- uid: Gasimo.Subtitles.SubtitleSequenceData
+  name: SubtitleSequenceData
+  href: api/Gasimo.Subtitles.SubtitleSequenceData.html
+  commentId: T:Gasimo.Subtitles.SubtitleSequenceData
+  fullName: Gasimo.Subtitles.SubtitleSequenceData
+  nameWithType: SubtitleSequenceData
+- uid: Gasimo.Subtitles.SubtitleSequenceData.Subtitles
+  name: Subtitles
+  href: api/Gasimo.Subtitles.SubtitleSequenceData.html#Gasimo_Subtitles_SubtitleSequenceData_Subtitles
+  commentId: F:Gasimo.Subtitles.SubtitleSequenceData.Subtitles
+  fullName: Gasimo.Subtitles.SubtitleSequenceData.Subtitles
+  nameWithType: SubtitleSequenceData.Subtitles
 - uid: Gasimo.Subtitles.Subtitler
   name: Subtitler
   href: api/Gasimo.Subtitles.Subtitler.html
@@ -210,22 +222,45 @@ references:
   isSpec: "True"
   fullName: Gasimo.Subtitles.Subtitler.CheckHideSubtitlePanel
   nameWithType: Subtitler.CheckHideSubtitlePanel
-- uid: Gasimo.Subtitles.Subtitler.DisplaySubtitle(System.String,System.String,System.Single)
-  name: DisplaySubtitle(string, string, float)
-  href: api/Gasimo.Subtitles.Subtitler.html#Gasimo_Subtitles_Subtitler_DisplaySubtitle_System_String_System_String_System_Single_
-  commentId: M:Gasimo.Subtitles.Subtitler.DisplaySubtitle(System.String,System.String,System.Single)
-  name.vb: DisplaySubtitle(String, String, Single)
-  fullName: Gasimo.Subtitles.Subtitler.DisplaySubtitle(string, string, float)
-  fullName.vb: Gasimo.Subtitles.Subtitler.DisplaySubtitle(String, String, Single)
-  nameWithType: Subtitler.DisplaySubtitle(string, string, float)
-  nameWithType.vb: Subtitler.DisplaySubtitle(String, String, Single)
-- uid: Gasimo.Subtitles.Subtitler.DisplaySubtitle*
-  name: DisplaySubtitle
-  href: api/Gasimo.Subtitles.Subtitler.html#Gasimo_Subtitles_Subtitler_DisplaySubtitle_
-  commentId: Overload:Gasimo.Subtitles.Subtitler.DisplaySubtitle
+- uid: Gasimo.Subtitles.Subtitler.Init
+  name: Init()
+  href: api/Gasimo.Subtitles.Subtitler.html#Gasimo_Subtitles_Subtitler_Init
+  commentId: M:Gasimo.Subtitles.Subtitler.Init
+  fullName: Gasimo.Subtitles.Subtitler.Init()
+  nameWithType: Subtitler.Init()
+- uid: Gasimo.Subtitles.Subtitler.Init*
+  name: Init
+  href: api/Gasimo.Subtitles.Subtitler.html#Gasimo_Subtitles_Subtitler_Init_
+  commentId: Overload:Gasimo.Subtitles.Subtitler.Init
   isSpec: "True"
-  fullName: Gasimo.Subtitles.Subtitler.DisplaySubtitle
-  nameWithType: Subtitler.DisplaySubtitle
+  fullName: Gasimo.Subtitles.Subtitler.Init
+  nameWithType: Subtitler.Init
+- uid: Gasimo.Subtitles.Subtitler.PlaySubtitleEntry(Gasimo.Subtitles.SubtitleDataEntry,UnityEngine.AudioSource)
+  name: PlaySubtitleEntry(SubtitleDataEntry, AudioSource)
+  href: api/Gasimo.Subtitles.Subtitler.html#Gasimo_Subtitles_Subtitler_PlaySubtitleEntry_Gasimo_Subtitles_SubtitleDataEntry_UnityEngine_AudioSource_
+  commentId: M:Gasimo.Subtitles.Subtitler.PlaySubtitleEntry(Gasimo.Subtitles.SubtitleDataEntry,UnityEngine.AudioSource)
+  fullName: Gasimo.Subtitles.Subtitler.PlaySubtitleEntry(Gasimo.Subtitles.SubtitleDataEntry, UnityEngine.AudioSource)
+  nameWithType: Subtitler.PlaySubtitleEntry(SubtitleDataEntry, AudioSource)
+- uid: Gasimo.Subtitles.Subtitler.PlaySubtitleEntry*
+  name: PlaySubtitleEntry
+  href: api/Gasimo.Subtitles.Subtitler.html#Gasimo_Subtitles_Subtitler_PlaySubtitleEntry_
+  commentId: Overload:Gasimo.Subtitles.Subtitler.PlaySubtitleEntry
+  isSpec: "True"
+  fullName: Gasimo.Subtitles.Subtitler.PlaySubtitleEntry
+  nameWithType: Subtitler.PlaySubtitleEntry
+- uid: Gasimo.Subtitles.Subtitler.PlaySubtitleSequence(Gasimo.Subtitles.SubtitleSequenceData,UnityEngine.AudioSource)
+  name: PlaySubtitleSequence(SubtitleSequenceData, AudioSource)
+  href: api/Gasimo.Subtitles.Subtitler.html#Gasimo_Subtitles_Subtitler_PlaySubtitleSequence_Gasimo_Subtitles_SubtitleSequenceData_UnityEngine_AudioSource_
+  commentId: M:Gasimo.Subtitles.Subtitler.PlaySubtitleSequence(Gasimo.Subtitles.SubtitleSequenceData,UnityEngine.AudioSource)
+  fullName: Gasimo.Subtitles.Subtitler.PlaySubtitleSequence(Gasimo.Subtitles.SubtitleSequenceData, UnityEngine.AudioSource)
+  nameWithType: Subtitler.PlaySubtitleSequence(SubtitleSequenceData, AudioSource)
+- uid: Gasimo.Subtitles.Subtitler.PlaySubtitleSequence*
+  name: PlaySubtitleSequence
+  href: api/Gasimo.Subtitles.Subtitler.html#Gasimo_Subtitles_Subtitler_PlaySubtitleSequence_
+  commentId: Overload:Gasimo.Subtitles.Subtitler.PlaySubtitleSequence
+  isSpec: "True"
+  fullName: Gasimo.Subtitles.Subtitler.PlaySubtitleSequence
+  nameWithType: Subtitler.PlaySubtitleSequence
 - uid: Gasimo.Subtitles.Subtitler.centeredText
   name: centeredText
   href: api/Gasimo.Subtitles.Subtitler.html#Gasimo_Subtitles_Subtitler_centeredText
@@ -260,19 +295,6 @@ references:
   isSpec: "True"
   fullName: Gasimo.Subtitles.Subtitler.killSubtitleById
   nameWithType: Subtitler.killSubtitleById
-- uid: Gasimo.Subtitles.Subtitler.playSubtitle(Gasimo.Subtitles.SubtitleData,UnityEngine.AudioSource)
-  name: playSubtitle(SubtitleData, AudioSource)
-  href: api/Gasimo.Subtitles.Subtitler.html#Gasimo_Subtitles_Subtitler_playSubtitle_Gasimo_Subtitles_SubtitleData_UnityEngine_AudioSource_
-  commentId: M:Gasimo.Subtitles.Subtitler.playSubtitle(Gasimo.Subtitles.SubtitleData,UnityEngine.AudioSource)
-  fullName: Gasimo.Subtitles.Subtitler.playSubtitle(Gasimo.Subtitles.SubtitleData, UnityEngine.AudioSource)
-  nameWithType: Subtitler.playSubtitle(SubtitleData, AudioSource)
-- uid: Gasimo.Subtitles.Subtitler.playSubtitle*
-  name: playSubtitle
-  href: api/Gasimo.Subtitles.Subtitler.html#Gasimo_Subtitles_Subtitler_playSubtitle_
-  commentId: Overload:Gasimo.Subtitles.Subtitler.playSubtitle
-  isSpec: "True"
-  fullName: Gasimo.Subtitles.Subtitler.playSubtitle
-  nameWithType: Subtitler.playSubtitle
 - uid: Gasimo.Subtitles.Subtitler.player
   name: player
   href: api/Gasimo.Subtitles.Subtitler.html#Gasimo_Subtitles_Subtitler_player
@@ -291,6 +313,12 @@ references:
   commentId: F:Gasimo.Subtitles.Subtitler.subtitlePool
   fullName: Gasimo.Subtitles.Subtitler.subtitlePool
   nameWithType: Subtitler.subtitlePool
+- uid: Gasimo.Subtitles.Subtitler.subtitlePoolSize
+  name: subtitlePoolSize
+  href: api/Gasimo.Subtitles.Subtitler.html#Gasimo_Subtitles_Subtitler_subtitlePoolSize
+  commentId: F:Gasimo.Subtitles.Subtitler.subtitlePoolSize
+  fullName: Gasimo.Subtitles.Subtitler.subtitlePoolSize
+  nameWithType: Subtitler.subtitlePoolSize
 - uid: Gasimo.Subtitles.Subtitler.subtitleSize
   name: subtitleSize
   href: api/Gasimo.Subtitles.Subtitler.html#Gasimo_Subtitles_Subtitler_subtitleSize

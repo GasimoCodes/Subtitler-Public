@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class ScriptableEvent
+      <title>Class SubtitleSequenceData
  | Subtitler </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class ScriptableEvent
+      <meta name="title" content="Class SubtitleSequenceData
  | Subtitler ">
     
       <link rel="shortcut icon" href="../favicon.ico">
@@ -77,14 +77,13 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Gasimo.Subtitles.ScriptableEvent">
+            <article class="content wrap" id="_content" data-uid="Gasimo.Subtitles.SubtitleSequenceData">
 
 
 
-  <h1 id="Gasimo_Subtitles_ScriptableEvent" data-uid="Gasimo.Subtitles.ScriptableEvent" class="text-break">Class ScriptableEvent
+  <h1 id="Gasimo_Subtitles_SubtitleSequenceData" data-uid="Gasimo.Subtitles.SubtitleSequenceData" class="text-break">Class SubtitleSequenceData
 </h1>
-  <div class="markdown level0 summary"><p>Object which you can bind custom events to. Use it by creating an ScriptableObject for every instance of events you want to use.
-To subscribe, use onEventRaised. To raise, use Raise(). Subtitles automatically calls Raise() when you attach instance of this class to a Subtitle line.</p>
+  <div class="markdown level0 summary"><p>Contains data holding a single Closed Caption sequence. For individual lines, see SubtitleDataEntry.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -92,51 +91,35 @@ To subscribe, use onEventRaised. To raise, use Raise(). Subtitles automatically 
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><span class="xref">Object</span></div>
     <div class="level2"><span class="xref">ScriptableObject</span></div>
-    <div class="level3"><span class="xref">ScriptableEvent</span></div>
+    <div class="level3"><span class="xref">SubtitleSequenceData</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Gasimo.html">Gasimo</a>.<a class="xref" href="Gasimo.Subtitles.html">Subtitles</a></h6>
   <h6><strong>Assembly</strong>: Gasimo.Subtitler.dll</h6>
-  <h5 id="Gasimo_Subtitles_ScriptableEvent_syntax">Syntax</h5>
+  <h5 id="Gasimo_Subtitles_SubtitleSequenceData_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[CreateAssetMenu(fileName = &quot;ScriptableEvent&quot;, menuName = &quot;Gasimo/ScriptableEvent&quot;)]
+    <pre><code class="lang-csharp hljs">[CreateAssetMenu(fileName = &quot;SubtitleFile&quot;, menuName = &quot;Gasimo/SubtitleFile&quot;)]
 [Serializable]
-public class ScriptableEvent : ScriptableObject</code></pre>
+public class SubtitleSequenceData : ScriptableObject</code></pre>
   </div>
-  <h3 id="methods">Methods
+  <h3 id="fields">Fields
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/GasimoCodes/Subtitler/new/main/apiSpec/new?filename=Gasimo_Subtitles_ScriptableEvent_Raise.md&amp;value=---%0Auid%3A%20Gasimo.Subtitles.ScriptableEvent.Raise%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/GasimoCodes/Subtitler/new/main/apiSpec/new?filename=Gasimo_Subtitles_SubtitleSequenceData_Subtitles.md&amp;value=---%0Auid%3A%20Gasimo.Subtitles.SubtitleSequenceData.Subtitles%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GasimoCodes/Subtitler/blob/main/com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ScriptableEvent.cs/#L23">View Source</a>
+    <a href="https://github.com/GasimoCodes/Subtitler/blob/main/com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleSequenceData.cs/#L19">View Source</a>
   </span>
-  <a id="Gasimo_Subtitles_ScriptableEvent_Raise_" data-uid="Gasimo.Subtitles.ScriptableEvent.Raise*"></a>
-  <h4 id="Gasimo_Subtitles_ScriptableEvent_Raise" data-uid="Gasimo.Subtitles.ScriptableEvent.Raise">Raise()</h4>
-  <div class="markdown level1 summary"><p>Invokes events subscribed to onEventRaised.</p>
+  <h4 id="Gasimo_Subtitles_SubtitleSequenceData_Subtitles" data-uid="Gasimo.Subtitles.SubtitleSequenceData.Subtitles">Subtitles</h4>
+  <div class="markdown level1 summary"><p>Sequence of Subtitles</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Raise()</code></pre>
+    <pre><code class="lang-csharp hljs">[SerializeField]
+public SubtitleDataEntry[] Subtitles</code></pre>
   </div>
-  <h3 id="events">Events
-</h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/GasimoCodes/Subtitler/new/main/apiSpec/new?filename=Gasimo_Subtitles_ScriptableEvent_onEventRaised.md&amp;value=---%0Auid%3A%20Gasimo.Subtitles.ScriptableEvent.onEventRaised%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GasimoCodes/Subtitler/blob/main/com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ScriptableEvent.cs/#L18">View Source</a>
-  </span>
-  <h4 id="Gasimo_Subtitles_ScriptableEvent_onEventRaised" data-uid="Gasimo.Subtitles.ScriptableEvent.onEventRaised">onEventRaised</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event ScriptableEvent.ScriptableEventHandler onEventRaised</code></pre>
-  </div>
-  <h5 class="eventType">Event Type</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-condensed">
     <thead>
       <tr>
@@ -146,7 +129,7 @@ public class ScriptableEvent : ScriptableObject</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Gasimo.Subtitles.ScriptableEvent.html">ScriptableEvent</a>.<a class="xref" href="Gasimo.Subtitles.ScriptableEvent.ScriptableEventHandler.html">ScriptableEventHandler</a></td>
+        <td><a class="xref" href="Gasimo.Subtitles.SubtitleDataEntry.html">SubtitleDataEntry</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -160,10 +143,10 @@ public class ScriptableEvent : ScriptableObject</code></pre>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/GasimoCodes/Subtitler/new/main/apiSpec/new?filename=Gasimo_Subtitles_ScriptableEvent.md&amp;value=---%0Auid%3A%20Gasimo.Subtitles.ScriptableEvent%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/GasimoCodes/Subtitler/new/main/apiSpec/new?filename=Gasimo_Subtitles_SubtitleSequenceData.md&amp;value=---%0Auid%3A%20Gasimo.Subtitles.SubtitleSequenceData%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
                   </li>
                   <li>
-                    <a href="https://github.com/GasimoCodes/Subtitler/blob/main/com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ScriptableEvent.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/GasimoCodes/Subtitler/blob/main/com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleSequenceData.cs/#L11" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

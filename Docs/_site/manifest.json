@@ -72,6 +72,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Gasimo.Subtitles.SubtitleSequenceData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gasimo.Subtitles.SubtitleSequenceData.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Gasimo.Subtitles.Subtitler.yml",
       "output": {
         ".html": {
@@ -149,6 +159,26 @@
       "output": {
         ".html": {
           "relative_path": "manual/subtitler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/timeline_intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/timeline_intro.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/timeline_use.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/timeline_use.html"
         }
       },
       "version": ""

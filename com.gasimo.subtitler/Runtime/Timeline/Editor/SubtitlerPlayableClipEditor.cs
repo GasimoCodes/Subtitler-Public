@@ -8,7 +8,9 @@ using UnityEngine.Timeline;
 
 namespace Gasimo.Subtitles.Timeline
 {
-
+    /// <summary>
+    /// Custom Editor for the Timeline clip. Takes care of replacing the clip name and assigning duration property.
+    /// </summary>
     [CustomTimelineEditor(typeof(SubtitlerPlayableAsset))]
     public class SubtitlerPlayableClipEditor : ClipEditor
     {

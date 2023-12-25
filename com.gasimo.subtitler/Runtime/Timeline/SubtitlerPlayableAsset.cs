@@ -6,7 +6,7 @@ using UnityEngine.Playables;
 namespace Gasimo.Subtitles.Timeline
 {
     /// <summary>
-    /// a clip instance on timeline
+    /// a clip instance containing one SubtitleDataEntry on the Timeline
     /// </summary>
 #if TIMELINE_PRESENT
     public class SubtitlerPlayableAsset : PlayableAsset

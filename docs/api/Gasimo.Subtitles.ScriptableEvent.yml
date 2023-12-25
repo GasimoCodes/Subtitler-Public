@@ -23,7 +23,7 @@ items:
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ScriptableEvent.cs
     startLine: 12
   assemblies:
-  - gasimo.subtitler
+  - Gasimo.Subtitler
   namespace: Gasimo.Subtitles
   summary: >-
     Object which you can bind custom events to. Use it by creating an ScriptableObject for every instance of events you want to use.
@@ -81,7 +81,7 @@ items:
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ScriptableEvent.cs
     startLine: 17
   assemblies:
-  - gasimo.subtitler
+  - Gasimo.Subtitler
   namespace: Gasimo.Subtitles
   syntax:
     content: public event ScriptableEvent.ScriptableEventHandler onEventRaised
@@ -108,7 +108,7 @@ items:
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ScriptableEvent.cs
     startLine: 22
   assemblies:
-  - gasimo.subtitler
+  - Gasimo.Subtitler
   namespace: Gasimo.Subtitles
   summary: Invokes events subscribed to onEventRaised.
   example: []

@@ -8,6 +8,9 @@ using UnityEditor.Timeline;
 
 namespace Gasimo.Subtitles.Timeline
 {
+    /// <summary>
+    /// Custom editor for the track. Will be used for custom icon once I find the docs on hows the proper way to implement this.
+    /// </summary>
     [CustomTimelineEditor(typeof(SubtitlerTrack))]
     public class SubtitlerTrackEditor : TrackEditor
     {

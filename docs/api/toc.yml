@@ -11,10 +11,10 @@ items:
     name: ScriptableEvent.ScriptableEventHandler
   - uid: Gasimo.Subtitles.SubtitleContainer
     name: SubtitleContainer
-  - uid: Gasimo.Subtitles.SubtitleData
-    name: SubtitleData
   - uid: Gasimo.Subtitles.SubtitleDataEntry
     name: SubtitleDataEntry
+  - uid: Gasimo.Subtitles.SubtitleSequenceData
+    name: SubtitleSequenceData
   - uid: Gasimo.Subtitles.Subtitler
     name: Subtitler
 memberLayout: SamePage

@@ -21,7 +21,7 @@ items:
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ScriptableEvent.cs
     startLine: 16
   assemblies:
-  - gasimo.subtitler
+  - Gasimo.Subtitler
   namespace: Gasimo.Subtitles
   syntax:
     content: public delegate void ScriptableEvent.ScriptableEventHandler()

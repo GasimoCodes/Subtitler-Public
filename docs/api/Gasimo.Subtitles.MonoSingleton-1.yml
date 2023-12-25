@@ -23,7 +23,7 @@ items:
     path: ../com.gasimo.subtitler/Runtime/Scripts/Misc/MonoSingleton.cs
     startLine: 10
   assemblies:
-  - gasimo.subtitler
+  - Gasimo.Subtitler
   namespace: Gasimo.Subtitles
   summary: Helper class to implement Singleton pattern into Subtitler
   example: []
@@ -64,7 +64,7 @@ items:
     path: ../com.gasimo.subtitler/Runtime/Scripts/Misc/MonoSingleton.cs
     startLine: 28
   assemblies:
-  - gasimo.subtitler
+  - Gasimo.Subtitler
   namespace: Gasimo.Subtitles
   summary: Gets the instance.
   example: []
@@ -96,9 +96,9 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: Awake
     path: ../com.gasimo.subtitler/Runtime/Scripts/Misc/MonoSingleton.cs
-    startLine: 53
+    startLine: 52
   assemblies:
-  - gasimo.subtitler
+  - Gasimo.Subtitler
   namespace: Gasimo.Subtitles
   summary: Use this for initialization.
   example: []

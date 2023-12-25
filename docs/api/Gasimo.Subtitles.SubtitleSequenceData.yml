@@ -1,0 +1,180 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gasimo.Subtitles.SubtitleSequenceData
+  commentId: T:Gasimo.Subtitles.SubtitleSequenceData
+  id: SubtitleSequenceData
+  parent: Gasimo.Subtitles
+  children:
+  - Gasimo.Subtitles.SubtitleSequenceData.Subtitles
+  langs:
+  - csharp
+  - vb
+  name: SubtitleSequenceData
+  nameWithType: SubtitleSequenceData
+  fullName: Gasimo.Subtitles.SubtitleSequenceData
+  type: Class
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleSequenceData.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler.git
+    id: SubtitleSequenceData
+    path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleSequenceData.cs
+    startLine: 10
+  assemblies:
+  - Gasimo.Subtitler
+  namespace: Gasimo.Subtitles
+  summary: Contains data holding a single Closed Caption sequence. For individual lines, see SubtitleDataEntry.
+  example: []
+  syntax:
+    content: >-
+      [CreateAssetMenu(fileName = "SubtitleFile", menuName = "Gasimo/SubtitleFile")]
+
+      [Serializable]
+
+      public class SubtitleSequenceData : ScriptableObject
+    content.vb: >-
+      <CreateAssetMenu(fileName:="SubtitleFile", menuName:="Gasimo/SubtitleFile")>
+
+      <Serializable>
+
+      Public Class SubtitleSequenceData Inherits ScriptableObject
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  attributes:
+  - type: UnityEngine.CreateAssetMenuAttribute
+    ctor: UnityEngine.CreateAssetMenuAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: fileName
+      type: System.String
+      value: SubtitleFile
+    - name: menuName
+      type: System.String
+      value: Gasimo/SubtitleFile
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: Gasimo.Subtitles.SubtitleSequenceData.Subtitles
+  commentId: F:Gasimo.Subtitles.SubtitleSequenceData.Subtitles
+  id: Subtitles
+  parent: Gasimo.Subtitles.SubtitleSequenceData
+  langs:
+  - csharp
+  - vb
+  name: Subtitles
+  nameWithType: SubtitleSequenceData.Subtitles
+  fullName: Gasimo.Subtitles.SubtitleSequenceData.Subtitles
+  type: Field
+  source:
+    remote:
+      path: com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleSequenceData.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler.git
+    id: Subtitles
+    path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleSequenceData.cs
+    startLine: 18
+  assemblies:
+  - Gasimo.Subtitler
+  namespace: Gasimo.Subtitles
+  summary: Sequence of Subtitles
+  example: []
+  syntax:
+    content: >-
+      [SerializeField]
+
+      public SubtitleDataEntry[] Subtitles
+    return:
+      type: Gasimo.Subtitles.SubtitleDataEntry[]
+    content.vb: >-
+      <SerializeField>
+
+      Public Subtitles As SubtitleDataEntry()
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+references:
+- uid: Gasimo.Subtitles
+  commentId: N:Gasimo.Subtitles
+  href: Gasimo.html
+  name: Gasimo.Subtitles
+  nameWithType: Gasimo.Subtitles
+  fullName: Gasimo.Subtitles
+  spec.csharp:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+  spec.vb:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: Gasimo.Subtitles.SubtitleDataEntry[]
+  isExternal: true
+  href: Gasimo.Subtitles.SubtitleDataEntry.html
+  name: SubtitleDataEntry[]
+  nameWithType: SubtitleDataEntry[]
+  fullName: Gasimo.Subtitles.SubtitleDataEntry[]
+  nameWithType.vb: SubtitleDataEntry()
+  fullName.vb: Gasimo.Subtitles.SubtitleDataEntry()
+  name.vb: SubtitleDataEntry()
+  spec.csharp:
+  - uid: Gasimo.Subtitles.SubtitleDataEntry
+    name: SubtitleDataEntry
+    href: Gasimo.Subtitles.SubtitleDataEntry.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Gasimo.Subtitles.SubtitleDataEntry
+    name: SubtitleDataEntry
+    href: Gasimo.Subtitles.SubtitleDataEntry.html
+  - name: (
+  - name: )

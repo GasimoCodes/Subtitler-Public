@@ -8,8 +8,8 @@ items:
   - Gasimo.Subtitles.ScriptableEvent
   - Gasimo.Subtitles.ScriptableEvent.ScriptableEventHandler
   - Gasimo.Subtitles.SubtitleContainer
-  - Gasimo.Subtitles.SubtitleData
   - Gasimo.Subtitles.SubtitleDataEntry
+  - Gasimo.Subtitles.SubtitleSequenceData
   - Gasimo.Subtitles.Subtitler
   langs:
   - csharp
@@ -19,7 +19,7 @@ items:
   fullName: Gasimo.Subtitles
   type: Namespace
   assemblies:
-  - gasimo.subtitler
+  - Gasimo.Subtitler
 references:
 - uid: Gasimo.Subtitles.ScriptableEvent
   commentId: T:Gasimo.Subtitles.ScriptableEvent
@@ -65,17 +65,18 @@ references:
   fullName: Gasimo.Subtitles.SubtitleContainer
 - uid: Gasimo.Subtitles.SubtitleDataEntry
   commentId: T:Gasimo.Subtitles.SubtitleDataEntry
+  parent: Gasimo.Subtitles
   href: Gasimo.Subtitles.SubtitleDataEntry.html
   name: SubtitleDataEntry
   nameWithType: SubtitleDataEntry
   fullName: Gasimo.Subtitles.SubtitleDataEntry
-- uid: Gasimo.Subtitles.SubtitleData
-  commentId: T:Gasimo.Subtitles.SubtitleData
+- uid: Gasimo.Subtitles.SubtitleSequenceData
+  commentId: T:Gasimo.Subtitles.SubtitleSequenceData
   parent: Gasimo.Subtitles
-  href: Gasimo.Subtitles.SubtitleData.html
-  name: SubtitleData
-  nameWithType: SubtitleData
-  fullName: Gasimo.Subtitles.SubtitleData
+  href: Gasimo.Subtitles.SubtitleSequenceData.html
+  name: SubtitleSequenceData
+  nameWithType: SubtitleSequenceData
+  fullName: Gasimo.Subtitles.SubtitleSequenceData
 - uid: Gasimo.Subtitles.MonoSingleton`1
   commentId: T:Gasimo.Subtitles.MonoSingleton`1
   href: Gasimo.Subtitles.MonoSingleton-1.html

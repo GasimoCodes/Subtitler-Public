@@ -8,7 +8,7 @@ using UnityEngine.Playables;
 namespace Gasimo.Subtitles.Timeline
 {
     /// <summary>
-    /// Behaviour called by clips
+    /// Behaviour called by clips. This plays a single SubtitleDataEntry at the beginning of the clip.
     /// </summary>
     public class SubtitlerPlayableBehaviour : PlayableBehaviour
     {

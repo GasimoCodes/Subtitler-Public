@@ -29,7 +29,7 @@ items:
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleDataEntry.cs
     startLine: 8
   assemblies:
-  - gasimo.subtitler
+  - Gasimo.Subtitler
   namespace: Gasimo.Subtitles
   summary: Contains data for 1 line of dialogue.
   example: []
@@ -68,7 +68,7 @@ items:
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleDataEntry.cs
     startLine: 14
   assemblies:
-  - gasimo.subtitler
+  - Gasimo.Subtitler
   namespace: Gasimo.Subtitles
   summary: Written Closed-Captions
   example: []
@@ -97,7 +97,7 @@ items:
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleDataEntry.cs
     startLine: 20
   assemblies:
-  - gasimo.subtitler
+  - Gasimo.Subtitler
   namespace: Gasimo.Subtitles
   summary: Display name of speaker/object which plays the dialogue. Leave empty for none (useful for sounds).
   example: []
@@ -136,7 +136,7 @@ items:
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleDataEntry.cs
     startLine: 25
   assemblies:
-  - gasimo.subtitler
+  - Gasimo.Subtitler
   namespace: Gasimo.Subtitles
   summary: AudioClip which will play simultaneously with the subtitle line. Can be left empty to not play sound.
   example: []
@@ -165,7 +165,7 @@ items:
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleDataEntry.cs
     startLine: 31
   assemblies:
-  - gasimo.subtitler
+  - Gasimo.Subtitler
   namespace: Gasimo.Subtitles
   summary: >-
     Programmable event which gets ivoked when this subtitle gets played. 
@@ -197,7 +197,7 @@ items:
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleDataEntry.cs
     startLine: 36
   assemblies:
-  - gasimo.subtitler
+  - Gasimo.Subtitler
   namespace: Gasimo.Subtitles
   summary: Delay between last Subtitle line and this one. Leave 0 to play at same time as previous line.
   example: []
@@ -226,7 +226,7 @@ items:
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleDataEntry.cs
     startLine: 41
   assemblies:
-  - gasimo.subtitler
+  - Gasimo.Subtitler
   namespace: Gasimo.Subtitles
   summary: How long will this subtitle be displayed for.
   example: []
@@ -255,7 +255,7 @@ items:
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleDataEntry.cs
     startLine: 44
   assemblies:
-  - gasimo.subtitler
+  - Gasimo.Subtitler
   namespace: Gasimo.Subtitles
   syntax:
     content: >-
@@ -292,7 +292,7 @@ items:
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/SubtitleDataEntry.cs
     startLine: 46
   assemblies:
-  - gasimo.subtitler
+  - Gasimo.Subtitler
   namespace: Gasimo.Subtitles
   syntax:
     content: >-

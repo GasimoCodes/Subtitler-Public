@@ -24,7 +24,7 @@ items:
     path: ../com.gasimo.subtitler/Runtime/Scripts/SubtitleContainer.cs
     startLine: 9
   assemblies:
-  - gasimo.subtitler
+  - Gasimo.Subtitler
   namespace: Gasimo.Subtitles
   summary: Component representing one subtitle source in the world.
   example: []
@@ -63,7 +63,7 @@ items:
     path: ../com.gasimo.subtitler/Runtime/Scripts/SubtitleContainer.cs
     startLine: 15
   assemblies:
-  - gasimo.subtitler
+  - Gasimo.Subtitler
   namespace: Gasimo.Subtitles
   summary: Play automatically on awake?
   example: []
@@ -92,15 +92,15 @@ items:
     path: ../com.gasimo.subtitler/Runtime/Scripts/SubtitleContainer.cs
     startLine: 20
   assemblies:
-  - gasimo.subtitler
+  - Gasimo.Subtitler
   namespace: Gasimo.Subtitles
   summary: Subtitle Data to play
   example: []
   syntax:
-    content: public SubtitleData subtitleData
+    content: public SubtitleSequenceData subtitleData
     return:
-      type: Gasimo.Subtitles.SubtitleData
-    content.vb: Public subtitleData As SubtitleData
+      type: Gasimo.Subtitles.SubtitleSequenceData
+    content.vb: Public subtitleData As SubtitleSequenceData
 - uid: Gasimo.Subtitles.SubtitleContainer.Play
   commentId: M:Gasimo.Subtitles.SubtitleContainer.Play
   id: Play
@@ -121,7 +121,7 @@ items:
     path: ../com.gasimo.subtitler/Runtime/Scripts/SubtitleContainer.cs
     startLine: 34
   assemblies:
-  - gasimo.subtitler
+  - Gasimo.Subtitler
   namespace: Gasimo.Subtitles
   summary: Plays the attached Subtitle Data
   example: []
@@ -215,13 +215,13 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
-- uid: Gasimo.Subtitles.SubtitleData
-  commentId: T:Gasimo.Subtitles.SubtitleData
+- uid: Gasimo.Subtitles.SubtitleSequenceData
+  commentId: T:Gasimo.Subtitles.SubtitleSequenceData
   parent: Gasimo.Subtitles
-  href: Gasimo.Subtitles.SubtitleData.html
-  name: SubtitleData
-  nameWithType: SubtitleData
-  fullName: Gasimo.Subtitles.SubtitleData
+  href: Gasimo.Subtitles.SubtitleSequenceData.html
+  name: SubtitleSequenceData
+  nameWithType: SubtitleSequenceData
+  fullName: Gasimo.Subtitles.SubtitleSequenceData
 - uid: Gasimo.Subtitles.SubtitleContainer.Play*
   commentId: Overload:Gasimo.Subtitles.SubtitleContainer.Play
   href: Gasimo.Subtitles.SubtitleContainer.html#Gasimo_Subtitles_SubtitleContainer_Play
