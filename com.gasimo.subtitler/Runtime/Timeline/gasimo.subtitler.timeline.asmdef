@@ -1,13 +1,11 @@
 {
-    "name": "Gasimo.Subtitler",
-    "rootNamespace": "Gasimo.Subtitles",
+    "name": "Gasimo.Subtitler.Timeline",
+    "rootNamespace": "Gasimo.Subtitles.Timeline",
     "references": [
         "Unity.TextMeshPro",
         "UniTask",
-        "UniTask.DOTween",
-        "Unity.Addressables",
-        "Unity.ResourceManager",
-        "DOTween.Modules"
+        "Unity.Timeline",
+        "Gasimo.Subtitler"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

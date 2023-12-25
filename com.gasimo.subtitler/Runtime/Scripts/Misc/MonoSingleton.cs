@@ -35,9 +35,8 @@ namespace Gasimo.Subtitles
                     instance = FindFirstObjectByType<T>();
                     if (instance == null)
                     {
-                        GameObject obj = new GameObject();
-                        obj.name = typeof(T).Name;
-                        instance = obj.AddComponent<T>();
+
+                        throw (new MissingComponentException("You are trying to get a Subtitler component which does not exist. Make sure that the Subtitler prefab exists in the scene."));
                     }
                 }
                 return instance;

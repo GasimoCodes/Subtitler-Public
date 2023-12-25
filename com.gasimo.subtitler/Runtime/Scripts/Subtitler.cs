@@ -66,12 +66,36 @@ namespace Gasimo.Subtitles
         Image displayBackground;
         Dictionary<int, bool> activeSubtitleList = new Dictionary<int, bool>();
         object subtitleLock = new System.Object();
+        bool isReady = false;
 
         protected override void Awake()
         {
             // Set singleton instance
             base.Awake();
+            Init();
+        }
 
+        private void Start()
+        {
+            if (player == null)
+                Debug.LogError("Player object not assigned, range-limited subtitles will fail.");
+        }
+
+        /// <summary>
+        /// Used internaly to force init before awake
+        /// </summary>
+        public void Init()
+        {
+            if (!isReady)
+            {
+                initSettings();
+                initSubtitlePool();
+                isReady = true;
+            }
+        }
+
+        private void initSettings()
+        {
             Addressables.InitializeAsync();
             Addressables.LoadAssetAsync<GameObject>("Gasimo/Subtitle");
 
@@ -81,10 +105,18 @@ namespace Gasimo.Subtitles
             if (centeredText)
                 displayPanel.GetComponent<VerticalLayoutGroup>().childAlignment = TextAnchor.LowerCenter;
 
-
-            if(player == null)
+            if (player == null)
                 player = FindAnyObjectByType<AudioListener>();
-            
+        }
+
+        private void initSubtitlePool()
+        {
+
+            // This is in case we already ran this
+            if (subtitlePool != null)
+            {
+                return;
+            }
 
             // Define pool methods
             subtitlePool = new ObjectPool<TextMeshProUGUI>(
@@ -112,14 +144,8 @@ namespace Gasimo.Subtitles
             collectionCheck: false,
             defaultCapacity: 5,
             maxSize: 10);
-
         }
 
-        private void Start()
-        {
-            if (player == null)
-                Debug.LogError("Player object not assigned, range-limited subtitles will fail.");
-        }
 
 
         /// <summary>
@@ -223,7 +249,7 @@ namespace Gasimo.Subtitles
                             displayPanel.GetComponent<Image>().DOFade(0.4f, 0.1f);
                         }
 
-                       _ =  DisplaySubtitle(sE.dialogue, sE.speaker, sE.displayFor);
+                        _ = DisplaySubtitle(sE.dialogue, sE.speaker, sE.displayFor);
                     }
 
                 }
@@ -255,8 +281,22 @@ namespace Gasimo.Subtitles
         /// <returns></returns>
         public async UniTaskVoid DisplaySubtitle(string message, string speaker, float displayFor)
         {
+
+#if UNITY_EDITOR
+            if (!Application.isPlaying)
+                // Show debug thru editor window
+                return;
+#endif
+
+            Init();
+
+
+            Debug.Log(message);
+
             TextMeshProUGUI subtitle = subtitlePool.Get();
             shownLines++;
+
+            CheckHideSubtitlePanel();
 
             // Display text
             if (speaker != "")
@@ -267,7 +307,6 @@ namespace Gasimo.Subtitles
 
             LayoutRebuilder.ForceRebuildLayoutImmediate(displayPanel.GetComponent<RectTransform>());
 
-            
 
             // Neat animation intro
             subtitle.transform.DOScaleY(0.5f, 0);
@@ -303,9 +342,15 @@ namespace Gasimo.Subtitles
         /// <returns></returns>
         public void CheckHideSubtitlePanel()
         {
+            if (enableBackgroundPanel == false) return;
+
             if (shownLines == 0)
             {
                 displayBackground.enabled = false;
+            }
+            else
+            {
+                displayBackground.enabled = true;
             }
         }
 
