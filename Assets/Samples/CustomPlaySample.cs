@@ -7,9 +7,11 @@ using Gasimo.Subtitles;
 
 public class CustomPlaySample : MonoBehaviour
 {
+    public SubtitleDataEntry entry;
+
     public void DisplaySubtitle(string sub)
     {
-        Subtitler.Instance.DisplaySubtitle(sub, "UI", 5);
+        Subtitler.Instance.PlaySubtitleEntry(entry, null);
     }
 
 

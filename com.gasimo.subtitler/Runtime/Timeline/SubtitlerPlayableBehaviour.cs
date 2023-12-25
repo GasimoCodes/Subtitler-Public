@@ -10,16 +10,22 @@ namespace Gasimo.Subtitles.Timeline
     /// </summary>
     public class SubtitlerPlayableBehaviour : PlayableBehaviour
     {
+
+        public SubtitleDataEntry entry;
+
+
         public override void OnBehaviourPlay(Playable playable, FrameData info)
         {
             base.OnBehaviourPlay(playable, info);
-            Subtitler.Instance.DisplaySubtitle("AAA", "AAAA", 10);
+            if (Application.isPlaying)
+                Subtitler.Instance.PlaySubtitleEntry(entry, null);
+
         }
 
         public override void OnBehaviourPause(Playable playable, FrameData info)
         {
             base.OnBehaviourPlay(playable, info);
-            Debug.Log("STOP");
+            // Debug.Log("STOP");
         }
     }
 }

@@ -68,6 +68,9 @@ namespace Gasimo.Subtitles
         object subtitleLock = new System.Object();
         bool isReady = false;
 
+        #region init
+
+
         protected override void Awake()
         {
             // Set singleton instance
@@ -146,7 +149,7 @@ namespace Gasimo.Subtitles
             maxSize: 10);
         }
 
-
+        #endregion init
 
         /// <summary>
         /// Plays a given subtitle track 
@@ -154,7 +157,7 @@ namespace Gasimo.Subtitles
         /// <param name="sD">Subtitle Data file</param>
         /// <param name="aS">AudioSource to playOneShot through</param>
         /// <returns>Cancellation ID of the subtitle instance</returns>
-        public int playSubtitle(SubtitleData sD, AudioSource aS)
+        public int PlaySubtitleSequence(SubtitleSequenceData sD, AudioSource aS)
         {
             int id = 0;
 
@@ -172,6 +175,21 @@ namespace Gasimo.Subtitles
             _ = playSubtitleFile(sD, aS, id);
             return id;
         }
+
+
+        /// <summary>
+        /// Plays a given subtitle entry 
+        /// </summary>
+        /// <param name="sD">Subtitle Data file</param>
+        /// <param name="aS">AudioSource to playOneShot through</param>
+        /// <returns>Cancellation ID of the subtitle instance</returns>
+        public void PlaySubtitleEntry(SubtitleDataEntry sD, AudioSource aS)
+        {
+            Init();
+            playSubtitleEntry(sD, aS);
+        }
+
+
 
         /// <summary>
         /// Immediately kills an active subtitle loop based on ID
@@ -195,9 +213,8 @@ namespace Gasimo.Subtitles
         /// <param name="sD">File to play</param>
         /// <param name="aS">AudioSource to play this with</param>
         /// <returns>UniTaskVoid Handle</returns>
-        private async UniTaskVoid playSubtitleFile(SubtitleData sD, AudioSource aS, int id)
+        private async UniTaskVoid playSubtitleFile(SubtitleSequenceData sD, AudioSource aS, int id)
         {
-            bool isRangeLimited = (aS.spatialBlend == 1);
 
             if (sD != null)
                 foreach (SubtitleDataEntry sE in sD.Subtitles)
@@ -215,61 +232,61 @@ namespace Gasimo.Subtitles
                         }
                     }
 
-                    // Play audio
-                    if (sE.audio != null)
-                        aS.PlayOneShot(sE.audio);
-
-                    // If the audioSource is really, really silent, or straight up disabled, do not show subtitle
-                    if (aS == null || aS.volume <= 0.05f || aS.enabled == false)
-                    {
-                        continue;
-                    }
-
-                    // Trigger programmed events
-                    if (sE.subtitleEvent != null)
-                    {
-                        sE.subtitleEvent.Raise();
-                    }
-
-
-                    // Display dialogue
-                    if (sE.dialogue != "")
-                    {
-
-                        // If we are (range-limited, out of range AND not a 2D source) OR IF (the audioSource is not playing AND there was an valid AudioClip)
-                        if ((isRangeLimited && !checkAudioDistance(aS.maxDistance, aS) && aS.spatialBlend != 0) || (aS.isPlaying == false && sE.audio != null))
-                        {
-                            continue;
-                        }
-
-                        if (enableBackgroundPanel)
-                        {
-                            displayPanel.GetComponent<Image>().DOKill();
-                            displayPanel.GetComponent<Image>().enabled = true;
-                            displayPanel.GetComponent<Image>().DOFade(0.4f, 0.1f);
-                        }
-
-                        _ = DisplaySubtitle(sE.dialogue, sE.speaker, sE.displayFor);
-                    }
+                    playSubtitleEntry(sE, aS);
 
                 }
         }
 
-        /// <summary>
-        /// Checks whether the distance between player and the audioSource is within the AudioSource maxRange
-        /// (e.g. if the player is in the AudioSources range)
-        /// </summary>
-        /// <param name="range">Max range from audiosource</param>
-        /// <param name="audioObj">AudioSource to check</param>
-        /// <returns></returns>
-        private bool checkAudioDistance(float range, AudioSource audioObj)
+
+
+        private void playSubtitleEntry(SubtitleDataEntry sE, AudioSource aS)
         {
-            if (Vector3.Distance(player.transform.position, audioObj.transform.position) <= range)
+            bool isRangeLimited = false;
+
+            // If we have audioSource, volume checks for occlusion
+            if (aS != null)
             {
-                return true;
+                isRangeLimited = (aS.spatialBlend == 1);
+
+                // Play audio
+                if (sE.audio != null)
+                    aS.PlayOneShot(sE.audio);
+
+                // If the audioSource is really, really silent, or straight up disabled, do not show subtitle
+                if (aS == null || aS.volume <= 0.05f || aS.enabled == false)
+                {
+                    return;
+                }
             }
 
-            return false;
+
+            // Trigger programmed events
+            if (sE.subtitleEvent != null)
+            {
+                sE.subtitleEvent.Raise();
+            }
+
+
+            // Display dialogue
+            if (sE.dialogue != "")
+            {
+
+                // Sound aint null AND (If we are (range-limited, out of range AND not a 2D source) OR IF (the audioSource is not playing AND there was an valid AudioClip))
+                if ( aS != null && ((isRangeLimited && !checkAudioDistance(aS.maxDistance, aS) && aS.spatialBlend != 0) || (aS.isPlaying == false && sE.audio != null)))
+                {
+                    return;
+                }
+
+                if (enableBackgroundPanel)
+                {
+                    displayPanel.GetComponent<Image>().DOKill();
+                    displayPanel.GetComponent<Image>().enabled = true;
+                    displayPanel.GetComponent<Image>().DOFade(0.4f, 0.1f);
+                }
+
+                _ = DisplaySubtitle(sE.dialogue, sE.speaker, sE.displayFor);
+            }
+
         }
 
         /// <summary>
@@ -279,19 +296,16 @@ namespace Gasimo.Subtitles
         /// <param name="speaker">Name of object which said the line (Leave empty string for none)</param>
         /// <param name="displayFor">How long should this line be displayed for?</param>
         /// <returns></returns>
-        public async UniTaskVoid DisplaySubtitle(string message, string speaker, float displayFor)
+        private async UniTaskVoid DisplaySubtitle(string message, string speaker, float displayFor)
         {
 
+            /*
 #if UNITY_EDITOR
             if (!Application.isPlaying)
                 // Show debug thru editor window
                 return;
 #endif
-
-            Init();
-
-
-            Debug.Log(message);
+            */
 
             TextMeshProUGUI subtitle = subtitlePool.Get();
             shownLines++;
@@ -311,6 +325,9 @@ namespace Gasimo.Subtitles
             // Neat animation intro
             subtitle.transform.DOScaleY(0.5f, 0);
             subtitle.transform.DOScaleY(1, 0.2f);
+           
+
+
             await UniTask.Delay(100);
             subtitle.DOFade(1, 0.1f);
 
@@ -336,6 +353,9 @@ namespace Gasimo.Subtitles
 
         }
 
+
+        #region utils
+
         /// <summary>
         /// Checks whether the Subtitle Panel shouldnt be hidden. Hides it if no subtitles are currently on display.
         /// </summary>
@@ -354,6 +374,24 @@ namespace Gasimo.Subtitles
             }
         }
 
+        /// <summary>
+        /// Checks whether the distance between player and the audioSource is within the AudioSource maxRange
+        /// (e.g. if the player is in the AudioSources range)
+        /// </summary>
+        /// <param name="range">Max range from audiosource</param>
+        /// <param name="audioObj">AudioSource to check</param>
+        /// <returns></returns>
+        private bool checkAudioDistance(float range, AudioSource audioObj)
+        {
+            if (Vector3.Distance(player.transform.position, audioObj.transform.position) <= range)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        #endregion utils
 
     }
 }

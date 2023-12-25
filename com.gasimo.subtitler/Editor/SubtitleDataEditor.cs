@@ -10,7 +10,7 @@ using UnityEngine.UIElements;
 namespace Gasimo.Subtitles
 {
 #if UNITY_2023_3_OR_NEWER
-    [CustomEditor(typeof(SubtitleData))]
+    [CustomEditor(typeof(SubtitleSequenceData))]
     public class SubtitleDataEditor : Editor
     {
         [SerializeField]
@@ -117,7 +117,7 @@ namespace Gasimo.Subtitles
             return root;
         }
 
-        private void AddNewItem(int index, SubtitleData array, MultiColumnListView view)
+        private void AddNewItem(int index, SubtitleSequenceData array, MultiColumnListView view)
         {
             Debug.Log("Clicked " + index);
 
@@ -130,7 +130,7 @@ namespace Gasimo.Subtitles
         }
 
 
-        private void RemoveItem(SubtitleData array, MultiColumnListView view)
+        private void RemoveItem(SubtitleSequenceData array, MultiColumnListView view)
         {
 
             Debug.Log("A " + view.selectedIndex);

@@ -12,25 +12,30 @@ namespace Gasimo.Subtitles.Timeline
     {
 
         public SubtitleDataEntry entry;
-        public ExposedReference<Subtitler> SubtitlerInstance;
 
 
         public override Playable CreatePlayable(PlayableGraph graph, GameObject owner)
         {
             var playable = ScriptPlayable<SubtitlerPlayableBehaviour>.Create(graph);
             var playableBehaviour = playable.GetBehaviour();
+            playableBehaviour.entry = entry;
 
 
             // Init Subtitler since this is called before awake :(
 #if UNITY_EDITOR
-            if (Application.isPlaying)
+            // if (Application.isPlaying)
 #endif
-                SubtitlerInstance.Resolve(graph.GetResolver()).Init();
+                
+
 
 
             return playable;
         }
 
-        
+
+
+
+
+
     }
 }

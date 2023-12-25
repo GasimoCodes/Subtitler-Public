@@ -10,7 +10,7 @@ namespace Gasimo.Subtitles
     /// </summary>
     [CreateAssetMenu(fileName = "SubtitleFile", menuName = "Gasimo/SubtitleFile")]
     [Serializable]
-    public class SubtitleData : ScriptableObject
+    public class SubtitleSequenceData : ScriptableObject
     {
         /// <summary>
         /// Sequence of Subtitles

@@ -18,7 +18,7 @@ namespace Gasimo.Subtitles
         /// <summary>
         /// Subtitle Data to play
         /// </summary>
-        public SubtitleData subtitleData;
+        public SubtitleSequenceData subtitleData;
 
 
         // Start is called before the first frame update
@@ -34,7 +34,7 @@ namespace Gasimo.Subtitles
         /// </summary>
         public void Play()
         {
-            Subtitler.Instance.playSubtitle(subtitleData, this.GetComponent<AudioSource>());
+            Subtitler.Instance.PlaySubtitleSequence(subtitleData, this.GetComponent<AudioSource>());
         }
     }
 }
