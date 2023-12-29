@@ -51,7 +51,4 @@ Recommended Unity version (as of now) is 2023.3 due to a [bug in UIToolkit](http
 ## Planned Features
 
 - Optional Localization Package Support
-
 - Optional Addressables for audioClips support
-
-- Timeline support
