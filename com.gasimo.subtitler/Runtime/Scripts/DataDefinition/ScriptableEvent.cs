@@ -22,7 +22,7 @@ namespace Gasimo.Subtitles
         /// </summary>
         public void Raise()
         {
-            onEventRaised.Invoke();
+            onEventRaised?.Invoke();
         }
 
     }
