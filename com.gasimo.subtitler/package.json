@@ -1,6 +1,6 @@
 {
   "name": "com.gasimo.subtitler",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "displayName": "Subtitler",
   "description": "Versatile Unity Subtitle System inspired by Source 1 Closed Captions",
   "unity": "2022.1",
