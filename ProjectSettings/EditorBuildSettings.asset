@@ -4,7 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Samples/Subtitler/0.1.2/Sample Subtitled Scene/SampleScene.unity
+    guid: 752bd8d0708a80a4eb4760e7fcee23bf
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 4dbb8f2a471a39f409250f23fb8854d1,
       type: 2}

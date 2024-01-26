@@ -5,6 +5,7 @@ All notable changes to this package will be documented in this file.
 - Added Icon for ScriptableEvent
 - Migrated ScriptableEvent to UnityAction instead of C# Delegates
 - Added null check to ScriptableEvent to prevent exceptions
+- Fixed build errors with Timeline due to Editor scripts not getting excluded
 
 
 ## [0.1.3] - 25/12/2023

@@ -5,8 +5,8 @@
         "Unity.TextMeshPro",
         "UniTask",
         "Unity.Timeline",
-        "Gasimo.Subtitler",
-        "Unity.Timeline.Editor"
+        "Unity.Timeline.Editor",
+        "Gasimo.Subtitler"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
