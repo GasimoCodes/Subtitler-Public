@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Gasimo.Subtitles
 {
@@ -14,8 +15,8 @@ namespace Gasimo.Subtitles
     [Serializable]
     public class ScriptableEvent : ScriptableObject
     {
-        public delegate void ScriptableEventHandler();
-        public event ScriptableEventHandler onEventRaised;
+        
+        public UnityAction onEventRaised;
 
         /// <summary>
         /// Invokes events subscribed to onEventRaised.
