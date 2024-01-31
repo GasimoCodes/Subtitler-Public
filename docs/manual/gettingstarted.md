@@ -12,40 +12,28 @@ Recommended Unity version (as of now) is 2023.3 due to a [bug in UIToolkit](http
 
 ### UPM:
 
-# [2023.2 and above](#tab/newer)
+# [2022.2 and above](#tab/newer)
 
 1. Add `https://github.com/GasimoCodes/Subtitler.git?path=com.gasimo.subtitler` into **Package Manager** 
 (*Package Manager/+/Install package from GIT URL*)
 
-2. If you dont have [DOTween](https://dotween.demigiant.com/download.php) in your project, import it.
-
+2. If Cysharp UniTask did not import/resolve automatically, [import it manually](https://github.com/Cysharp/UniTask)  
 3. To see **samples**, open Package Manager, navigate to Subtitler. Press Samples and select import. Sample will automatically import into *Assets/Samples/Subtitler*
 
-# [2023.1 and below](#tab/older)
-
-1. Add `https://github.com/GasimoCodes/Subtitler.git?path=com.gasimo.subtitler` into **Package Manager** 
-(*Package Manager/+/Install package from GIT URL*)
-
-2. If you dont have [DOTween](https://dotween.demigiant.com/download.php) in your project, import it.
-
-3. If you are on 2023.1 or below, add TextMeshPro package in your Package Manager. For 2023.2 onwards, Unity merged TextMeshPro with Unity Core, nothing needs to be done. 
-
-4. To see **samples**, open Package Manager, navigate to Subtitler. Press Samples and select import. Sample will automatically import into *Assets/Samples/Subtitler*
-
----
   
 
 ## Features
 
 - Cull subtitles based on Player Distance / Audio Volume
 - Define dialogue entries with variable timing offsets and display lengths
-- Assign AudioClip to each dialogue entry, or use one big clip for whole dialogue instead
-- Rich Text Support (uses TextMeshPro)
+- Assign AudioClip to each dialogue entry, or use one big clip for whole dialogue instead (useful with videos or heavily processed sounds which cant be split by lines)
+- Rich Text Support
 - UI Options (Alignment, background panel visibility, Font size)
 - Trigger events (ScriptableEvent) when a certain line gets played
-- Editor Subtitle Authoring tool
+- Fancy Editor Subtitle Authoring tool (>=2023.3, fallbacks to normal Inspector)
 - API to hook your custom subtitles scripts or logic
-- API to stop currently playing subtitles using their runtime ID.
+- API to stop currently playing subtitles using their runtime ID
+- Timeline Integration
   
 
 ## Planned Features

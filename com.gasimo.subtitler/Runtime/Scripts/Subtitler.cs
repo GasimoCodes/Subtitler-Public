@@ -1,7 +1,6 @@
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Pool;
-using DG.Tweening;
 using Cysharp.Threading.Tasks;
 using System;
 using System.Collections.Generic;
