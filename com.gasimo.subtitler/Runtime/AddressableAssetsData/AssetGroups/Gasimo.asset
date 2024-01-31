@@ -13,15 +13,8 @@ MonoBehaviour:
   m_Name: Gasimo
   m_EditorClassIdentifier: 
   m_GroupName: Gasimo
-  m_Data:
-    m_SerializedData: []
   m_GUID: 39c355eb05c2e2e42a0ed82b212417b2
-  m_SerializeEntries:
-  - m_GUID: 6b8e67d9d0671e44287f8a561a1eb5fc
-    m_Address: Gasimo/Subtitle
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: ca047d32c308e894d8674e2ddb0dc280, type: 2}
   m_SchemaSet:

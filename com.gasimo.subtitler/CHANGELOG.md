@@ -1,6 +1,13 @@
 # Changelog
 All notable changes to this package will be documented in this file.
 
+## [0.2.0] - 31/01/2024
+- UI Rework, Subtitler is now using UIToolkit instead of Unity.UI for runtime rendering and layouting.
+- Removed dependency on DOTWeen
+- Removed dependency on Addressables
+- Removed dependency on TextMeshPro
+- Fixed invalid layouting issues caused by previous GameObjects based solution.
+
 ## [0.1.4] - 26/01/2024
 - Added Icon for ScriptableEvent
 - Migrated ScriptableEvent to UnityAction instead of C# Delegates

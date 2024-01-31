@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Packages/com.gasimo.subtitler/Runtime/UI/SubtitlerTheme.uss?fileID=7433441132597879392&amp;guid=795125b9e5739ef46a3824ef973e8349&amp;type=3#SubtitlerTheme" />
+    <ui:VisualElement name="SubtitlePanel" class="SubtitlePanel" style="padding-right: 10px; padding-left: 10px;">
+        <ui:Label text="Subtitler Panel&#10;" />
+    </ui:VisualElement>
+</ui:UXML>

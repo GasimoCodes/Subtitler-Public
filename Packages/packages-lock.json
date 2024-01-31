@@ -12,7 +12,6 @@
       "depth": 0,
       "source": "local",
       "dependencies": {
-        "com.unity.addressables": "1.21.10",
         "com.cysharp.unitask": "2.3.3"
       }
     },

@@ -1,14 +1,13 @@
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Pool;
-using UnityEngine.AddressableAssets;
-using UnityEngine.UI;
 using DG.Tweening;
 using Cysharp.Threading.Tasks;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using TMPro;
+using UnityEngine.UIElements;
+using UnityEngine.UIElements.Experimental;
 
 
 namespace Gasimo.Subtitles
@@ -16,6 +15,7 @@ namespace Gasimo.Subtitles
     /// <summary>
     /// Subtitler Manager. Contains all display logic and cc functions.
     /// </summary>
+    [RequireComponent(typeof(UIDocument))]
     public class Subtitler : MonoSingleton<Subtitler>
     {
         /// <summary>
@@ -26,12 +26,12 @@ namespace Gasimo.Subtitles
         /// <summary>
         /// Pool of TextMeshProUGUI Instances. Initializes automatically.
         /// </summary>
-        public ObjectPool<TextMeshProUGUI> subtitlePool;
+        public ObjectPool<Label> subtitlePool;
 
         /// <summary>
         /// UI Panel GameObject where Subtitles will spawn
         /// </summary>
-        public Transform displayPanel;
+        public VisualElement displayPanel;
 
         /// <summary>
         /// Default Speaker Color
@@ -60,10 +60,10 @@ namespace Gasimo.Subtitles
         /// </summary>
         public int subtitlePoolSize = 10;
 
+        UIDocument uiDocument;
 
         // Privates
         int shownLines = 0;
-        Image displayBackground;
         Dictionary<int, bool> activeSubtitleList = new Dictionary<int, bool>();
         object subtitleLock = new System.Object();
         bool isReady = false;
@@ -91,6 +91,7 @@ namespace Gasimo.Subtitles
         {
             if (!isReady)
             {
+                uiDocument = GetComponent<UIDocument>();
                 initSettings();
                 initSubtitlePool();
                 isReady = true;
@@ -99,14 +100,17 @@ namespace Gasimo.Subtitles
 
         private void initSettings()
         {
-            Addressables.InitializeAsync();
-            Addressables.LoadAssetAsync<GameObject>("Gasimo/Subtitle");
 
-            displayBackground = displayPanel.GetComponent<Image>();
-            displayBackground.enabled = false;
+            // Set background visibility
+            displayPanel = uiDocument.rootVisualElement.Query("SubtitlePanel").First();
+
+            displayPanel.style.visibility = Visibility.Hidden;
+
+
+            displayPanel.Clear();
 
             if (centeredText)
-                displayPanel.GetComponent<VerticalLayoutGroup>().childAlignment = TextAnchor.LowerCenter;
+                displayPanel.style.alignItems = Align.Center;
 
             if (player == null)
                 player = FindAnyObjectByType<AudioListener>();
@@ -122,28 +126,35 @@ namespace Gasimo.Subtitles
             }
 
             // Define pool methods
-            subtitlePool = new ObjectPool<TextMeshProUGUI>(
+            subtitlePool = new ObjectPool<Label>(
             createFunc: () =>
             {
-                var op = Addressables.LoadAssetAsync<GameObject>("Gasimo/Subtitle");
-                GameObject go = Instantiate<GameObject>(op.WaitForCompletion(), displayPanel);
-                TextMeshProUGUI text = go.GetComponent<TextMeshProUGUI>();
-                text.fontSize = subtitleSize;
-                return text;
+                var label = new Label();
+                
+                //Parent UIToolkit label to panel 
+                displayPanel.Add(label);
+                label.enableRichText = true;
+                label.style.fontSize = subtitleSize;
+                label.style.flexWrap = Wrap.Wrap;
+                label.AddToClassList("Label_Hide");
+                return label;
 
             },
             actionOnGet: (obj) =>
             {
-                obj.transform.SetAsLastSibling();
+                // Move Label at bottom of UIToolkit hiearchy
+                displayPanel.Add(obj);
+
                 obj.text = "";
-                obj.gameObject.SetActive(true);
+                obj.style.visibility = Visibility.Visible;
             },
             actionOnRelease: (obj) =>
             {
+                displayPanel.Remove(obj);
                 obj.text = "";
-                obj.gameObject.SetActive(false);
+                obj.style.visibility = Visibility.Visible;
             },
-            actionOnDestroy: (obj) => Destroy(obj.gameObject),
+            actionOnDestroy: (obj) => obj.RemoveFromHierarchy(),
             collectionCheck: false,
             defaultCapacity: 5,
             maxSize: 10);
@@ -277,12 +288,14 @@ namespace Gasimo.Subtitles
                     return;
                 }
 
+                /*
                 if (enableBackgroundPanel)
                 {
                     displayPanel.GetComponent<Image>().DOKill();
                     displayPanel.GetComponent<Image>().enabled = true;
                     displayPanel.GetComponent<Image>().DOFade(0.4f, 0.1f);
                 }
+                */
 
                 _ = DisplaySubtitle(sE.dialogue, sE.speaker, sE.displayFor);
             }
@@ -309,7 +322,7 @@ namespace Gasimo.Subtitles
 
 
 
-            TextMeshProUGUI subtitle = subtitlePool.Get();
+            Label subtitle = subtitlePool.Get();
             shownLines++;
 
             CheckHideSubtitlePanel();
@@ -318,34 +331,56 @@ namespace Gasimo.Subtitles
             if (speaker != "")
                 subtitle.text += $"<color=#{ColorUtility.ToHtmlStringRGB(speakerHighlight)}><b>{speaker}</b></color>: ";
             subtitle.text += message;
-            subtitle.alpha = 255;
-            subtitle.GetComponent<ContentSizeFitter>().enabled = true;
 
-            LayoutRebuilder.ForceRebuildLayoutImmediate(displayPanel.GetComponent<RectTransform>());
+            /*
+            subtitle.experimental.animation.Start(0, 4, 100, (b, val) =>
+            {
+                b.style.paddingTop = val;
+                b.style.paddingBottom = val;
+                b.style.marginTop = val;
+                b.style.marginBottom = val;
+
+            }).Ease(Easing.InSine);
+            */
 
 
-            // Neat animation intro
-            subtitle.transform.DOScaleY(0.5f, 0);
-            subtitle.transform.DOScaleY(1, 0.2f);
-           
+            // Neat animation intro, 100ms
+            subtitle.style.maxHeight = 0;
+            
+            subtitle.experimental.animation.Start(0, 999, 100, (b, val) =>
+            {
+                b.style.maxHeight = val;
+            }).Ease(Easing.InSine);
 
+            await UniTask.Delay(50);
 
-            await UniTask.Delay(100);
-            subtitle.DOFade(1, 0.1f);
+            // Show subtitle
+            subtitle.RemoveFromClassList("Label_Hide");
+
+            await UniTask.Delay(50);
+
 
 
             // Display for specified amount of time
             await UniTask.Delay((int)(displayFor * 1000f));
 
 
-            // Fadeout, then make small
-            subtitle.DOFade(0.0f, 0.3f);
-            // await UniTask.Delay(0.3f);
+            // Fadeout...
+            subtitle.AddToClassList("Label_Hide");
+            
+            await UniTask.Delay(1000);
 
-            // LayoutRebuilder.ForceRebuildLayoutImmediate(displayPanel.GetComponent<RectTransform>());
-            subtitle.GetComponent<ContentSizeFitter>().enabled = false;
-            subtitle.transform.localScale = new Vector3(1, 1, 1);
-            await subtitle.transform.DOScaleY(0, 0.5f).AsyncWaitForCompletion();
+            // Outro
+            // Play the animations async
+            
+
+            subtitle.experimental.animation.Start(1000, 0, 100, (b, val) =>
+            {
+                b.style.maxHeight = val;
+            }).Ease(Easing.Linear);
+            
+
+            await UniTask.Delay(100);
 
 
             shownLines--;
@@ -368,11 +403,14 @@ namespace Gasimo.Subtitles
 
             if (shownLines == 0)
             {
-                displayBackground.enabled = false;
+                displayPanel.AddToClassList("SubtitlePanel_Hide");
+
+                
             }
             else
             {
-                displayBackground.enabled = true;
+                displayPanel.style.visibility = Visibility.Visible;
+                displayPanel.RemoveFromClassList("SubtitlePanel_Hide");
             }
         }
 

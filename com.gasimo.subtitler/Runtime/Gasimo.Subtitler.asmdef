@@ -2,12 +2,8 @@
     "name": "Gasimo.Subtitler",
     "rootNamespace": "Gasimo.Subtitles",
     "references": [
-        "Unity.TextMeshPro",
         "UniTask",
-        "UniTask.DOTween",
-        "Unity.Addressables",
-        "Unity.ResourceManager",
-        "DOTween.Modules"
+        "Unity.ResourceManager"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
