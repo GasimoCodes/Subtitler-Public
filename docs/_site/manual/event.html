@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Data | Subtitler </title>
+      <title>Events | Subtitler </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Data | Subtitler ">
+      <meta name="title" content="Events | Subtitler ">
     
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
@@ -76,9 +76,14 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="data">Data</h1>
+<h1 id="events">Events</h1>
 
-<h2 id="subtitlerentry">SubtitlerEntry</h2>
+<p>Subtitler allows you to subscribe simple C# events to subtitle entries. These events are fired when the corresponding entry is displayed.</p>
+<h2 id="scriptableevent">ScriptableEvent</h2>
+<p>A <a href="https://docs.unity3d.com/Manual/class-ScriptableObject.html">ScriptableObject</a> file. Can be created using the <em>Gasimo/ScriptableEvent</em> context menu.
+You can subscribe to the ScriptableEvent by calling</p>
+<pre><code class="lang-csharp">onEventRaised += (your_action);
+</code></pre>
 
 </article>
           </div>

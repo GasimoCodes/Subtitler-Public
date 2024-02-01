@@ -2,21 +2,25 @@
 _layout: landing
 ---
 
-# Subtitler
-The subtitling system works using three major components:
-
-### Subtitler
-This is the brains of the subtitling empire. All subtitling UI and playing logic runs through it. 
-
-### SubtitleContainers (Players)
-This is a component representing a single Subtitle source in the world. It contains link to subtitle entries data and (either automatically or thru APIs) plays them using Subtitler. If you wish to play subtitles from custom scripts, you can use this script as API example for the Subtitler.  
-
-### Data
-This is a data file containing a single sequence of closed-captions. If you have 2023.3 or newer, a fancy custom editor table is exposed for you to use while editing them. 
-
-
 # Subtitler Prefab
 In order to use Subtitler, you need to drag the Subtitler Prefab from the package into the scene. Alternatively, you can copy the prefab from the provided Samples.
 
-The Subtitler component exposes some commonly changed properties such as font-size, background visibility and text alignment. If you wish to change any other visual property, you will need to copy Subtitler package into your Assets/ instead of linking the git UPM. Unity marks all external packages as read-only.
+![Prefab](../images/Screens/Prefab.PNG)
 
+
+The Subtitler component exposes some commonly changed properties such as font-size, background visibility and text alignment. 
+
+
+
+## Changing Visuals
+Subtitler exposes some commonly changed properties like font-size, text alignment (centered/left-aligned) and speaker highlight color.
+
+#### Subtitler does not render on top of my UI when I dont want it to and vice-versa
+Change Subtitler's UIDocument Sort Order
+
+#### Change Font
+To be exposed in future update
+
+#### Advanced: I wish to change the UI in depth / integrate Subtitler into my own UIToolkit document
+If you wish to modify any visual property, you will need to copy the whole Subtitler VisualTreeAsset and USS styling sheets into your own  UIToolkit document. When modifying, make sure to include the same classes and overriden values as the original document to gurantee proper layouting. This mostly means margins, transitions and MaxHeight properties, which are used by Subtitler extensively. 
+Keep on mind that all children of Subtitler VisualElement are cleared and that Labels are created and initialized at runtime, not copied from any Labels currently under the Subtitler VisualElement.

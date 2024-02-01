@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Subtitler Track | Subtitler </title>
+      <title>Subtitle Containers | Subtitler </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Subtitler Track | Subtitler ">
+      <meta name="title" content="Subtitle Containers | Subtitler ">
     
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
@@ -76,15 +76,42 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="subtitler-track">Subtitler Track</h1>
+<h1 id="subtitle-containers">Subtitle Containers</h1>
 
-<p>Think of a Subtitler track like a Subtitler Sequence left to right. You can create an Subtitler under <em>+/Gasimo.Subtitler.Timeline/Subtitler Track</em>.</p>
-<p><img src="../images/Screens/TimelineTrack.PNG" alt="Track"></p>
-<h2 id="subtitler-entry-clip">Subtitler Entry (Clip)</h2>
-<p>You can add entries on the timeline by right clicking anywhere on the Subtitler Track and selecting <em>'Add Subtitler Playable Asset'</em>.</p>
-<p><img src="../images/Screens/TimelineClip.PNG" alt=""></p>
-<h3 id="timing">Timing</h3>
-<p>Subtitler Entry timing works a little differently on the Timeline compared to Subtitle Sequences. Timing is loaded automatically from the Clip timing (An entry gets triggered at the exact time its played by the Timeline and lasts depending on the length of the clip). Changing the WaitFor property of the Entry will result in the Entry having a delay and be out of sync with the Timeline.</p>
+<p>These are world objects, which contain data about what subtitles to play. They do not contain playing logic. Example implementation of this is available through the SubtitleContainer component.</p>
+<h3 id="subtitlecontainer-component">SubtitleContainer Component</h3>
+<p><img src="../images/Screens/SubtitleContainer.PNG" alt="SubtitleContainer"></p>
+<p>This object either calls Subtitler to play its SubtitleSequence on Start() or, if you choose, manually through
+<code>SubtitleContainer.Play();</code>.</p>
+<h4 id="setting-up-range-limiting-and-occlusion-subtitlecontainer">Setting up Range-Limiting and Occlusion SubtitleContainer</h4>
+<p>Subtitler allows you to cull subtitles automatically if they become hard to hear. Culling does not mean subtitles will not be 'played', they will just not be displayed on the UI.
+This is done by checking the AudioSource associated with the SubtitleContainer. A list of properties evaulated is as follows:</p>
+<table>
+<thead>
+<tr>
+<th>AudioSource</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spatial Blend</td>
+<td>Value of 1 forces range-limiting.</td>
+</tr>
+<tr>
+<td>Max Distance</td>
+<td>If player distance exceeds max distance (and 3D Mix is set to 1), the subtitle entry will not be visible.</td>
+</tr>
+<tr>
+<td>Volume</td>
+<td>If the volume is currently low, the entry will not be displayed.</td>
+</tr>
+<tr>
+<td>Enabled</td>
+<td>If the AudioSource is not enabled, the entry will not be shown.</td>
+</tr>
+</tbody>
+</table>
 
 </article>
           </div>
@@ -94,7 +121,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/GasimoCodes/Subtitler/blob/main/docs/manual/timeline_use.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/GasimoCodes/Subtitler/blob/main/docs/manual/containers.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>

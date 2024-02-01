@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Subtitler | Subtitler </title>
+      <title>Subtitler Prefab | Subtitler </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Subtitler | Subtitler ">
+      <meta name="title" content="Subtitler Prefab | Subtitler ">
     
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
@@ -76,18 +76,20 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="subtitler">Subtitler</h1>
-
-<p>The subtitling system works using three major components:</p>
-<h3 id="subtitler-1">Subtitler</h3>
-<p>This is the brains of the subtitling empire. All subtitling display and playing logic runs through it.</p>
-<h3 id="subtitlecontainer-player">SubtitleContainer (Player)</h3>
-<p>This is a component representing a single Subtitle source in the world. It contains link to subtitle entries data and (either automatically or thru APIs) plays them using Subtitler. If you wish to play subtitles from custom scripts, you can use this script as API example for the Subtitler.</p>
-<h3 id="data">Data</h3>
-<p>This is a data file containing a single sequence of closed-captions. If you have 2023.3 or newer, a fancy custom editor table is exposed for you to use while editing them.</p>
 <h1 id="subtitler-prefab">Subtitler Prefab</h1>
+
 <p>In order to use Subtitler, you need to drag the Subtitler Prefab from the package into the scene. Alternatively, you can copy the prefab from the provided Samples.</p>
-<p>The Subtitler component exposes some commonly changed properties such as font-size, background visibility and text alignment. If you wish to change any other visual property, you can do so by modifying the underlying objects in the canvas.</p>
+<p><img src="../images/Screens/Prefab.PNG" alt="Prefab"></p>
+<p>The Subtitler component exposes some commonly changed properties such as font-size, background visibility and text alignment.</p>
+<h2 id="changing-visuals">Changing Visuals</h2>
+<p>Subtitler exposes some commonly changed properties like font-size, text alignment (centered/left-aligned) and speaker highlight color.</p>
+<h4 id="subtitler-does-not-render-on-top-of-my-ui-when-i-dont-want-it-to-and-vice-versa">Subtitler does not render on top of my UI when I dont want it to and vice-versa</h4>
+<p>Change Subtitler's UIDocument Sort Order</p>
+<h4 id="change-font">Change Font</h4>
+<p>To be exposed in future update</p>
+<h4 id="advanced-i-wish-to-change-the-ui-in-depth--integrate-subtitler-into-my-own-uitoolkit-document">Advanced: I wish to change the UI in depth / integrate Subtitler into my own UIToolkit document</h4>
+<p>If you wish to modify any visual property, you will need to copy the whole Subtitler VisualTreeAsset and USS styling sheets into your own  UIToolkit document. When modifying, make sure to include the same classes and overriden values as the original document to gurantee proper layouting. This mostly means margins, transitions and MaxHeight properties, which are used by Subtitler extensively.
+Keep on mind that all children of Subtitler VisualElement are cleared and that Labels are created and initialized at runtime, not copied from any Labels currently under the Subtitler VisualElement.</p>
 
 </article>
           </div>

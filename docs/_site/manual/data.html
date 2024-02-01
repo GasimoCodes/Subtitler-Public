@@ -78,7 +78,47 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="data">Data</h1>
 
-<h2 id="subtitlerentry">SubtitlerEntry</h2>
+<p>Data of subtitler is represented either as a standalone entry or a sequence of entries.</p>
+<h2 id="subtitler-entry">Subtitler Entry</h2>
+<p><img src="../images/Screens/Entry.PNG" alt="Entry"></p>
+<p>This struct represents a single line of Closed-Captions. It contains information on timing (when to play the subtitle relative to previous, if any), events (things which you want triggered upon playing this line of the Subtitle, like Achievments or an NPC becoming hostile) and the speaker who spoke the line (if any).</p>
+<h2 id="subtitler-sequence">Subtitler Sequence</h2>
+<p>Sequences are ScriptableObjects and are the recommended way to create subtitles. Under the hood, it contains a list of SubtitlerEntries which are played top-to-bottom.</p>
+<p><img src="../images/Screens/SubtitlerSeq.PNG" alt="SubtitleContainer"></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Speaker</td>
+<td>Name of the entity which speaks, displayed highlighted on closed-captions. Leave empty to omit.</td>
+</tr>
+<tr>
+<td>Dialogue</td>
+<td>Closed Caption text content. Be it dialogue or sounds.</td>
+</tr>
+<tr>
+<td>Start</td>
+<td>Delay after which this entry will be displayed, relative to Start of last Subtitle Entry.</td>
+</tr>
+<tr>
+<td>End</td>
+<td>How long will this Subtitle be displayed for?</td>
+</tr>
+<tr>
+<td>Audio</td>
+<td>If included, Subtitler will play an AudioClip with this Entry. (For this to work, a reference to an AudioSource must be passed along as an argument. Refer to <a href="containers.html">containers</a> or API reference for more info.)</td>
+</tr>
+<tr>
+<td>Event</td>
+<td>An event to be played when this Subtitle is displayed. See <a href="event.html">Events</a></td>
+</tr>
+</tbody>
+</table>
 
 </article>
           </div>

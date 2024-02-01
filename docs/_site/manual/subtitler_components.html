@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Subtitler Track | Subtitler </title>
+      <title>Components | Subtitler </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Subtitler Track | Subtitler ">
+      <meta name="title" content="Components | Subtitler ">
     
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
@@ -76,15 +76,15 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="subtitler-track">Subtitler Track</h1>
+<h1 id="components">Components</h1>
 
-<p>Think of a Subtitler track like a Subtitler Sequence left to right. You can create an Subtitler under <em>+/Gasimo.Subtitler.Timeline/Subtitler Track</em>.</p>
-<p><img src="../images/Screens/TimelineTrack.PNG" alt="Track"></p>
-<h2 id="subtitler-entry-clip">Subtitler Entry (Clip)</h2>
-<p>You can add entries on the timeline by right clicking anywhere on the Subtitler Track and selecting <em>'Add Subtitler Playable Asset'</em>.</p>
-<p><img src="../images/Screens/TimelineClip.PNG" alt=""></p>
-<h3 id="timing">Timing</h3>
-<p>Subtitler Entry timing works a little differently on the Timeline compared to Subtitle Sequences. Timing is loaded automatically from the Clip timing (An entry gets triggered at the exact time its played by the Timeline and lasts depending on the length of the clip). Changing the WaitFor property of the Entry will result in the Entry having a delay and be out of sync with the Timeline.</p>
+<p>The subtitling system is divided into three major components:</p>
+<h3 id="subtitler">Subtitler</h3>
+<p>This is the brains of the subtitling empire. All subtitling UI and playing logic runs through this component. If you wish to use your own underlying system for playing Subtitles, reference this using the singleton <code>Subtitler.Instance();</code>.</p>
+<h3 id="subtitlecontainers">SubtitleContainers</h3>
+<p>This is a component representing a single Subtitle source in the world. It does not contain any logic, only a reference an Subtitle Sequence/Entry.</p>
+<h3 id="data">Data</h3>
+<p>This is a data file containing a single sequence of closed-captions. If you have 2023.3 or newer, a fancy custom editor table is exposed for you to use while editing them.</p>
 
 </article>
           </div>
@@ -94,7 +94,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/GasimoCodes/Subtitler/blob/main/docs/manual/timeline_use.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/GasimoCodes/Subtitler/blob/main/docs/manual/subtitler_components.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>

@@ -175,6 +175,76 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/Screens/Entry.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/Screens/Entry.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Screens/Prefab.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/Screens/Prefab.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Screens/SubtitleContainer.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/Screens/SubtitleContainer.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Screens/SubtitlerSeq.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/Screens/SubtitlerSeq.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Screens/TimelineClip.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/Screens/TimelineClip.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Screens/TimelineIntro.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/Screens/TimelineIntro.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Screens/TimelineTrack.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/Screens/TimelineTrack.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/logo.png",
       "output": {
         "resource": {
@@ -199,6 +269,16 @@
       "output": {
         ".html": {
           "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/containers.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/containers.html"
         }
       },
       "version": ""
@@ -239,6 +319,16 @@
       "output": {
         ".html": {
           "relative_path": "manual/subtitler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/subtitler_components.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/subtitler_components.html"
         }
       },
       "version": ""

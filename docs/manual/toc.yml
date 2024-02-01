@@ -2,10 +2,16 @@ items:
 - name: Getting Started
   href: gettingstarted.md
   items:
-  - name: Setting up Subtitler
-    href: subtitler.md
-  - name: Defining Subtitles
-    href: data.md
+  - name: Components
+    href: subtitler_components.md
+    items:
+    - name: Setting up Subtitler
+      href: subtitler.md
+    - name: Playing Subtitles using Containers
+      href: containers.md
+    - name: Defining Subtitles
+      href: data.md
+      
   - name: Custom Events
     href: event.md
 
