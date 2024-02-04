@@ -102,7 +102,7 @@ namespace Gasimo.Subtitles
 
             // Set background visibility
             displayPanel = uiDocument.rootVisualElement.Query("SubtitlePanel").First();
-
+            displayPanel.usageHints = UsageHints.GroupTransform;
             displayPanel.style.visibility = Visibility.Hidden;
 
 
@@ -136,6 +136,7 @@ namespace Gasimo.Subtitles
                 label.style.fontSize = subtitleSize;
                 label.style.flexWrap = Wrap.Wrap;
                 label.AddToClassList("Label_Hide");
+                label.usageHints = UsageHints.DynamicTransform;
                 return label;
 
             },

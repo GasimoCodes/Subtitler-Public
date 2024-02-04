@@ -1,7 +1,6 @@
 ---
 _layout: landing
 ---
-
 # Events
 Subtitler allows you to subscribe simple C# events to subtitle entries. These events are fired when the corresponding entry is displayed.
 

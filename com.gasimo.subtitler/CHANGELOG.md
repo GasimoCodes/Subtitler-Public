@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this package will be documented in this file.
 
+## [0.2.1] - 04/02/2024
+- Layouting performance improvement by marking VisualElements usageHints. (Pending benchmark)
+
+
 ## [0.2.0] - 31/01/2024
 - UI Rework, Subtitler is now using UIToolkit instead of Unity.UI for runtime rendering and layouting.
 - Removed dependency on DOTWeen

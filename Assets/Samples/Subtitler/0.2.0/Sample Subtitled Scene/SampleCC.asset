@@ -38,7 +38,8 @@ MonoBehaviour:
     displayFor: 4
     start: 0
     end: 0
-  - dialogue: You can setup <b>when</b> the subtitle appears...
+  - dialogue: You can setup <b>when</b> the subtitle appears or when it fades out.
+      You can even use rich text, custom sizing or italics.
     speaker: World
     audio: {fileID: 0}
     subtitleEvent: {fileID: 0}
@@ -46,7 +47,7 @@ MonoBehaviour:
     displayFor: 10
     start: 0
     end: 0
-  - dialogue: and after how long it fades out! This one will fade before the previous.
+  - dialogue: This subtitle fades before the previous.
     speaker: World
     audio: {fileID: 0}
     subtitleEvent: {fileID: 0}

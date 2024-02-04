@@ -91,25 +91,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -122,12 +104,12 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: 'Timeline: You can even overlay clips in a single track'
+    m_DisplayName: 'Timeline: You can even overlay clips in a single track.'
   - m_Version: 1
     m_Start: 2.6166666666666667
     m_ClipIn: 0
     m_Asset: {fileID: 4868387746247410502}
-    m_Duration: 3.25
+    m_Duration: 3.266666666666667
     m_TimeScale: 1
     m_ParentTrack: {fileID: -6239435379288401440}
     m_EaseInDuration: 0
@@ -136,25 +118,7 @@ MonoBehaviour:
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -175,7 +139,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 'Timeline: Watch!'
   - m_Version: 1
-    m_Start: 7.233333333333333
+    m_Start: 7.05
     m_ClipIn: 0
     m_Asset: {fileID: 8691472308360181851}
     m_Duration: 1.7666666666666662
@@ -193,25 +157,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -240,7 +186,7 @@ MonoBehaviour:
   m_Name: SubtitlerPlayableAsset(Clone)(Clone)
   m_EditorClassIdentifier: 
   entry:
-    dialogue: You can even overlay clips in a single track
+    dialogue: You can even overlay clips in a single track.
     speaker: Timeline
     audio: {fileID: 0}
     subtitleEvent: {fileID: 0}
@@ -308,7 +254,7 @@ MonoBehaviour:
     audio: {fileID: 0}
     subtitleEvent: {fileID: 0}
     waitFor: 1
-    displayFor: 3.25
+    displayFor: 3.2666667
     start: 0
     end: 0
 --- !u!114 &8691472308360181851
