@@ -194,7 +194,7 @@ namespace Gasimo.Subtitles
         /// <param name="sD">Subtitle Data file</param>
         /// <param name="aS">AudioSource to playOneShot through</param>
         /// <returns>Cancellation ID of the subtitle instance</returns>
-        public void PlaySubtitleEntry(SubtitleDataEntry sD, AudioSource aS)
+        public void PlaySubtitleEntry(ISubtitleEntry sD, AudioSource aS)
         {
             Init();
             playSubtitleEntry(sD, aS);
@@ -250,7 +250,7 @@ namespace Gasimo.Subtitles
 
 
 
-        private void playSubtitleEntry(SubtitleDataEntry sE, AudioSource aS)
+        private void playSubtitleEntry(ISubtitleEntry sE, AudioSource aS)
         {
             bool isRangeLimited = false;
 
@@ -260,8 +260,8 @@ namespace Gasimo.Subtitles
                 isRangeLimited = (aS.spatialBlend == 1);
 
                 // Play audio
-                if (sE.audio != null)
-                    aS.PlayOneShot(sE.audio);
+                if (sE.getAudio() != null)
+                    aS.PlayOneShot(sE.getAudio());
 
                 // If the audioSource is really, really silent, or straight up disabled, do not show subtitle
                 if (aS == null || aS.volume <= 0.05f || aS.enabled == false)
@@ -272,18 +272,18 @@ namespace Gasimo.Subtitles
 
 
             // Trigger programmed events
-            if (sE.subtitleEvent != null)
+            if (sE.getSubtitleEvent() != null)
             {
-                sE.subtitleEvent.Raise();
+                sE.getSubtitleEvent().Raise();
             }
 
 
             // Display dialogue
-            if (sE.dialogue != "")
+            if (sE.getDialogue() != "")
             {
 
                 // Sound aint null AND (If we are (range-limited, out of range AND not a 2D source) OR IF (the audioSource is not playing AND there was an valid AudioClip))
-                if ( aS != null && ((isRangeLimited && !checkAudioDistance(aS.maxDistance, aS) && aS.spatialBlend != 0) || (aS.isPlaying == false && sE.audio != null)))
+                if ( aS != null && ((isRangeLimited && !checkAudioDistance(aS.maxDistance, aS) && aS.spatialBlend != 0) || (aS.isPlaying == false && sE.getAudio() != null)))
                 {
                     return;
                 }
@@ -297,7 +297,7 @@ namespace Gasimo.Subtitles
                 }
                 */
 
-                _ = DisplaySubtitle(sE.dialogue, sE.speaker, sE.displayFor);
+                _ = DisplaySubtitle(sE.getDialogue(), sE.getSpeaker(), sE.getDisplayFor());
             }
 
         }

@@ -23,8 +23,8 @@ namespace Gasimo.Subtitles.Timeline
 
             textPlayableasset.entry.displayFor = (float)clip.duration;
 
-            if (textPlayableasset != null && !string.IsNullOrEmpty(textPlayableasset.entry.dialogue))
-                clip.displayName = textPlayableasset.entry.speaker + ": " + textPlayableasset.entry.dialogue;
+            if (textPlayableasset != null && !string.IsNullOrEmpty(textPlayableasset.entry.getDialogue()))
+                clip.displayName = textPlayableasset.entry.getSpeaker() + ": " + textPlayableasset.entry.getDialogue();
         }
 
     }

@@ -9,6 +9,8 @@ EditorBuildSettings:
     path: Assets/Samples/Subtitler/0.2.0/Sample Subtitled Scene/SampleScene.unity
     guid: e6fdb73de9b05824884d70b0920a21d9
   m_configObjects:
-    com.unity.addressableassets: {fileID: 11400000, guid: 4dbb8f2a471a39f409250f23fb8854d1,
+    com.unity.addressableassets: {fileID: 11400000, guid: e6e3a5771d6315c499eced4bf92254f0,
+      type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: a0c1738a3f4efd840a4521e78671a2b2,
       type: 2}
   m_UseUCBPForAssetBundles: 0

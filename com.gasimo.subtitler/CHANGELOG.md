@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this package will be documented in this file.
 
+## [0.3.0] - 19/02/2024
+- Unity Localization Optional Support
+- Subtitler now accepts ISubtitleEntry instead of a specific class
+- SubtitleEntryData now implements ISubtitleEntry
+
+
 ## [0.2.1] - 04/02/2024
 - Layouting performance improvement by marking VisualElements usageHints. (Pending benchmark)
 

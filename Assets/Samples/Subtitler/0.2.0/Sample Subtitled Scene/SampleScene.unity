@@ -210,7 +210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoPlay: 1
-  subtitleData: {fileID: 11400000, guid: f0706db0cbaa6aa49b89ce5174a4da8f, type: 2}
+  subtitleData: {fileID: 11400000, guid: 6df048db5e9eb524ba7ca04c7ead9f86, type: 2}
 --- !u!82 &105787466
 AudioSource:
   m_ObjectHideFlags: 0
@@ -399,7 +399,6 @@ Light:
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
-  m_ForceVisible: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &705507995
