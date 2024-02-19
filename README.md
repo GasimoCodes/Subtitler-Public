@@ -19,6 +19,7 @@
 - API to hook your custom subtitles scripts or logic
 - API to stop currently playing subtitles using their runtime ID
 - Timeline Integration
+- Unity Localization support
 
 
 ## [Quick Start](https://gasimocodes.github.io/Subtitler/manual/gettingstarted.html?tabs=newer)
