@@ -1,4 +1,5 @@
-<img align="right" src="https://github.com/GasimoCodes/Subtitler/assets/22917863/8492b1ea-ac2e-4ab5-95e8-0d746084e20c" alt="Subtitler img" height="250"/>
+<img align="right" src="https://github.com/user-attachments/assets/f5efff1d-d151-42dc-a78f-31ec8d7fbd06" alt="Subtitler img" height="250"/>
+
 
 ### Subtitler
  A simple to use Subtitling/Closed-Captions solution for Unity3D inspired by Source Engine Closed Captions. Currently under active development. 
