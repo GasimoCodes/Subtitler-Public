@@ -17,9 +17,10 @@ Subtitler is a simple to use Subtitling/Closed-Captions solution for Unity3D. It
 - Trigger events (ScriptableEvent) when a certain line gets played
 - Fancy Editor Subtitle Authoring tool (>=2023.3, fallbacks to normal Inspector)
 - API to hook your custom subtitles scripts or logic
-- API to stop currently playing subtitles using their runtime ID
+- API to stop and hide currently playing subtitles using their runtime ID
 - Timeline Integration
 - Unity Localization support
+- SRT Files Import Support
   
 
 ## Planned Features

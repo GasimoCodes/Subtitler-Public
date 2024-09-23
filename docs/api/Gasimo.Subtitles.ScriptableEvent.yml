@@ -21,7 +21,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: ScriptableEvent
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ScriptableEvent.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - Gasimo.Subtitler
   namespace: Gasimo.Subtitles
@@ -62,7 +62,7 @@ items:
     ctor: System.SerializableAttribute.#ctor
     arguments: []
 - uid: Gasimo.Subtitles.ScriptableEvent.onEventRaised
-  commentId: E:Gasimo.Subtitles.ScriptableEvent.onEventRaised
+  commentId: F:Gasimo.Subtitles.ScriptableEvent.onEventRaised
   id: onEventRaised
   parent: Gasimo.Subtitles.ScriptableEvent
   langs:
@@ -71,7 +71,7 @@ items:
   name: onEventRaised
   nameWithType: ScriptableEvent.onEventRaised
   fullName: Gasimo.Subtitles.ScriptableEvent.onEventRaised
-  type: Event
+  type: Field
   source:
     remote:
       path: com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ScriptableEvent.cs
@@ -79,15 +79,15 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: onEventRaised
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ScriptableEvent.cs
-    startLine: 17
+    startLine: 18
   assemblies:
   - Gasimo.Subtitler
   namespace: Gasimo.Subtitles
   syntax:
-    content: public event ScriptableEvent.ScriptableEventHandler onEventRaised
+    content: public UnityAction onEventRaised
     return:
-      type: Gasimo.Subtitles.ScriptableEvent.ScriptableEventHandler
-    content.vb: Public Event onEventRaised As ScriptableEvent.ScriptableEventHandler
+      type: UnityEngine.Events.UnityAction
+    content.vb: Public onEventRaised As UnityAction
 - uid: Gasimo.Subtitles.ScriptableEvent.Raise
   commentId: M:Gasimo.Subtitles.ScriptableEvent.Raise
   id: Raise
@@ -106,7 +106,7 @@ items:
       repo: https://github.com/GasimoCodes/Subtitler.git
     id: Raise
     path: ../com.gasimo.subtitler/Runtime/Scripts/DataDefinition/ScriptableEvent.cs
-    startLine: 22
+    startLine: 23
   assemblies:
   - Gasimo.Subtitler
   namespace: Gasimo.Subtitles
@@ -177,29 +177,35 @@ references:
   name: UnityEngine
   nameWithType: UnityEngine
   fullName: UnityEngine
-- uid: Gasimo.Subtitles.ScriptableEvent.ScriptableEventHandler
-  commentId: T:Gasimo.Subtitles.ScriptableEvent.ScriptableEventHandler
-  parent: Gasimo.Subtitles
-  href: Gasimo.Subtitles.ScriptableEvent.html
-  name: ScriptableEvent.ScriptableEventHandler
-  nameWithType: ScriptableEvent.ScriptableEventHandler
-  fullName: Gasimo.Subtitles.ScriptableEvent.ScriptableEventHandler
+- uid: UnityEngine.Events.UnityAction
+  commentId: T:UnityEngine.Events.UnityAction
+  parent: UnityEngine.Events
+  isExternal: true
+  name: UnityAction
+  nameWithType: UnityAction
+  fullName: UnityEngine.Events.UnityAction
+- uid: UnityEngine.Events
+  commentId: N:UnityEngine.Events
+  isExternal: true
+  name: UnityEngine.Events
+  nameWithType: UnityEngine.Events
+  fullName: UnityEngine.Events
   spec.csharp:
-  - uid: Gasimo.Subtitles.ScriptableEvent
-    name: ScriptableEvent
-    href: Gasimo.Subtitles.ScriptableEvent.html
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
   - name: .
-  - uid: Gasimo.Subtitles.ScriptableEvent.ScriptableEventHandler
-    name: ScriptableEventHandler
-    href: Gasimo.Subtitles.ScriptableEvent.ScriptableEventHandler.html
+  - uid: UnityEngine.Events
+    name: Events
+    isExternal: true
   spec.vb:
-  - uid: Gasimo.Subtitles.ScriptableEvent
-    name: ScriptableEvent
-    href: Gasimo.Subtitles.ScriptableEvent.html
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
   - name: .
-  - uid: Gasimo.Subtitles.ScriptableEvent.ScriptableEventHandler
-    name: ScriptableEventHandler
-    href: Gasimo.Subtitles.ScriptableEvent.ScriptableEventHandler.html
+  - uid: UnityEngine.Events
+    name: Events
+    isExternal: true
 - uid: Gasimo.Subtitles.ScriptableEvent.Raise*
   commentId: Overload:Gasimo.Subtitles.ScriptableEvent.Raise
   href: Gasimo.Subtitles.ScriptableEvent.html#Gasimo_Subtitles_ScriptableEvent_Raise

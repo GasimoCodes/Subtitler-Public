@@ -1,0 +1,220 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gasimo.Subtitles.Editor.SRTImporterEditor
+  commentId: T:Gasimo.Subtitles.Editor.SRTImporterEditor
+  id: SRTImporterEditor
+  parent: Gasimo.Subtitles.Editor
+  children:
+  - Gasimo.Subtitles.Editor.SRTImporterEditor.OnInspectorGUI
+  langs:
+  - csharp
+  - vb
+  name: SRTImporterEditor
+  nameWithType: SRTImporterEditor
+  fullName: Gasimo.Subtitles.Editor.SRTImporterEditor
+  type: Class
+  source:
+    remote:
+      path: com.gasimo.subtitler/Editor/SRTImporter.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler.git
+    id: SRTImporterEditor
+    path: ../com.gasimo.subtitler/Editor/SRTImporter.cs
+    startLine: 100
+  assemblies:
+  - Gasimo.Subtitler.Editor
+  namespace: Gasimo.Subtitles.Editor
+  syntax:
+    content: >-
+      [CustomEditor(typeof(SRTImporter))]
+
+      public class SRTImporterEditor : ScriptedImporterEditor
+    content.vb: >-
+      <CustomEditor(GetType(SRTImporter))>
+
+      Public Class SRTImporterEditor Inherits ScriptedImporterEditor
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  - UnityEditor.Editor
+  - UnityEditor.AssetImporters.AssetImporterEditor
+  - UnityEditor.AssetImporters.ScriptedImporterEditor
+  attributes:
+  - type: UnityEditor.CustomEditor
+    ctor: UnityEditor.CustomEditor.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: Gasimo.Subtitles.Editor.SRTImporter
+- uid: Gasimo.Subtitles.Editor.SRTImporterEditor.OnInspectorGUI
+  commentId: M:Gasimo.Subtitles.Editor.SRTImporterEditor.OnInspectorGUI
+  id: OnInspectorGUI
+  parent: Gasimo.Subtitles.Editor.SRTImporterEditor
+  langs:
+  - csharp
+  - vb
+  name: OnInspectorGUI()
+  nameWithType: SRTImporterEditor.OnInspectorGUI()
+  fullName: Gasimo.Subtitles.Editor.SRTImporterEditor.OnInspectorGUI()
+  type: Method
+  source:
+    remote:
+      path: com.gasimo.subtitler/Editor/SRTImporter.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler.git
+    id: OnInspectorGUI
+    path: ../com.gasimo.subtitler/Editor/SRTImporter.cs
+    startLine: 103
+  assemblies:
+  - Gasimo.Subtitler.Editor
+  namespace: Gasimo.Subtitles.Editor
+  summary: <p>Override this method to create your own Inpsector GUI for a ScriptedImporter.</p>
+  example: []
+  syntax:
+    content: public override void OnInspectorGUI()
+    content.vb: Public Overrides Sub OnInspectorGUI()
+  overridden: UnityEditor.AssetImporters.AssetImporterEditor.OnInspectorGUI
+  overload: Gasimo.Subtitles.Editor.SRTImporterEditor.OnInspectorGUI*
+references:
+- uid: Gasimo.Subtitles.Editor
+  commentId: N:Gasimo.Subtitles.Editor
+  href: Gasimo.html
+  name: Gasimo.Subtitles.Editor
+  nameWithType: Gasimo.Subtitles.Editor
+  fullName: Gasimo.Subtitles.Editor
+  spec.csharp:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+  - name: .
+  - uid: Gasimo.Subtitles.Editor
+    name: Editor
+    href: Gasimo.Subtitles.Editor.html
+  spec.vb:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+  - name: .
+  - uid: Gasimo.Subtitles.Editor
+    name: Editor
+    href: Gasimo.Subtitles.Editor.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: UnityEditor.Editor
+  commentId: T:UnityEditor.Editor
+  parent: UnityEditor
+  isExternal: true
+  name: Editor
+  nameWithType: Editor
+  fullName: UnityEditor.Editor
+- uid: UnityEditor.AssetImporters.AssetImporterEditor
+  commentId: T:UnityEditor.AssetImporters.AssetImporterEditor
+  parent: UnityEditor.AssetImporters
+  isExternal: true
+  name: AssetImporterEditor
+  nameWithType: AssetImporterEditor
+  fullName: UnityEditor.AssetImporters.AssetImporterEditor
+- uid: UnityEditor.AssetImporters.ScriptedImporterEditor
+  commentId: T:UnityEditor.AssetImporters.ScriptedImporterEditor
+  parent: UnityEditor.AssetImporters
+  isExternal: true
+  name: ScriptedImporterEditor
+  nameWithType: ScriptedImporterEditor
+  fullName: UnityEditor.AssetImporters.ScriptedImporterEditor
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEditor
+  commentId: N:UnityEditor
+  isExternal: true
+  name: UnityEditor
+  nameWithType: UnityEditor
+  fullName: UnityEditor
+- uid: UnityEditor.AssetImporters
+  commentId: N:UnityEditor.AssetImporters
+  isExternal: true
+  name: UnityEditor.AssetImporters
+  nameWithType: UnityEditor.AssetImporters
+  fullName: UnityEditor.AssetImporters
+  spec.csharp:
+  - uid: UnityEditor
+    name: UnityEditor
+    isExternal: true
+  - name: .
+  - uid: UnityEditor.AssetImporters
+    name: AssetImporters
+    isExternal: true
+  spec.vb:
+  - uid: UnityEditor
+    name: UnityEditor
+    isExternal: true
+  - name: .
+  - uid: UnityEditor.AssetImporters
+    name: AssetImporters
+    isExternal: true
+- uid: UnityEditor.AssetImporters.AssetImporterEditor.OnInspectorGUI
+  commentId: M:UnityEditor.AssetImporters.AssetImporterEditor.OnInspectorGUI
+  parent: UnityEditor.AssetImporters.AssetImporterEditor
+  isExternal: true
+  name: OnInspectorGUI()
+  nameWithType: AssetImporterEditor.OnInspectorGUI()
+  fullName: UnityEditor.AssetImporters.AssetImporterEditor.OnInspectorGUI()
+  spec.csharp:
+  - uid: UnityEditor.AssetImporters.AssetImporterEditor.OnInspectorGUI
+    name: OnInspectorGUI
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.AssetImporters.AssetImporterEditor.OnInspectorGUI
+    name: OnInspectorGUI
+    isExternal: true
+  - name: (
+  - name: )
+- uid: Gasimo.Subtitles.Editor.SRTImporterEditor.OnInspectorGUI*
+  commentId: Overload:Gasimo.Subtitles.Editor.SRTImporterEditor.OnInspectorGUI
+  href: Gasimo.Subtitles.Editor.SRTImporterEditor.html#Gasimo_Subtitles_Editor_SRTImporterEditor_OnInspectorGUI
+  name: OnInspectorGUI
+  nameWithType: SRTImporterEditor.OnInspectorGUI
+  fullName: Gasimo.Subtitles.Editor.SRTImporterEditor.OnInspectorGUI

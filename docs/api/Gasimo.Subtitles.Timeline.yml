@@ -6,9 +6,7 @@ items:
   children:
   - Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset
   - Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour
-  - Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor
   - Gasimo.Subtitles.Timeline.SubtitlerTrack
-  - Gasimo.Subtitles.Timeline.SubtitlerTrackEditor
   - Gasimo.Subtitles.Timeline.SubtitlerTrackMixer
   langs:
   - csharp
@@ -20,12 +18,6 @@ items:
   assemblies:
   - Gasimo.Subtitler.Timeline
 references:
-- uid: Gasimo.Subtitles.Timeline.SubtitlerTrackEditor
-  commentId: T:Gasimo.Subtitles.Timeline.SubtitlerTrackEditor
-  href: Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.html
-  name: SubtitlerTrackEditor
-  nameWithType: SubtitlerTrackEditor
-  fullName: Gasimo.Subtitles.Timeline.SubtitlerTrackEditor
 - uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour
   commentId: T:Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour
   href: Gasimo.Subtitles.Timeline.SubtitlerPlayableBehaviour.html
@@ -39,15 +31,8 @@ references:
   name: SubtitlerPlayableAsset
   nameWithType: SubtitlerPlayableAsset
   fullName: Gasimo.Subtitles.Timeline.SubtitlerPlayableAsset
-- uid: Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor
-  commentId: T:Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor
-  href: Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor.html
-  name: SubtitlerPlayableClipEditor
-  nameWithType: SubtitlerPlayableClipEditor
-  fullName: Gasimo.Subtitles.Timeline.SubtitlerPlayableClipEditor
 - uid: Gasimo.Subtitles.Timeline.SubtitlerTrack
   commentId: T:Gasimo.Subtitles.Timeline.SubtitlerTrack
-  parent: Gasimo.Subtitles.Timeline
   href: Gasimo.Subtitles.Timeline.SubtitlerTrack.html
   name: SubtitlerTrack
   nameWithType: SubtitlerTrack

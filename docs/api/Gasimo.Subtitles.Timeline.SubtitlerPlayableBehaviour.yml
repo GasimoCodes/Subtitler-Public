@@ -119,12 +119,7 @@ items:
   assemblies:
   - Gasimo.Subtitler.Timeline
   namespace: Gasimo.Subtitles.Timeline
-  summary: >-
-    <p>This method is invoked when one of the following situations occurs:
-
-    &lt;br&gt;&lt;br&gt;
-         The effective play state during traversal is changed to Playables.PlayState.Paused. This state is indicated by FrameData.effectivePlayState.&lt;br&gt;&lt;br&gt;
-         The PlayableGraph is stopped while the playable play state is Playing. This state is indicated by PlayableGraph.IsPlaying returning true.</p>
+  summary: "    <p>This method is invoked when one of the following situations occurs:\r\n&lt;br&gt;&lt;br&gt;\r\n     The effective play state during traversal is changed to Playables.PlayState.Paused. This state is indicated by FrameData.effectivePlayState.&lt;br&gt;&lt;br&gt;\r\n     The PlayableGraph is stopped while the playable play state is Playing. This state is indicated by PlayableGraph.IsPlaying returning true.</p>"
   example: []
   syntax:
     content: public override void OnBehaviourPause(Playable playable, FrameData info)

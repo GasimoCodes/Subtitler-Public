@@ -1,0 +1,304 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gasimo.Subtitles.Editor.SRTImporter
+  commentId: T:Gasimo.Subtitles.Editor.SRTImporter
+  id: SRTImporter
+  parent: Gasimo.Subtitles.Editor
+  children:
+  - Gasimo.Subtitles.Editor.SRTImporter.ImportSRT(System.String)
+  - Gasimo.Subtitles.Editor.SRTImporter.OnImportAsset(UnityEditor.AssetImporters.AssetImportContext)
+  langs:
+  - csharp
+  - vb
+  name: SRTImporter
+  nameWithType: SRTImporter
+  fullName: Gasimo.Subtitles.Editor.SRTImporter
+  type: Class
+  source:
+    remote:
+      path: com.gasimo.subtitler/Editor/SRTImporter.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler.git
+    id: SRTImporter
+    path: ../com.gasimo.subtitler/Editor/SRTImporter.cs
+    startLine: 12
+  assemblies:
+  - Gasimo.Subtitler.Editor
+  namespace: Gasimo.Subtitles.Editor
+  syntax:
+    content: >-
+      [ScriptedImporter(1, "srt")]
+
+      public class SRTImporter : ScriptedImporter
+    content.vb: >-
+      <ScriptedImporter(1, "srt")>
+
+      Public Class SRTImporter Inherits ScriptedImporter
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEditor.AssetImporter
+  - UnityEditor.AssetImporters.ScriptedImporter
+  attributes:
+  - type: UnityEditor.AssetImporters.ScriptedImporterAttribute
+    ctor: UnityEditor.AssetImporters.ScriptedImporterAttribute.#ctor(System.Int32,System.String)
+    arguments:
+    - type: System.Int32
+      value: 1
+    - type: System.String
+      value: srt
+- uid: Gasimo.Subtitles.Editor.SRTImporter.OnImportAsset(UnityEditor.AssetImporters.AssetImportContext)
+  commentId: M:Gasimo.Subtitles.Editor.SRTImporter.OnImportAsset(UnityEditor.AssetImporters.AssetImportContext)
+  id: OnImportAsset(UnityEditor.AssetImporters.AssetImportContext)
+  parent: Gasimo.Subtitles.Editor.SRTImporter
+  langs:
+  - csharp
+  - vb
+  name: OnImportAsset(AssetImportContext)
+  nameWithType: SRTImporter.OnImportAsset(AssetImportContext)
+  fullName: Gasimo.Subtitles.Editor.SRTImporter.OnImportAsset(UnityEditor.AssetImporters.AssetImportContext)
+  type: Method
+  source:
+    remote:
+      path: com.gasimo.subtitler/Editor/SRTImporter.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler.git
+    id: OnImportAsset
+    path: ../com.gasimo.subtitler/Editor/SRTImporter.cs
+    startLine: 15
+  assemblies:
+  - Gasimo.Subtitler.Editor
+  namespace: Gasimo.Subtitles.Editor
+  summary: <p>This method must by overriden by the derived class and is called by the Asset pipeline to import files.</p>
+  example: []
+  syntax:
+    content: public override void OnImportAsset(AssetImportContext ctx)
+    parameters:
+    - id: ctx
+      type: UnityEditor.AssetImporters.AssetImportContext
+      description: This argument contains all the contextual information needed to process the import event and is also used by the custom importer to store the resulting Unity Asset.
+    content.vb: Public Overrides Sub OnImportAsset(ctx As AssetImportContext)
+  overridden: UnityEditor.AssetImporters.ScriptedImporter.OnImportAsset(UnityEditor.AssetImporters.AssetImportContext)
+  overload: Gasimo.Subtitles.Editor.SRTImporter.OnImportAsset*
+- uid: Gasimo.Subtitles.Editor.SRTImporter.ImportSRT(System.String)
+  commentId: M:Gasimo.Subtitles.Editor.SRTImporter.ImportSRT(System.String)
+  id: ImportSRT(System.String)
+  parent: Gasimo.Subtitles.Editor.SRTImporter
+  langs:
+  - csharp
+  - vb
+  name: ImportSRT(string)
+  nameWithType: SRTImporter.ImportSRT(string)
+  fullName: Gasimo.Subtitles.Editor.SRTImporter.ImportSRT(string)
+  type: Method
+  source:
+    remote:
+      path: com.gasimo.subtitler/Editor/SRTImporter.cs
+      branch: main
+      repo: https://github.com/GasimoCodes/Subtitler.git
+    id: ImportSRT
+    path: ../com.gasimo.subtitler/Editor/SRTImporter.cs
+    startLine: 22
+  assemblies:
+  - Gasimo.Subtitler.Editor
+  namespace: Gasimo.Subtitles.Editor
+  syntax:
+    content: public static SubtitleSequenceData ImportSRT(string filePath)
+    parameters:
+    - id: filePath
+      type: System.String
+    return:
+      type: Gasimo.Subtitles.SubtitleSequenceData
+    content.vb: Public Shared Function ImportSRT(filePath As String) As SubtitleSequenceData
+  overload: Gasimo.Subtitles.Editor.SRTImporter.ImportSRT*
+  nameWithType.vb: SRTImporter.ImportSRT(String)
+  fullName.vb: Gasimo.Subtitles.Editor.SRTImporter.ImportSRT(String)
+  name.vb: ImportSRT(String)
+references:
+- uid: Gasimo.Subtitles.Editor
+  commentId: N:Gasimo.Subtitles.Editor
+  href: Gasimo.html
+  name: Gasimo.Subtitles.Editor
+  nameWithType: Gasimo.Subtitles.Editor
+  fullName: Gasimo.Subtitles.Editor
+  spec.csharp:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+  - name: .
+  - uid: Gasimo.Subtitles.Editor
+    name: Editor
+    href: Gasimo.Subtitles.Editor.html
+  spec.vb:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+  - name: .
+  - uid: Gasimo.Subtitles.Editor
+    name: Editor
+    href: Gasimo.Subtitles.Editor.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEditor.AssetImporter
+  commentId: T:UnityEditor.AssetImporter
+  parent: UnityEditor
+  isExternal: true
+  name: AssetImporter
+  nameWithType: AssetImporter
+  fullName: UnityEditor.AssetImporter
+- uid: UnityEditor.AssetImporters.ScriptedImporter
+  commentId: T:UnityEditor.AssetImporters.ScriptedImporter
+  parent: UnityEditor.AssetImporters
+  isExternal: true
+  name: ScriptedImporter
+  nameWithType: ScriptedImporter
+  fullName: UnityEditor.AssetImporters.ScriptedImporter
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEditor
+  commentId: N:UnityEditor
+  isExternal: true
+  name: UnityEditor
+  nameWithType: UnityEditor
+  fullName: UnityEditor
+- uid: UnityEditor.AssetImporters
+  commentId: N:UnityEditor.AssetImporters
+  isExternal: true
+  name: UnityEditor.AssetImporters
+  nameWithType: UnityEditor.AssetImporters
+  fullName: UnityEditor.AssetImporters
+  spec.csharp:
+  - uid: UnityEditor
+    name: UnityEditor
+    isExternal: true
+  - name: .
+  - uid: UnityEditor.AssetImporters
+    name: AssetImporters
+    isExternal: true
+  spec.vb:
+  - uid: UnityEditor
+    name: UnityEditor
+    isExternal: true
+  - name: .
+  - uid: UnityEditor.AssetImporters
+    name: AssetImporters
+    isExternal: true
+- uid: UnityEditor.AssetImporters.ScriptedImporter.OnImportAsset(UnityEditor.AssetImporters.AssetImportContext)
+  commentId: M:UnityEditor.AssetImporters.ScriptedImporter.OnImportAsset(UnityEditor.AssetImporters.AssetImportContext)
+  parent: UnityEditor.AssetImporters.ScriptedImporter
+  isExternal: true
+  name: OnImportAsset(AssetImportContext)
+  nameWithType: ScriptedImporter.OnImportAsset(AssetImportContext)
+  fullName: UnityEditor.AssetImporters.ScriptedImporter.OnImportAsset(UnityEditor.AssetImporters.AssetImportContext)
+  spec.csharp:
+  - uid: UnityEditor.AssetImporters.ScriptedImporter.OnImportAsset(UnityEditor.AssetImporters.AssetImportContext)
+    name: OnImportAsset
+    isExternal: true
+  - name: (
+  - uid: UnityEditor.AssetImporters.AssetImportContext
+    name: AssetImportContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: UnityEditor.AssetImporters.ScriptedImporter.OnImportAsset(UnityEditor.AssetImporters.AssetImportContext)
+    name: OnImportAsset
+    isExternal: true
+  - name: (
+  - uid: UnityEditor.AssetImporters.AssetImportContext
+    name: AssetImportContext
+    isExternal: true
+  - name: )
+- uid: Gasimo.Subtitles.Editor.SRTImporter.OnImportAsset*
+  commentId: Overload:Gasimo.Subtitles.Editor.SRTImporter.OnImportAsset
+  href: Gasimo.Subtitles.Editor.SRTImporter.html#Gasimo_Subtitles_Editor_SRTImporter_OnImportAsset_UnityEditor_AssetImporters_AssetImportContext_
+  name: OnImportAsset
+  nameWithType: SRTImporter.OnImportAsset
+  fullName: Gasimo.Subtitles.Editor.SRTImporter.OnImportAsset
+- uid: UnityEditor.AssetImporters.AssetImportContext
+  commentId: T:UnityEditor.AssetImporters.AssetImportContext
+  parent: UnityEditor.AssetImporters
+  isExternal: true
+  name: AssetImportContext
+  nameWithType: AssetImportContext
+  fullName: UnityEditor.AssetImporters.AssetImportContext
+- uid: Gasimo.Subtitles.Editor.SRTImporter.ImportSRT*
+  commentId: Overload:Gasimo.Subtitles.Editor.SRTImporter.ImportSRT
+  href: Gasimo.Subtitles.Editor.SRTImporter.html#Gasimo_Subtitles_Editor_SRTImporter_ImportSRT_System_String_
+  name: ImportSRT
+  nameWithType: SRTImporter.ImportSRT
+  fullName: Gasimo.Subtitles.Editor.SRTImporter.ImportSRT
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Gasimo.Subtitles.SubtitleSequenceData
+  commentId: T:Gasimo.Subtitles.SubtitleSequenceData
+  parent: Gasimo.Subtitles
+  href: Gasimo.Subtitles.SubtitleSequenceData.html
+  name: SubtitleSequenceData
+  nameWithType: SubtitleSequenceData
+  fullName: Gasimo.Subtitles.SubtitleSequenceData
+- uid: Gasimo.Subtitles
+  commentId: N:Gasimo.Subtitles
+  href: Gasimo.html
+  name: Gasimo.Subtitles
+  nameWithType: Gasimo.Subtitles
+  fullName: Gasimo.Subtitles
+  spec.csharp:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+  spec.vb:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html

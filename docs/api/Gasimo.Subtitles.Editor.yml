@@ -1,0 +1,61 @@
+### YamlMime:ManagedReference
+items:
+- uid: Gasimo.Subtitles.Editor
+  commentId: N:Gasimo.Subtitles.Editor
+  id: Gasimo.Subtitles.Editor
+  children:
+  - Gasimo.Subtitles.Editor.SRTImporter
+  - Gasimo.Subtitles.Editor.SRTImporterEditor
+  langs:
+  - csharp
+  - vb
+  name: Gasimo.Subtitles.Editor
+  nameWithType: Gasimo.Subtitles.Editor
+  fullName: Gasimo.Subtitles.Editor
+  type: Namespace
+  assemblies:
+  - Gasimo.Subtitler.Editor
+references:
+- uid: Gasimo.Subtitles.Editor.SRTImporter
+  commentId: T:Gasimo.Subtitles.Editor.SRTImporter
+  parent: Gasimo.Subtitles.Editor
+  href: Gasimo.Subtitles.Editor.SRTImporter.html
+  name: SRTImporter
+  nameWithType: SRTImporter
+  fullName: Gasimo.Subtitles.Editor.SRTImporter
+- uid: Gasimo.Subtitles.Editor.SRTImporterEditor
+  commentId: T:Gasimo.Subtitles.Editor.SRTImporterEditor
+  href: Gasimo.Subtitles.Editor.SRTImporterEditor.html
+  name: SRTImporterEditor
+  nameWithType: SRTImporterEditor
+  fullName: Gasimo.Subtitles.Editor.SRTImporterEditor
+- uid: Gasimo.Subtitles.Editor
+  commentId: N:Gasimo.Subtitles.Editor
+  href: Gasimo.html
+  name: Gasimo.Subtitles.Editor
+  nameWithType: Gasimo.Subtitles.Editor
+  fullName: Gasimo.Subtitles.Editor
+  spec.csharp:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+  - name: .
+  - uid: Gasimo.Subtitles.Editor
+    name: Editor
+    href: Gasimo.Subtitles.Editor.html
+  spec.vb:
+  - uid: Gasimo
+    name: Gasimo
+    href: Gasimo.html
+  - name: .
+  - uid: Gasimo.Subtitles
+    name: Subtitles
+    href: Gasimo.Subtitles.html
+  - name: .
+  - uid: Gasimo.Subtitles.Editor
+    name: Editor
+    href: Gasimo.Subtitles.Editor.html

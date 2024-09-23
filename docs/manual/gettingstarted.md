@@ -14,12 +14,9 @@ Recommended Unity version (as of now) is 2023.3 due to a [bug in UIToolkit](http
 
 # [2022.2 and above](#tab/newer)
 
-1. Import [Cysharp UniTask]((https://github.com/Cysharp/UniTask)) by adding `https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask` into **Package Manager** 
-(*Package Manager/+/Install package from GIT URL*)
-
-2. Import Subtitler `https://github.com/GasimoCodes/Subtitler.git?path=com.gasimo.subtitler` into **Package Manager** 
+1. Import Subtitler `https://github.com/GasimoCodes/Subtitler.git?path=com.gasimo.subtitler` into **Package Manager** 
   
-3. To see **samples**, open Package Manager, navigate to Subtitler. Press Samples and select import. Sample will automatically import into *Assets/Samples/Subtitler*
+2. To see **samples**, open Package Manager, navigate to Subtitler. Press Samples and select import. Sample will automatically import into *Assets/Samples/Subtitler*
 
 ---
 

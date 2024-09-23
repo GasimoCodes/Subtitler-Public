@@ -1,0 +1,47 @@
+﻿1
+00:00:00,000 --> 00:00:05,370
+This is an automated broadcast
+from the Greenland Maritime Safety Information Service.
+
+2
+00:00:05,250 --> 00:00:09,850
+The following information
+is valid for the next 24 hours.
+
+3
+00:00:09,650 --> 00:00:13,230
+Weather forecast for waters
+off the south west coast of Greenland.
+
+4
+00:00:13,250 --> 00:00:19,330
+Northeast, force 5 to 6, increasing to force 7 in exposed areas.
+
+5
+00:00:19,310 --> 00:00:23,130
+Moderate to rough, becoming very rough in open waters.
+
+6
+00:00:23,090 --> 00:00:27,750
+Poor, with fog patches, improving to moderate by afternoon.
+
+7
+00:00:27,810 --> 00:00:30,710
+Two to four. One.
+
+8
+00:00:30,790 --> 00:00:39,330
+Navigation warning: A strict no-sail zone has been established around Ravnedod due to electromagnetical interference and ongoing research.
+
+9
+00:00:39,430 --> 00:00:43,890
+All vessels are prohibited
+from entering the area bounded by the following coordinates.
+
+10
+00:00:44,190 --> 00:00:49,330
+63°45'N, 051°35'W, 63°45'N, 051°15'W...
+
+11
+00:00:50,640 --> 00:00:52,460
+*static*

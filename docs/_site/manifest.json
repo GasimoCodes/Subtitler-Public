@@ -12,6 +12,46 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Gasimo.Subtitles.Editor.SRTImporter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gasimo.Subtitles.Editor.SRTImporter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gasimo.Subtitles.Editor.SRTImporterEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gasimo.Subtitles.Editor.SRTImporterEditor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gasimo.Subtitles.Editor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gasimo.Subtitles.Editor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Gasimo.Subtitles.ISubtitleEntry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gasimo.Subtitles.ISubtitleEntry.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Gasimo.Subtitles.MonoSingleton-1.yml",
       "output": {
         ".html": {
@@ -245,6 +285,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/Screens/srt.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/Screens/srt.PNG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/logo.png",
       "output": {
         "resource": {
@@ -309,6 +359,16 @@
       "output": {
         ".html": {
           "relative_path": "manual/gettingstarted.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/srtsupport.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/srtsupport.html"
         }
       },
       "version": ""

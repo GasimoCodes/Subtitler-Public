@@ -5,11 +5,11 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class SubtitlerTrackEditor | Subtitler </title>
+      <title>Class SRTImporter | Subtitler </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class SubtitlerTrackEditor | Subtitler ">
+      <meta name="title" content="Class SRTImporter | Subtitler ">
     
-    <meta name="description" content="Custom editor for the track. Will be used for custom icon once I find the docs on hows the proper way to implement this.">
+    
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
@@ -76,74 +76,44 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Gasimo.Subtitles.Timeline.SubtitlerTrackEditor">
+            <article class="content wrap" id="_content" data-uid="Gasimo.Subtitles.Editor.SRTImporter">
 
 
 
-  <h1 id="Gasimo_Subtitles_Timeline_SubtitlerTrackEditor" data-uid="Gasimo.Subtitles.Timeline.SubtitlerTrackEditor" class="text-break">Class SubtitlerTrackEditor</h1>
-  <div class="markdown level0 summary"><p>Custom editor for the track. Will be used for custom icon once I find the docs on hows the proper way to implement this.</p>
-</div>
+  <h1 id="Gasimo_Subtitles_Editor_SRTImporter" data-uid="Gasimo.Subtitles.Editor.SRTImporter" class="text-break">Class SRTImporter</h1>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-    <div class="level1"><span class="xref">TrackEditor</span></div>
-    <div class="level2"><span class="xref">SubtitlerTrackEditor</span></div>
+    <div class="level1"><span class="xref">Object</span></div>
+    <div class="level2"><span class="xref">AssetImporter</span></div>
+    <div class="level3"><span class="xref">ScriptedImporter</span></div>
+    <div class="level4"><span class="xref">SRTImporter</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Gasimo.html">Gasimo</a>.<a class="xref" href="Gasimo.Subtitles.html">Subtitles</a>.<a class="xref" href="Gasimo.Subtitles.Timeline.html">Timeline</a></h6>
-  <h6><strong>Assembly</strong>: Gasimo.Subtitler.Timeline.dll</h6>
-  <h5 id="Gasimo_Subtitles_Timeline_SubtitlerTrackEditor_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Gasimo.html">Gasimo</a>.<a class="xref" href="Gasimo.Subtitles.html">Subtitles</a>.<a class="xref" href="Gasimo.Subtitles.Editor.html">Editor</a></h6>
+  <h6><strong>Assembly</strong>: Gasimo.Subtitler.Editor.dll</h6>
+  <h5 id="Gasimo_Subtitles_Editor_SRTImporter_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[CustomTimelineEditor(typeof(SubtitlerTrack))]
-public class SubtitlerTrackEditor : TrackEditor</code></pre>
+    <pre><code class="lang-csharp hljs">[ScriptedImporter(1, &quot;srt&quot;)]
+public class SRTImporter : ScriptedImporter</code></pre>
   </div>
-  <h3 id="fields">Fields
-</h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/GasimoCodes/Subtitler/new/main/apiSpec/new?filename=Gasimo_Subtitles_Timeline_SubtitlerTrackEditor_icon.md&amp;value=---%0Auid%3A%20Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.icon%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GasimoCodes/Subtitler/blob/main/com.gasimo.subtitler/Runtime/Timeline/Editor/SubtitlerTrackEditor.cs/#L18">View Source</a>
-  </span>
-  <h4 id="Gasimo_Subtitles_Timeline_SubtitlerTrackEditor_icon" data-uid="Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.icon">icon</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Sprite icon</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Sprite</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/GasimoCodes/Subtitler/new/main/apiSpec/new?filename=Gasimo_Subtitles_Timeline_SubtitlerTrackEditor_GetTrackOptions_UnityEngine_Timeline_TrackAsset_UnityEngine_Object_.md&amp;value=---%0Auid%3A%20Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.GetTrackOptions(UnityEngine.Timeline.TrackAsset%2CUnityEngine.Object)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/GasimoCodes/Subtitler/new/main/apiSpec/new?filename=Gasimo_Subtitles_Editor_SRTImporter_ImportSRT_System_String_.md&amp;value=---%0Auid%3A%20Gasimo.Subtitles.Editor.SRTImporter.ImportSRT(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/GasimoCodes/Subtitler/blob/main/com.gasimo.subtitler/Runtime/Timeline/Editor/SubtitlerTrackEditor.cs/#L20">View Source</a>
+    <a href="https://github.com/GasimoCodes/Subtitler/blob/main/com.gasimo.subtitler/Editor/SRTImporter.cs/#L23">View Source</a>
   </span>
-  <a id="Gasimo_Subtitles_Timeline_SubtitlerTrackEditor_GetTrackOptions_" data-uid="Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.GetTrackOptions*"></a>
-  <h4 id="Gasimo_Subtitles_Timeline_SubtitlerTrackEditor_GetTrackOptions_UnityEngine_Timeline_TrackAsset_UnityEngine_Object_" data-uid="Gasimo.Subtitles.Timeline.SubtitlerTrackEditor.GetTrackOptions(UnityEngine.Timeline.TrackAsset,UnityEngine.Object)">GetTrackOptions(TrackAsset, Object)</h4>
+  <a id="Gasimo_Subtitles_Editor_SRTImporter_ImportSRT_" data-uid="Gasimo.Subtitles.Editor.SRTImporter.ImportSRT*"></a>
+  <h4 id="Gasimo_Subtitles_Editor_SRTImporter_ImportSRT_System_String_" data-uid="Gasimo.Subtitles.Editor.SRTImporter.ImportSRT(System.String)">ImportSRT(string)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override TrackDrawOptions GetTrackOptions(TrackAsset track, Object binding)</code></pre>
+    <pre><code class="lang-csharp hljs">public static SubtitleSequenceData ImportSRT(string filePath)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -156,13 +126,8 @@ public class SubtitlerTrackEditor : TrackEditor</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">TrackAsset</span></td>
-        <td><span class="parametername">track</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Object</span></td>
-        <td><span class="parametername">binding</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">filePath</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -177,13 +142,47 @@ public class SubtitlerTrackEditor : TrackEditor</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">TrackDrawOptions</span></td>
+        <td><a class="xref" href="Gasimo.Subtitles.SubtitleSequenceData.html">SubtitleSequenceData</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/GasimoCodes/Subtitler/new/main/apiSpec/new?filename=Gasimo_Subtitles_Editor_SRTImporter_OnImportAsset_UnityEditor_AssetImporters_AssetImportContext_.md&amp;value=---%0Auid%3A%20Gasimo.Subtitles.Editor.SRTImporter.OnImportAsset(UnityEditor.AssetImporters.AssetImportContext)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/GasimoCodes/Subtitler/blob/main/com.gasimo.subtitler/Editor/SRTImporter.cs/#L16">View Source</a>
+  </span>
+  <a id="Gasimo_Subtitles_Editor_SRTImporter_OnImportAsset_" data-uid="Gasimo.Subtitles.Editor.SRTImporter.OnImportAsset*"></a>
+  <h4 id="Gasimo_Subtitles_Editor_SRTImporter_OnImportAsset_UnityEditor_AssetImporters_AssetImportContext_" data-uid="Gasimo.Subtitles.Editor.SRTImporter.OnImportAsset(UnityEditor.AssetImporters.AssetImportContext)">OnImportAsset(AssetImportContext)</h4>
+  <div class="markdown level1 summary"><p>This method must by overriden by the derived class and is called by the Asset pipeline to import files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void OnImportAsset(AssetImportContext ctx)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">AssetImportContext</span></td>
+        <td><span class="parametername">ctx</span></td>
+        <td><p>This argument contains all the contextual information needed to process the import event and is also used by the custom importer to store the resulting Unity Asset.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">UnityEditor.Timeline.TrackEditor.GetTrackOptions(UnityEngine.Timeline.TrackAsset, UnityEngine.Object)</span></div>
+  <div><span class="xref">UnityEditor.AssetImporters.ScriptedImporter.OnImportAsset(UnityEditor.AssetImporters.AssetImportContext)</span></div>
 
 </article>
           </div>
@@ -193,10 +192,10 @@ public class SubtitlerTrackEditor : TrackEditor</code></pre>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/GasimoCodes/Subtitler/new/main/apiSpec/new?filename=Gasimo_Subtitles_Timeline_SubtitlerTrackEditor.md&amp;value=---%0Auid%3A%20Gasimo.Subtitles.Timeline.SubtitlerTrackEditor%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/GasimoCodes/Subtitler/new/main/apiSpec/new?filename=Gasimo_Subtitles_Editor_SRTImporter.md&amp;value=---%0Auid%3A%20Gasimo.Subtitles.Editor.SRTImporter%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
                   </li>
                   <li>
-                    <a href="https://github.com/GasimoCodes/Subtitler/blob/main/com.gasimo.subtitler/Runtime/Timeline/Editor/SubtitlerTrackEditor.cs/#L14" class="contribution-link">View Source</a>
+                    <a href="https://github.com/GasimoCodes/Subtitler/blob/main/com.gasimo.subtitler/Editor/SRTImporter.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

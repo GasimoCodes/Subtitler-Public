@@ -15,6 +15,9 @@ items:
   - name: Custom Events
     href: event.md
 
+- name: SRT Files Support
+  href: srtsupport.md
+
 - name: Timeline Integration
   href: timeline_intro.md
   items:

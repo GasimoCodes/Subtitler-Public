@@ -4,9 +4,9 @@ items:
   commentId: N:Gasimo.Subtitles
   id: Gasimo.Subtitles
   children:
+  - Gasimo.Subtitles.ISubtitleEntry
   - Gasimo.Subtitles.MonoSingleton`1
   - Gasimo.Subtitles.ScriptableEvent
-  - Gasimo.Subtitles.ScriptableEvent.ScriptableEventHandler
   - Gasimo.Subtitles.SubtitleContainer
   - Gasimo.Subtitles.SubtitleDataEntry
   - Gasimo.Subtitles.SubtitleSequenceData
@@ -28,29 +28,6 @@ references:
   name: ScriptableEvent
   nameWithType: ScriptableEvent
   fullName: Gasimo.Subtitles.ScriptableEvent
-- uid: Gasimo.Subtitles.ScriptableEvent.ScriptableEventHandler
-  commentId: T:Gasimo.Subtitles.ScriptableEvent.ScriptableEventHandler
-  parent: Gasimo.Subtitles
-  href: Gasimo.Subtitles.ScriptableEvent.html
-  name: ScriptableEvent.ScriptableEventHandler
-  nameWithType: ScriptableEvent.ScriptableEventHandler
-  fullName: Gasimo.Subtitles.ScriptableEvent.ScriptableEventHandler
-  spec.csharp:
-  - uid: Gasimo.Subtitles.ScriptableEvent
-    name: ScriptableEvent
-    href: Gasimo.Subtitles.ScriptableEvent.html
-  - name: .
-  - uid: Gasimo.Subtitles.ScriptableEvent.ScriptableEventHandler
-    name: ScriptableEventHandler
-    href: Gasimo.Subtitles.ScriptableEvent.ScriptableEventHandler.html
-  spec.vb:
-  - uid: Gasimo.Subtitles.ScriptableEvent
-    name: ScriptableEvent
-    href: Gasimo.Subtitles.ScriptableEvent.html
-  - name: .
-  - uid: Gasimo.Subtitles.ScriptableEvent.ScriptableEventHandler
-    name: ScriptableEventHandler
-    href: Gasimo.Subtitles.ScriptableEvent.ScriptableEventHandler.html
 - uid: Gasimo.Subtitles.Subtitler
   commentId: T:Gasimo.Subtitles.Subtitler
   href: Gasimo.Subtitles.Subtitler.html
@@ -63,6 +40,13 @@ references:
   name: SubtitleContainer
   nameWithType: SubtitleContainer
   fullName: Gasimo.Subtitles.SubtitleContainer
+- uid: Gasimo.Subtitles.ISubtitleEntry
+  commentId: T:Gasimo.Subtitles.ISubtitleEntry
+  parent: Gasimo.Subtitles
+  href: Gasimo.Subtitles.ISubtitleEntry.html
+  name: ISubtitleEntry
+  nameWithType: ISubtitleEntry
+  fullName: Gasimo.Subtitles.ISubtitleEntry
 - uid: Gasimo.Subtitles.SubtitleDataEntry
   commentId: T:Gasimo.Subtitles.SubtitleDataEntry
   parent: Gasimo.Subtitles
