@@ -5,25 +5,14 @@
   "description": "Versatile Unity Subtitle System inspired by Source 1 Closed Captions",
   "unity": "2022.1",
   "documentationUrl": "https://gasimocodes.github.io/Subtitler/",
-  "scopedRegistries": [
-    {
-      "name": "package.openupm.com",
-      "url": "https://package.openupm.com",
-      "scopes": [
-        "com.cysharp.unitask"
-      ]
-    }
-  ],
-  "dependencies": {
-    "com.cysharp.unitask": "2.3.3"
-  },
   "keywords": [
     "Subtitles",
-    "Closed Caption"
+    "Closed Caption",
+    "Subtitling"
   ],
   "author": {
     "name": "Gasimo",
-    "url": "https://github.com/GasimoCodes/"
+    "url": "https://gasimo.dev/Subtitler/"
   },
   "samples": [
     {
