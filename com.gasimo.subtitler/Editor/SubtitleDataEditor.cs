@@ -7,11 +7,11 @@ using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Gasimo.Subtitles
+namespace Gasimo.Subtitles.Editor
 {
 #if UNITY_2023_3_OR_NEWER
     [CustomEditor(typeof(SubtitleSequenceData))]
-    public class SubtitleDataEditor : Editor
+    public class SubtitleDataEditor : UnityEditor.Editor
     {
         [SerializeField]
         public VisualTreeAsset m_VisualTreeAsset = default;

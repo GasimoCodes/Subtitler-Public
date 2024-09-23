@@ -1,437 +1,316 @@
-using System.Threading.Tasks;
-using UnityEngine;
-using UnityEngine.Pool;
-using Cysharp.Threading.Tasks;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
+using UnityEngine;
+using UnityEngine.Pool;
 using UnityEngine.UIElements;
 using UnityEngine.UIElements.Experimental;
 
-
 namespace Gasimo.Subtitles
 {
-    /// <summary>
-    /// Subtitler Manager. Contains all display logic and cc functions.
-    /// </summary>
     [RequireComponent(typeof(UIDocument))]
     public class Subtitler : MonoSingleton<Subtitler>
     {
-        /// <summary>
-        /// Target audioListener, used for audio occlusion calculation.
-        /// </summary>
-        public AudioListener player;
+        [Header("Appearance")]
+        [SerializeField] private Color speakerHighlight = Color.white;
+        [SerializeField] private bool enableBackgroundPanel = true;
+        [SerializeField] private TextAnchor subtitlerAlign = TextAnchor.MiddleLeft;
+        [SerializeField] private int subtitleSize = 24;
+        [SerializeField] private int subtitlePoolSize = 10;
 
-        /// <summary>
-        /// Pool of TextMeshProUGUI Instances. Initializes automatically.
-        /// </summary>
-        public ObjectPool<Label> subtitlePool;
+        [Header("References")]
+        [SerializeField] private AudioListener player;
 
-        /// <summary>
-        /// UI Panel GameObject where Subtitles will spawn
-        /// </summary>
-        public VisualElement displayPanel;
-
-        /// <summary>
-        /// Default Speaker Color
-        /// </summary>
-        public Color speakerHighlight = Color.white;
-
-        /// <summary>
-        /// Should background panel be visible?
-        /// </summary>
-        public bool enableBackgroundPanel = true;
-
-        /// <summary>
-        /// Centers text. Text is aligned left by default.
-        /// </summary>
-        public bool centeredText = false;
-
-        /// <summary>
-        /// Size of subtitle text. Default is 24.
-        /// </summary>
-        public int subtitleSize = 24;
-
-
-        [HideInInspector]
-        /// <summary>
-        /// Max amount of lines visible at once. Unused right now. 
-        /// </summary>
-        public int subtitlePoolSize = 10;
-
-        UIDocument uiDocument;
-
-        // Privates
-        int shownLines = 0;
-        Dictionary<int, bool> activeSubtitleList = new Dictionary<int, bool>();
-        object subtitleLock = new System.Object();
-        bool isReady = false;
-
-        #region init
-
+        private UIDocument uiDocument;
+        private VisualElement displayPanel;
+        private ObjectPool<Label> subtitlePool;
+        private Dictionary<int, CancellationTokenSource> activeSubtitles = new Dictionary<int, CancellationTokenSource>();
+        private int activeSubtitleCount = 0;
+        private int nextSubtitleId = 0;
+        private bool isInitialized = false;
 
         protected override void Awake()
         {
-            // Set singleton instance
             base.Awake();
-            Init();
+            Initialize();
         }
 
         private void Start()
         {
             if (player == null)
-                Debug.LogError("Player object not assigned, range-limited subtitles will fail.");
-        }
-
-        /// <summary>
-        /// Used internaly to force init before awake
-        /// </summary>
-        public void Init()
-        {
-            if (!isReady)
             {
-                uiDocument = GetComponent<UIDocument>();
-                initSettings();
-                initSubtitlePool();
-                isReady = true;
+                Debug.LogWarning("Player object not assigned, range-limited subtitles will fail. Attempting to find AudioListener.");
+                player = FindObjectOfType<AudioListener>();
+                if (player == null)
+                {
+                    Debug.LogError("Failed to find AudioListener. Range-limited subtitles will not work.");
+                }
             }
         }
 
-        private void initSettings()
+        private void Initialize()
         {
+            if (isInitialized) return;
 
-            // Set background visibility
-            displayPanel = uiDocument.rootVisualElement.Query("SubtitlePanel").First();
-            displayPanel.usageHints = UsageHints.GroupTransform;
-            displayPanel.style.visibility = Visibility.Hidden;
-
-
-            displayPanel.Clear();
-
-            if (centeredText)
-                displayPanel.style.alignItems = Align.Center;
-
-            if (player == null)
-                player = FindAnyObjectByType<AudioListener>();
+            uiDocument = GetComponent<UIDocument>();
+            InitializeDisplayPanel();
+            InitializeSubtitlePool();
+            isInitialized = true;
         }
 
-        private void initSubtitlePool()
+        private void InitializeDisplayPanel()
         {
-
-            // This is in case we already ran this
-            if (subtitlePool != null)
+            displayPanel = uiDocument.rootVisualElement.Q<VisualElement>("SubtitlePanel");
+            if (displayPanel == null)
             {
+                Debug.LogError("SubtitlePanel not found in UIDocument. Please ensure it exists in your UI layout.");
                 return;
             }
 
-            // Define pool methods
-            subtitlePool = new ObjectPool<Label>(
-            createFunc: () =>
-            {
-                var label = new Label();
-                
-                //Parent UIToolkit label to panel 
-                displayPanel.Add(label);
-                label.enableRichText = true;
-                label.style.fontSize = subtitleSize;
-                label.style.flexWrap = Wrap.Wrap;
-                label.AddToClassList("Label_Hide");
-                label.usageHints = UsageHints.DynamicTransform;
-                return label;
-
-            },
-            actionOnGet: (obj) =>
-            {
-                // Move Label at bottom of UIToolkit hiearchy
-                displayPanel.Add(obj);
-
-                obj.text = "";
-                obj.style.visibility = Visibility.Visible;
-            },
-            actionOnRelease: (obj) =>
-            {
-                displayPanel.Remove(obj);
-                obj.text = "";
-                obj.style.visibility = Visibility.Visible;
-            },
-            actionOnDestroy: (obj) => obj.RemoveFromHierarchy(),
-            collectionCheck: false,
-            defaultCapacity: 5,
-            maxSize: 10);
+            displayPanel.usageHints = UsageHints.GroupTransform;
+            displayPanel.style.visibility = Visibility.Hidden;
+            displayPanel.Clear();
         }
 
-        #endregion init
+        private void InitializeSubtitlePool()
+        {
+            subtitlePool = new ObjectPool<Label>(
+                createFunc: CreateSubtitleLabel,
+                actionOnGet: PrepareSubtitleLabel,
+                actionOnRelease: ReleaseSubtitleLabel,
+                actionOnDestroy: DestroySubtitleLabel,
+                collectionCheck: false,
+                defaultCapacity: 5,
+                maxSize: subtitlePoolSize
+            );
+        }
+
+        #region PoolFunctions
+
+        private Label CreateSubtitleLabel()
+        {
+            var label = new Label
+            {
+                enableRichText = true,
+                usageHints = UsageHints.DynamicTransform
+            };
+            label.AddToClassList("Label_Hide");
+            label.style.fontSize = subtitleSize;
+            label.style.flexWrap = Wrap.Wrap;
+            label.style.unityTextAlign = new StyleEnum<TextAnchor>(subtitlerAlign);
+            return label;
+        }
+
+        private void PrepareSubtitleLabel(Label label)
+        {
+            displayPanel.Add(label);
+            label.text = string.Empty;
+            label.style.visibility = Visibility.Visible;
+        }
+
+        private void ReleaseSubtitleLabel(Label label)
+        {
+            displayPanel.Remove(label);
+            label.text = string.Empty;
+            label.style.visibility = Visibility.Hidden;
+        }
+
+        private void DestroySubtitleLabel(Label label)
+        {
+            label.RemoveFromHierarchy();
+        }
+
+        #endregion
 
         /// <summary>
-        /// Plays a given subtitle track 
+        /// Plays a sequence of SubtitleEntries on a given AudioSource
         /// </summary>
-        /// <param name="sD">Subtitle Data file</param>
-        /// <param name="aS">AudioSource to playOneShot through</param>
-        /// <returns>Cancellation ID of the subtitle instance</returns>
-        public int PlaySubtitleSequence(SubtitleSequenceData sD, AudioSource aS)
+        /// <param name="sequenceData">Sequence to be played</param>
+        /// <param name="audioSource">AudioSource to play through</param>
+        /// <returns>Id of the session instance</returns>
+        public int PlaySubtitleSequence(SubtitleSequenceData sequenceData, AudioSource audioSource)
         {
-            int id = 0;
-
-            lock (subtitleLock)
-            {
-                if (activeSubtitleList.Count != 0)
-                {
-                    id = activeSubtitleList.Max(kvp => kvp.Key) + 1;
-                }
-                activeSubtitleList.Add(id, true);
-            }
-
-            // Debug.Log("Playing " + id);
-
-            _ = playSubtitleFile(sD, aS, id);
+            Initialize();
+            int id = GetNextSubtitleId();
+            var cts = new CancellationTokenSource();
+            activeSubtitles[id] = cts;
+            _ = PlaySubtitleSequenceAsync(sequenceData, audioSource, id, cts.Token);
             return id;
         }
 
-
         /// <summary>
-        /// Plays a given subtitle entry 
+        /// Plays a single line of subtitles on a given AudioSource
         /// </summary>
-        /// <param name="sD">Subtitle Data file</param>
-        /// <param name="aS">AudioSource to playOneShot through</param>
-        /// <returns>Cancellation ID of the subtitle instance</returns>
-        public void PlaySubtitleEntry(ISubtitleEntry sD, AudioSource aS)
+        /// <param name="entry">Entry containing the subtitle data</param>
+        /// <param name="audioSource">AudioSource to play through</param>
+        /// <returns>Id of the session instance</returns>
+        public int PlaySubtitleEntry(ISubtitleEntry entry, AudioSource audioSource)
         {
-            Init();
-            playSubtitleEntry(sD, aS);
+            Initialize();
+            int id = GetNextSubtitleId();
+            var cts = new CancellationTokenSource();
+            activeSubtitles[id] = cts;
+            _ = PlaySubtitleEntryAsync(entry, audioSource, cts.Token);
+            return id;
         }
 
-
-
         /// <summary>
-        /// Immediately kills an active subtitle loop based on ID
+        /// Removes and hides a Subtitle session immediately.
         /// </summary>
-        /// <param name="id">Subtitle Session ID to be killed</param>
-        public void killSubtitleById(int id)
+        /// <param name="id">Id of the session to hide</param>
+        public void RemoveSubtitle(int id)
         {
-            lock (subtitleLock)
+            if (activeSubtitles.TryGetValue(id, out var cts))
             {
-                Debug.Log("Removing " + id);
-                if (activeSubtitleList.ContainsKey(id))
-                {
-                    activeSubtitleList[id] = false;
-                }
+                cts.Cancel();
+                cts.Dispose();
+                activeSubtitles.Remove(id);
             }
         }
 
         /// <summary>
-        /// Internal method for playing Subtitles
+        /// Removes and hides a active Subtitle Session with the oldest id.
         /// </summary>
-        /// <param name="sD">File to play</param>
-        /// <param name="aS">AudioSource to play this with</param>
-        /// <returns>UniTaskVoid Handle</returns>
-        private async UniTaskVoid playSubtitleFile(SubtitleSequenceData sD, AudioSource aS, int id)
+        public void RemoveOldest()
         {
-
-            if (sD != null)
-                foreach (SubtitleDataEntry sE in sD.Subtitles)
-                {
-
-                    await UniTask.Delay((int)(sE.waitFor * 1000f));
-
-                    // Check if we werent cancelled
-                    lock (subtitleLock)
-                    {
-                        if (activeSubtitleList[id] == false)
-                        {
-                            activeSubtitleList.Remove(id);
-                            return;
-                        }
-                    }
-
-                    playSubtitleEntry(sE, aS);
-
-                }
+            if (activeSubtitles.Count > 0)
+            {
+                int oldestSubtitleId = activeSubtitles.Keys.Min();
+                RemoveSubtitle(oldestSubtitleId);
+            }
         }
 
-
-
-        private void playSubtitleEntry(ISubtitleEntry sE, AudioSource aS)
+        private async Task PlaySubtitleSequenceAsync(SubtitleSequenceData sequenceData, AudioSource audioSource, int id, CancellationToken cancellationToken)
         {
-            bool isRangeLimited = false;
-
-            // If we have audioSource, volume checks for occlusion
-            if (aS != null)
+            try
             {
-                isRangeLimited = (aS.spatialBlend == 1);
-
-                // Play audio
-                if (sE.getAudio() != null)
-                    aS.PlayOneShot(sE.getAudio());
-
-                // If the audioSource is really, really silent, or straight up disabled, do not show subtitle
-                if (aS == null || aS.volume <= 0.05f || aS.enabled == false)
+                foreach (var entry in sequenceData.Subtitles)
                 {
-                    return;
+                    await Task.Delay(TimeSpan.FromSeconds(entry.waitFor), cancellationToken);
+                    _ = PlaySubtitleEntryAsync(entry, audioSource, cancellationToken);
                 }
             }
-
-
-            // Trigger programmed events
-            if (sE.getSubtitleEvent() != null)
+            catch (OperationCanceledException)
             {
-                sE.getSubtitleEvent().Raise();
+                // Subtitle sequence was cancelled, clean up if necessary
             }
-
-
-            // Display dialogue
-            if (sE.getDialogue() != "")
+            finally
             {
-
-                // Sound aint null AND (If we are (range-limited, out of range AND not a 2D source) OR IF (the audioSource is not playing AND there was an valid AudioClip))
-                if ( aS != null && ((isRangeLimited && !checkAudioDistance(aS.maxDistance, aS) && aS.spatialBlend != 0) || (aS.isPlaying == false && sE.getAudio() != null)))
-                {
-                    return;
-                }
-
-                /*
-                if (enableBackgroundPanel)
-                {
-                    displayPanel.GetComponent<Image>().DOKill();
-                    displayPanel.GetComponent<Image>().enabled = true;
-                    displayPanel.GetComponent<Image>().DOFade(0.4f, 0.1f);
-                }
-                */
-
-                _ = DisplaySubtitle(sE.getDialogue(), sE.getSpeaker(), sE.getDisplayFor());
+                activeSubtitles.Remove(id);
             }
-
         }
 
-        /// <summary>
-        /// Method to display a single line of subtitles. Use this when you need to play subtitles using custom logic and want to skip all the additional features.
-        /// </summary>
-        /// <param name="message">Message (Dialogue) line to show</param>
-        /// <param name="speaker">Name of object which said the line (Leave empty string for none)</param>
-        /// <param name="displayFor">How long should this line be displayed for?</param>
-        /// <returns></returns>
-        private async UniTaskVoid DisplaySubtitle(string message, string speaker, float displayFor)
+        private async Task PlaySubtitleEntryAsync(ISubtitleEntry entry, AudioSource audioSource, CancellationToken cancellationToken)
         {
+            if (!ShouldDisplaySubtitle(entry, audioSource)) return;
 
-            /*
-#if UNITY_EDITOR
-            if (!Application.isPlaying)
-                // Show debug thru editor window
-                return;
-#endif
-            */
-
-
-
-            Label subtitle = subtitlePool.Get();
-            shownLines++;
-
-            CheckHideSubtitlePanel();
-
-            // Display text
-            if (speaker != "")
-                subtitle.text += $"<color=#{ColorUtility.ToHtmlStringRGB(speakerHighlight)}><b>{speaker}</b></color>: ";
-            subtitle.text += message;
-
-            /*
-            subtitle.experimental.animation.Start(0, 4, 100, (b, val) =>
+            if (audioSource != null && entry.getAudio() != null)
             {
-                b.style.paddingTop = val;
-                b.style.paddingBottom = val;
-                b.style.marginTop = val;
-                b.style.marginBottom = val;
+                audioSource.PlayOneShot(entry.getAudio());
+            }
 
-            }).Ease(Easing.InSine);
-            */
+            entry.getSubtitleEvent()?.Raise();
 
+            if (!string.IsNullOrEmpty(entry.getDialogue()))
+            {
+                await DisplaySubtitleAsync(entry.getDialogue(), entry.getSpeaker(), entry.getDisplayFor(), cancellationToken);
+            }
+        }
 
-            // Neat animation intro, 100ms
+        private async Task DisplaySubtitleAsync(string message, string speaker, float displayDuration, CancellationToken cancellationToken)
+        {
+            var subtitle = subtitlePool.Get();
+            activeSubtitleCount++;
+            UpdateSubtitlePanelVisibility();
+
+            try
+            {
+                SetSubtitleText(subtitle, speaker, message);
+                await AnimateSubtitleEntrance(subtitle, cancellationToken);
+                await Task.Delay(TimeSpan.FromSeconds(displayDuration), cancellationToken);
+            }
+            finally
+            {
+                await AnimateSubtitleExit(subtitle, CancellationToken.None);
+
+                activeSubtitleCount--;
+                subtitlePool.Release(subtitle);
+                UpdateSubtitlePanelVisibility();
+            }
+        }
+
+        private void SetSubtitleText(Label subtitle, string speaker, string message)
+        {
+            subtitle.text = string.IsNullOrEmpty(speaker)
+                ? message
+                : $"<color=#{ColorUtility.ToHtmlStringRGB(speakerHighlight)}><b>{speaker}</b></color>: {message}";
+        }
+
+        #region animations
+
+        private async Task AnimateSubtitleEntrance(Label subtitle, CancellationToken cancellationToken)
+        {
             subtitle.style.maxHeight = 0;
-            
-            subtitle.experimental.animation.Start(0, 999, 100, (b, val) =>
-            {
-                b.style.maxHeight = val;
-            }).Ease(Easing.InSine);
+            subtitle.experimental.animation
+                .Start(0, 999, 100, (element, value) => element.style.maxHeight = value)
+                .Ease(Easing.InSine);
 
-            await UniTask.Delay(50);
-
-            // Show subtitle
+            await Task.Delay(50, cancellationToken);
             subtitle.RemoveFromClassList("Label_Hide");
-
-            await UniTask.Delay(50);
-
-
-
-            // Display for specified amount of time
-            await UniTask.Delay((int)(displayFor * 1000f));
-
-
-            // Fadeout...
-            subtitle.AddToClassList("Label_Hide");
-            
-            await UniTask.Delay(1000);
-
-            // Outro
-            // Play the animations async
-            
-
-            subtitle.experimental.animation.Start(1000, 0, 100, (b, val) =>
-            {
-                b.style.maxHeight = val;
-            }).Ease(Easing.Linear);
-            
-
-            await UniTask.Delay(100);
-
-
-            shownLines--;
-
-            subtitlePool.Release(subtitle);
-            CheckHideSubtitlePanel();
-
+            await Task.Delay(50, cancellationToken);
         }
 
-
-        #region utils
-
-        /// <summary>
-        /// Checks whether the Subtitle Panel shouldnt be hidden. Hides it if no subtitles are currently on display.
-        /// </summary>
-        /// <returns></returns>
-        public void CheckHideSubtitlePanel()
+        private async Task AnimateSubtitleExit(Label subtitle, CancellationToken cancellationToken)
         {
-            if (enableBackgroundPanel == false) return;
+            subtitle.AddToClassList("Label_Hide");
 
-            if (shownLines == 0)
+            subtitle.experimental.animation
+                .Start(1000, 0, 100, (element, value) => element.style.maxHeight = value)
+                .Ease(Easing.Linear);
+
+            await Task.Delay(100, cancellationToken);
+        }
+
+        private void UpdateSubtitlePanelVisibility()
+        {
+            if (!enableBackgroundPanel) return;
+
+            if (activeSubtitleCount == 0)
             {
                 displayPanel.AddToClassList("SubtitlePanel_Hide");
-
-                
+                displayPanel.style.visibility = Visibility.Hidden;
             }
             else
             {
-                displayPanel.style.visibility = Visibility.Visible;
                 displayPanel.RemoveFromClassList("SubtitlePanel_Hide");
+                displayPanel.style.visibility = Visibility.Visible;
             }
         }
 
-        /// <summary>
-        /// Checks whether the distance between player and the audioSource is within the AudioSource maxRange
-        /// (e.g. if the player is in the AudioSources range)
-        /// </summary>
-        /// <param name="range">Max range from audiosource</param>
-        /// <param name="audioObj">AudioSource to check</param>
-        /// <returns></returns>
-        private bool checkAudioDistance(float range, AudioSource audioObj)
+        #endregion
+
+        private int GetNextSubtitleId()
         {
-            if (Vector3.Distance(player.transform.position, audioObj.transform.position) <= range)
-            {
-                return true;
-            }
-
-            return false;
+            return Interlocked.Increment(ref nextSubtitleId);
         }
 
-        #endregion utils
+        #region utils
 
+        private bool ShouldDisplaySubtitle(ISubtitleEntry entry, AudioSource audioSource)
+        {
+            if (audioSource == null) return true;
+            if (audioSource.volume <= 0.05f || !audioSource.enabled) return false;
+            if (audioSource.spatialBlend == 1 && !IsWithinAudioRange(audioSource)) return false;
+            return true;
+        }
+
+        private bool IsWithinAudioRange(AudioSource audioSource)
+        {
+            return Vector3.Distance(player.transform.position, audioSource.transform.position) <= audioSource.maxDistance;
+        }
+
+        #endregion
     }
 }

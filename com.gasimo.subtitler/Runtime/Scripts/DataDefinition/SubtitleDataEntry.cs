@@ -58,11 +58,6 @@ namespace Gasimo.Subtitles
         public float displayFor = 5;
 
 
-        [HideInInspector]
-        public float start;  // Add these properties
-        [HideInInspector]
-        public float end;    // Add these properties
-
 #if !SUBTITLER_LOCALIZATION
         public AudioClip getAudio()
         {

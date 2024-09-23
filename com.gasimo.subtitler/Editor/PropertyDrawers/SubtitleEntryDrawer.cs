@@ -5,7 +5,7 @@ using UnityEditor.UIElements;
 using UnityEngine.UIElements;
 using System.IO;
 
-namespace gasimo.subtitles
+namespace Gasimo.Subtitles.Editor
 {
     #if UNITY_2023_3_OR_NEWER
     /*

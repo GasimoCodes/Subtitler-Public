@@ -1,0 +1,22 @@
+{
+    "name": "Gasimo.Subtitler.Editor",
+    "rootNamespace": "Gasimo.Subtitler.Editor",
+    "references": [
+        "GUID:4cc12bb14387ca44fa1985119e52434b"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.localization",
+            "expression": "0.1",
+            "define": "SUBTITLER_LOCALIZATION"
+        }
+    ],
+    "noEngineReferences": false
+}

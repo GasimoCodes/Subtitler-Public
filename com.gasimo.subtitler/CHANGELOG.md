@@ -1,6 +1,16 @@
 # Changelog
 All notable changes to this package will be documented in this file.
 
+## [0.4.0] - 23/09/2024
+- SRT File Support (Unity ScriptedImporter)
+- Remove CySharp UniTask Dependency (All code moved to Native Async)
+- SubtitleEntry() now supports CancellationTokens
+- KillSubtitleById has been replaced with RemoveSubtitle(Id)
+- RemoveSubtitle(Id) hides even ongoing subtitles immediately instead of just cancelling new ones in sequence.
+- Improved Exit timings accuracy
+- Added icon for Subtitler
+- Improved text anchor customization
+
 ## [0.3.0] - 19/02/2024
 - Unity Localization Optional Support
 - Subtitler now accepts ISubtitleEntry instead of a specific class
