@@ -12,7 +12,7 @@
 <br>
 
 
-![Capture1](https://github.com/GasimoCodes/Subtitler/assets/22917863/65229daa-4547-4c9e-8277-c8cde53e8d0f)
+![image](https://github.com/user-attachments/assets/a93e090a-3c04-4c05-a334-c8f998d59b0d)
 ![Capture2](https://github.com/GasimoCodes/Subtitler/assets/22917863/d1607038-3afd-45d1-968a-6507ebf08b3d)
 
 
