@@ -30,6 +30,7 @@
 - API to stop currently playing subtitles using their runtime ID
 - Timeline Integration
 - Unity Localization support
+- SRT Files support
 
 
 ## [Quick Start](https://gasimocodes.github.io/Subtitler/manual/gettingstarted.html?tabs=newer)
