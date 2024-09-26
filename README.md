@@ -30,20 +30,17 @@
 - API to stop currently playing subtitles using their runtime ID
 - Timeline Integration
 - Unity Localization support
+- SRT Files support
 
 
 ## [Quick Start](https://gasimocodes.github.io/Subtitler/manual/gettingstarted.html?tabs=newer)
 
-1. Import [Cysharp UniTask]((https://github.com/Cysharp/UniTask)) by adding `https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask` into **Package Manager** 
-(*Package Manager/+/Install package from GIT URL*)
-
-2. Import Subtitler `https://github.com/GasimoCodes/Subtitler.git?path=com.gasimo.subtitler` into **Package Manager** 
+1. Import Subtitler `https://github.com/GasimoCodes/Subtitler.git?path=com.gasimo.subtitler` into **Package Manager** 
   
-3. To see **samples**, open Package Manager, navigate to Subtitler. Press Samples and select import. Sample will automatically import into *Assets/Samples/Subtitler*
+2. To see **samples**, open Package Manager, navigate to Subtitler. Press Samples and select import. Sample will automatically import into *Assets/Samples/Subtitler*
 
 For usage see [Docs](https://gasimo.dev/Subtitler/manual/gettingstarted.html?tabs=newer)
 
 
 ## Dependencies
-- **Cysharp UniTask** for proper Async support when exiting play mode.
 - **Unity 2022 or Newer** (Lower versions werent tested, should work on any version with proper UIToolkit support)
