@@ -5,7 +5,7 @@
  A simple to use Subtitling/Closed-Captions solution for Unity3D inspired by Source Engine Closed Captions. 
  > Subtitler has reached a stable version and has released on the Asset Store. This branch will continue to exist but will **not receive any future updates or support**. To support the project or get the full up-to-date version, please obtain the asset through [Asset Store](https://assetstore.unity.com/packages/tools/utilities/subtitler-closed-captions-toolkit-256323).
 
-#### [Docs](https://gasimo.dev/Subtitler/manual/gettingstarted.html?tabs=newer)
+#### [Docs](https://gasimo.dev/Subtitler/manual/gettingstarted.html?tabs=newer) | [Issue Tracker](https://github.com/GasimoCodes/Subtitler-Public/issues) | [Full Version (Asset Store)](https://assetstore.unity.com/packages/tools/utilities/subtitler-closed-captions-toolkit-256323) 
 
 <br>
 <br>
